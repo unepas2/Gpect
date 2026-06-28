@@ -95,7 +95,7 @@ ORDER={
  "Q9.1_priorites_gpect","Q9.2_roles","Q9.3_ateliers",
  "#Territoire|Image et freins vus côté stagiaires/alternants.",
  "Q10.1_image","Q10.2_freins_territoire","Q10.3_actions_attractivite",
- "#Ouverture|Action la plus utile et observations.","Q11.1_action_utile","Q11.2_acteur_associer","Q11.3_souhaite_synthese","Q11.4_observations"],
+ "#Ouverture|Action la plus utile et observations.","Q11.1_action_utile","Q11.2_acteur_associer","Q11.4_observations"],
 "acteurs":[
  "#Profil & publics|Qui sont les 7 acteurs de l'emploi et qui ils accompagnent.",
  "Q0.1_type","Q0.2_conseillers","Q0.3_volume_accompagnes","Q1.1_publics","Q1.2_importance_publics","Q1.3_qualif_dominante",
@@ -384,7 +384,7 @@ function auto(c,k){const d=Q(c,k);if(!d)return '';const cm=COMMENTS[c+'|'+k]||''
    return card(title,'Moyenne 1-5 (classé) · n='+(a[0]?a[0].n:''),chCanvas(id,true),cm);}
  if(t==='texte_libre_code'){const a=d.themes.filter(x=>x.n>0);CQ.push(()=>hbar(id,a.map(x=>x.theme),a.map(x=>x.n),col,d.n_repondants));
    return card(title,'Thèmes — nb de répondants sur '+d.n_repondants,chCanvas(id,a.length>6)+verbList(d.verbatims_anonymises,3),cm);}
- if(t==='texte_libre'){return card(title,'Verbatims anonymisés · n='+d.n_repondants,verbList(d.verbatims_anonymises,6)||'<p class="note">Réponses peu renseignées.</p>',cm);}
+ if(t==='texte_libre'){const vb=verbList(d.verbatims_anonymises,6);if(!vb&&!cm)return '';return card(title,'Verbatims anonymisés · n='+d.n_repondants,vb||'',cm);}
  return '';}
 // pyramide entreprises (avec/sans Safran)
 function pyrCard(){const p=Q('entreprises','Q4.1_pyramide');const id='cv_pyr';
@@ -423,6 +423,9 @@ BUILD.synthese=function(){const host=document.getElementById('p-synthese');const
  const offre=dim("adéquation de l'offre").valeurs,trans=dim('transmission').valeurs;
  const afest=(Q('entreprises','Q4.8_dispositifs_transmission').items.find(x=>x.item.includes('AFEST'))||{}).moyenne;
  const seniors=Q('entreprises','Q4.1_pyramide').AVEC_plus_gros.pct_seniors_45plus;
+ const imgV=Q('entreprises','Q8.2_image_issoudun').moyenne;
+ const imgF=(Q('entreprises','Q8.1_facteurs_territoire').modalites.find(m=>m.modalite.includes('Image du territoire'))||{}).pct_repondants;
+ const cl9=Q('entreprises','Q9.1_priorites_gpect').classement_par_moyenne;const trI=cl9.find(x=>x.item.includes('Gestion des seniors'));const trR=cl9.indexOf(trI)+1;
  host.innerHTML=`<div class="banner"><b>L'essentiel :</b> un bassin industriel en forte tension de recrutement, une offre de formation jugée en décalage par ceux qui l'utilisent, un risque de départs en retraite sous-estimé, et 4 familles d'acteurs qui ne voient pas toujours les mêmes priorités. Ce tableau de bord donne le diagnostic complet par collège, les croisements, et un plan d'action en 7 axes.</div>
  <h2 class="pt">Vue d'ensemble</h2><p class="sub">Qui a répondu, et les chiffres à retenir.</p>
  <div class="grid g4">${metricCard(co.entreprises.n,'Entreprises')}${metricCard(co.of.n,'Organismes de formation')}${metricCard(co.acteurs.n,"Acteurs de l'emploi")}${metricCard(co.syndicats.n,'Syndicats / orga pro')}</div>
@@ -431,9 +434,9 @@ BUILD.synthese=function(){const host=document.getElementById('p-synthese');const
  ${metricCard(fmt(offre.of)+' vs '+fmt(offre.acteurs),"Offre de formation : vue par les OF vs les acteurs de l'emploi",'écart de perception majeur (~2 pts)')}
  ${metricCard(seniors+' %','de salariés de 45 ans et + (entreprises)','enjeu de transmission')}
  ${metricCard(fmt(afest),'AFEST : maîtrise dans les entreprises (1-5)','dispositif quasi inexistant')}
- ${metricCard('2,3','Image du territoire notée par les entreprises (1-5)','jamais supérieure à 3')}
- ${metricCard('95 %',"des entreprises citent l'image comme frein",'')}
- ${metricCard('Dernière','place de la transmission dans les priorités des entreprises','prioritaire pour 5/7 syndicats')}</div>
+ ${metricCard(fmt(imgV),'Image du territoire notée par les entreprises (1-5)','jamais supérieure à 3')}
+ ${metricCard(fmt(imgF)+' %',"des entreprises citent l'image comme frein",'')}
+ ${metricCard(fmt(trI.moyenne)+' · '+trR+'ᵉ/'+cl9.length,'Priorité de la transmission (entreprises)','la plus basse — prioritaire pour 5/7 syndicats')}</div>
  <div class="grid g2" style="margin-top:16px"><div class="card"><h3>Tension de recrutement (entreprises)</h3><p class="note">n=21</p>${chCanvas('c-tens')}</div>
  <div class="card"><h3>Comment lire ce tableau de bord</h3><p style="font-size:13px">Chaque chiffre vient des réponses, agrégées par collège et vérifiées (audit de traçabilité). <b>Une moyenne</b> pour les questions notées 1-5 ; <b>un effectif ou un %</b> pour les comptages. Trois collèges à <b>n=7</b> → on lit des <b>tendances</b>. Les encadrés <b>💡</b> expliquent les stats critiques. Les onglets <b>Plan d'action</b> déroulent les 7 axes.</p></div></div>`;
  const dims=[dim("adéquation de l'offre"),dim('mobilité'),dim('transmission'),dim('afest')];
@@ -446,7 +449,9 @@ BUILD.comp=function(){const host=document.getElementById('p-comp');
  <div class="gauto">${auto('of','Q2.2_capacite_emergentes')}${auto('entreprises','Q6.5_competences_3_5ans')}${auto('acteurs','Q6.2_manque_formation')}${auto('of','Q8.2_domaines_evolutions')}${auto('entreprises','Q6.2_tech_manquantes')}${auto('syndicats','Q12_competences_techniques')}</div>`;
  CQ.forEach(f=>{try{f()}catch(e){}});CQ=[];};
 BUILD.cx=function(){const host=document.getElementById('p-cx');const co=SV._meta.colleges;
- host.innerHTML=`<div class="banner"><b>En clair :</b> sur l'offre, la mobilité, la transmission et l'AFEST, les 4 collèges ne sont pas d'accord. Ces écarts sont le vrai sujet du diagnostic.</div><h2 class="pt">Croisements — les écarts de perception</h2><p class="sub">Sur un même sujet, qui voit quoi ? Moyennes 1-5.</p><div class="gauto" id="cxh"></div><h3 class="sec" style="margin-top:22px">Paradoxes à porter au débat</h3><div class="grid g2" id="cxp"></div>`;
+ host.innerHTML=`<div class="banner"><b>En clair :</b> sur l'offre, la mobilité, la transmission et l'AFEST, les 4 collèges ne sont pas d'accord. Ces écarts sont le vrai sujet du diagnostic.</div><h2 class="pt">Croisements — les écarts de perception</h2><p class="sub">Sur un même sujet, qui voit quoi ? Moyennes 1-5.</p><div class="gauto" id="cxh"></div>
+ <h3 class="sec" style="margin-top:22px">Points de consensus — les 4 collèges s'accordent</h3><div class="grid g2">${SV.convergences.map(x=>`<div class="card" style="border-left:4px solid var(--of)"><p style="font-size:13px;margin:2px 0">✅ ${x}</p></div>`).join('')}</div>
+ <h3 class="sec" style="margin-top:22px">Paradoxes à porter au débat</h3><div class="grid g2" id="cxp"></div>`;
  const W=[['adéquation de l\'offre','Offre de formation locale'],['mobilité','Mobilité comme frein'],['transmission','Transmission (priorité)'],['afest','AFEST (maîtrise)'],['image','Image du territoire']];
  const host2=document.getElementById('cxh');
  W.forEach((w,i)=>{const d=dim(w[0]);if(!d)return;const cs=['entreprises','of','acteurs','syndicats'].filter(c=>typeof d.valeurs[c]==='number');const id='cxc'+i;
