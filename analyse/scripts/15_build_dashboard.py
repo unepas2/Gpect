@@ -236,6 +236,11 @@ footer b{color:var(--ink)}
         <dt>PMSMP</dt><dd>Période de Mise en Situation en Milieu Professionnel : immersion découverte.</dd>
         <dt>CNC</dt><dd>Commande Numérique (machines-outils pilotées par ordinateur).</dd>
         <dt>CAO / DAO</dt><dd>Conception / Dessin Assisté par Ordinateur.</dd>
+        <dt>ERP / GPAO</dt><dd>Logiciels de gestion industrielle (pilotage de la production et des ressources).</dd>
+        <dt>Cobotique</dt><dd>Robots collaboratifs travaillant aux côtés des opérateurs.</dd>
+        <dt>Métrologie</dt><dd>Science de la mesure (contrôle qualité dimensionnel).</dd>
+        <dt>CACES / SPL</dt><dd>Permis de conduite d'engins (CACES) / poids lourds super-lourds (SPL).</dd>
+        <dt>VAE</dt><dd>Validation des Acquis de l'Expérience (obtenir un diplôme via l'expérience).</dd>
         <dt>QPV</dt><dd>Quartier Prioritaire de la politique de la Ville.</dd>
         <dt>CFA</dt><dd>Centre de Formation d'Apprentis.</dd>
       </dl>
