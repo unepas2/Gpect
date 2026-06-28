@@ -122,14 +122,19 @@ function Q(c,k){return (SV.donnees_colleges[c]||{}).questions[k];}
 function lbl(s){s=String(s);for(let i=0;i<2;i++)s=s.replace(/^\s*Q[0-9][0-9.]*[a-z]?\s*[—–-]\s*/,'');return s;}
 function shorten(s,n){s=String(s);return s.length>(n||34)?s.slice(0,(n||34)-1)+'…':s;}
 function dim(n){return SV.dimensions_partagees.find(d=>d.dimension.toLowerCase().includes(n));}
-let CQ=[];
+let CQ=[];let _n=0;const nid=()=>'cv'+(++_n);
 function chCanvas(id,tall){return `<div class="chartbox${tall?' tall':''}"><canvas id="${id}"></canvas></div>`;}
+// plugin : affiche la valeur au bout de chaque barre (lisibilité)
+const valLabel={id:'valLabel',afterDatasetsDraw(ch){const ds=ch.data.datasets;if(ds.length>1)return;const ctx=ch.ctx;const meta=ch.getDatasetMeta(0);ctx.save();ctx.font='bold 10.5px -apple-system,sans-serif';ctx.fillStyle='#33414f';
+ meta.data.forEach((bar,i)=>{const v=ds[0].data[i];if(v==null)return;const suf=ch.$suffix||'';
+  if(ch.options.indexAxis==='y'){ctx.textAlign='left';ctx.textBaseline='middle';ctx.fillText(fmt(v)+suf,bar.x+5,bar.y);}
+  else{ctx.textAlign='center';ctx.textBaseline='bottom';ctx.fillText(fmt(v)+suf,bar.x,bar.y-4);}});ctx.restore();}};
 function card(t,nt,body,cm,cls){return `<div class="card ${cls||''}"><h3>${t}</h3>${nt?`<p class="note">${nt}</p>`:''}${body}${cm?`<div class="lec"><b>💡 Ce que ça dit —</b> ${cm}</div>`:''}</div>`;}
 function metricCard(num,lab,small){return `<div class="card metric"><div class="num">${num}</div><div class="lab">${lab}</div>${small?`<small>${small}</small>`:''}</div>`;}
 function uid(c,k){return 'cv_'+c+'_'+k.replace(/[^a-z0-9]/gi,'');}
 // charts
-function hbar(id,labels,data,color,max){new Chart(document.getElementById(id),{type:'bar',data:{labels,datasets:[{data,backgroundColor:color,borderRadius:4,maxBarThickness:24}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,scales:{x:{beginAtZero:true,max:max||undefined,grid:{color:'#eef2f7'}},y:{grid:{display:false},ticks:{autoSkip:false,font:{size:10.5}}}},plugins:{tooltip:{callbacks:{label:c=>' '+fmt(c.parsed.x)}}}}});}
-function vbar(id,labels,data,colors,max){new Chart(document.getElementById(id),{type:'bar',data:{labels,datasets:[{data,backgroundColor:colors,borderRadius:5,maxBarThickness:64}]},options:{responsive:true,maintainAspectRatio:false,scales:{y:{beginAtZero:true,max:max||5,grid:{color:'#eef2f7'}},x:{grid:{display:false}}},plugins:{tooltip:{callbacks:{label:c=>' '+fmt(c.parsed.y)}}}}});}
+function hbar(id,labels,data,color,max,suf){const ch=new Chart(document.getElementById(id),{type:'bar',data:{labels,datasets:[{data,backgroundColor:color,borderRadius:4,maxBarThickness:26}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,layout:{padding:{right:40}},scales:{x:{beginAtZero:true,max:max||undefined,grid:{color:'#eef2f7'}},y:{grid:{display:false},ticks:{autoSkip:false,font:{size:10.5},callback:function(v){const l=this.getLabelForValue(v);return l.length>32?l.slice(0,31)+'…':l;}}}},plugins:{tooltip:{callbacks:{title:items=>items[0].label,label:c=>' '+fmt(c.parsed.x)+(suf||'')}}}},plugins:[valLabel]});ch.$suffix=suf||'';ch.update();}
+function vbar(id,labels,data,colors,max,suf){const ch=new Chart(document.getElementById(id),{type:'bar',data:{labels,datasets:[{data,backgroundColor:colors,borderRadius:5,maxBarThickness:70}]},options:{responsive:true,maintainAspectRatio:false,layout:{padding:{top:18}},scales:{y:{beginAtZero:true,max:max||5,grid:{color:'#eef2f7'}},x:{grid:{display:false}}},plugins:{tooltip:{callbacks:{label:c=>' '+fmt(c.parsed.y)+(suf||'')}}}},plugins:[valLabel]});ch.$suffix=suf||'';ch.update();}
 function dough(id,labels,data,colors){new Chart(document.getElementById(id),{type:'doughnut',data:{labels,datasets:[{data,backgroundColor:colors,borderWidth:2,borderColor:'#fff'}]},options:{responsive:true,maintainAspectRatio:false,cutout:'56%',plugins:{legend:{display:true,position:'bottom',labels:{boxWidth:11,font:{size:10.5}}},tooltip:{callbacks:{label:c=>' '+c.label+' : '+c.parsed}}}}});}
 function radar(id,labels,data,col){new Chart(document.getElementById(id),{type:'radar',data:{labels,datasets:[{data,backgroundColor:col+'2e',borderColor:col,borderWidth:2,pointBackgroundColor:col,pointRadius:3}]},options:{responsive:true,maintainAspectRatio:false,scales:{r:{min:0,max:5,ticks:{stepSize:1,font:{size:9}},pointLabels:{font:{size:9.5}}}},plugins:{tooltip:{callbacks:{label:c=>' '+fmt(c.parsed.r)}}}}});}
 function battChart(id,a,col){const sf=a[0]&&a[0].sans_financeur;
@@ -139,21 +144,21 @@ function verbList(arr,n){const sk=/^(ras|na|n\/a|ne sait pas|non renseign|pas de
  const v=(arr||[]).filter(x=>x&&!sk.test(x.trim())&&x.trim().length>14).slice(0,n);
  return v.length?('<div style="margin-top:8px">'+v.map(x=>`<div class="verb">« ${x} »</div>`).join('')+'</div>'):'';}
 // auto render by type
-function auto(c,k){const d=Q(c,k);if(!d)return '';const cm=COMMENTS[c+'|'+k]||'';const t=d.type,id=uid(c,k),col=COL[c],title=lbl(d.intitule);
- if(t==='echelle_1_5'){const sf=d.sans_financeur?`<br>sans le financeur : <b>${fmt(d.sans_financeur.moyenne)}</b> (n=${d.sans_financeur.n})`:'';
-   return card(title,'Échelle de 1 à 5',`<div class="bigrow"><div class="big">${fmt(d.moyenne)}<span>/5</span></div><div class="bigmeta">médiane ${fmt(d.mediane)} · min ${d.min} · max ${d.max}<br>n=${d.n}${sf}</div></div>`,cm);}
- if(t==='numerique'){const s2=d.sans_plus_gros?`<br>sans le plus gros employeur : <b>${fmt(d.sans_plus_gros.somme)}</b> (méd. ${fmt(d.sans_plus_gros.mediane)})`:'';
-   const nn=d.n_non_numerique_exclus?` · ${d.n_non_numerique_exclus} non chiffrable(s)`:'';
-   return card(title,'Numérique',`<div class="bigrow"><div class="big">${fmt(d.somme)}</div><div class="bigmeta">total · médiane ${fmt(d.mediane)} · n=${d.n}${nn}${s2}</div></div>`,cm);}
- if(t==='choix_unique'){const m=d.modalites;CQ.push(()=>dough(id,m.map(x=>shorten(x.modalite,30)),m.map(x=>x.n),PAL));
-   return card(title,'Répartition · n='+d.n_repondants,chCanvas(id),cm);}
- if(t==='multi_select'){const a=d.modalites.filter(x=>x.n>0);CQ.push(()=>hbar(id,a.map(x=>x.modalite),a.map(x=>x.pct_repondants),col,100));
-   return card(title,'% des répondants (choix multiple) · n='+d.n_repondants,chCanvas(id,a.length>6),cm);}
+function auto(c,k){const d=Q(c,k);if(!d)return '';const cm=COMMENTS[c+'|'+k]||'';const t=d.type,id=nid(),col=COL[c],title=lbl(d.intitule);
+ if(t==='echelle_1_5'){const sf=d.sans_financeur?`<br>sans le financeur : <b>${fmt(d.sans_financeur.moyenne)}</b>/5 (n=${d.sans_financeur.n})`:'';
+   return card(title,'Note moyenne sur 5',`<div class="bigrow"><div class="big">${fmt(d.moyenne)}<span>/5</span></div><div class="bigmeta">médiane ${fmt(d.mediane)} · mini ${d.min} · maxi ${d.max}<br>${d.n} répondants${sf}</div></div>`,cm);}
+ if(t==='numerique'){const s2=d.sans_plus_gros?`<br>sans le plus gros employeur : <b>${fmt(d.sans_plus_gros.somme)}</b> (médiane ${fmt(d.sans_plus_gros.mediane)})`:'';
+   const nn=d.n_non_numerique_exclus?` · ${d.n_non_numerique_exclus} réponse(s) non chiffrable(s)`:'';
+   return card(title,'Total déclaré',`<div class="bigrow"><div class="big">${fmt(d.somme)}</div><div class="bigmeta">total cumulé · médiane ${fmt(d.mediane)} · ${d.n} réponses${nn}${s2}</div></div>`,cm);}
+ if(t==='choix_unique'){const m=d.modalites;CQ.push(()=>dough(id,m.map(x=>shorten(x.modalite,30)+' ('+x.n+')'),m.map(x=>x.n),PAL));
+   return card(title,'Répartition des '+d.n_repondants+' réponses',chCanvas(id),cm);}
+ if(t==='multi_select'){const a=d.modalites.filter(x=>x.n>0);CQ.push(()=>hbar(id,a.map(x=>x.modalite),a.map(x=>x.pct_repondants),col,100,'%'));
+   return card(title,'% des '+d.n_repondants+' répondants — plusieurs réponses possibles',chCanvas(id,a.length>6),cm);}
  if(t==='batterie_echelle_1_5'){const a=(d.classement_par_moyenne||d.items);CQ.push(()=>battChart(id,a,col));
-   return card(title,'Moyenne 1-5 (classé) · n='+(a[0]?a[0].n:''),chCanvas(id,true),cm);}
+   return card(title,'Note moyenne sur 5 (du + élevé au + faible) — '+(a[0]?a[0].n:'')+' répondants',chCanvas(id,true),cm);}
  if(t==='texte_libre_code'){const a=d.themes.filter(x=>x.n>0);CQ.push(()=>hbar(id,a.map(x=>x.theme),a.map(x=>x.n),col,d.n_repondants));
-   return card(title,'Thèmes — nb de répondants sur '+d.n_repondants,chCanvas(id,a.length>6)+verbList(d.verbatims_anonymises,3),cm);}
- if(t==='texte_libre'){const vb=verbList(d.verbatims_anonymises,6);if(!vb&&!cm)return '';return card(title,'Verbatims anonymisés · n='+d.n_repondants,vb||'',cm);}
+   return card(title,'Nombre de répondants (sur '+d.n_repondants+') ayant cité chaque thème',chCanvas(id,a.length>6)+verbList(d.verbatims_anonymises,3),cm);}
+ if(t==='texte_libre'){const vb=verbList(d.verbatims_anonymises,6);if(!vb&&!cm)return '';return card(title,'Verbatims anonymisés · '+d.n_repondants+' réponses',vb||'',cm);}
  return '';}
 // pyramide entreprises (avec/sans Safran)
 function pyrCard(){const p=Q('entreprises','Q4.1_pyramide');const id='cv_pyr';
