@@ -17,26 +17,34 @@ HTML = r"""<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>GPECT Issoudun — Diagnostic emploi-compétences</title>
 <style>
-:root{--ent:#1f4e79;--of:#2e8b57;--act:#c55a11;--syn:#7030a0;--ink:#1a2332;--mut:#5b6b7d;--bg:#f4f6f9;--card:#fff;--line:#e2e8f0;--accent:#0b6e99;}
+:root{--ent:#1f4e79;--of:#2e8b57;--act:#c55a11;--syn:#7030a0;--ink:#1a2332;--mut:#5b6b7d;--bg:#f4f6f9;--card:#fff;--line:#e2e8f0;--accent:#0b6e99;--navh:52px;}
 *{box-sizing:border-box}
-body{margin:0;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.5}
-header.top{background:linear-gradient(120deg,#13314f,#0b6e99);color:#fff;padding:18px 24px}
-header.top h1{margin:0;font-size:20px;font-weight:700}
-header.top p{margin:4px 0 0;font-size:13px;opacity:.9}
-nav{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:2px;padding:6px 12px;box-shadow:0 1px 4px rgba(0,0,0,.04)}
-nav button{border:0;background:transparent;color:var(--mut);font-size:13px;font-weight:600;padding:8px 12px;border-radius:8px;cursor:pointer}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:calc(var(--navh) + 8px)}
+body{margin:0;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.5;overflow-x:hidden;text-rendering:optimizeLegibility}
+header.top{background:linear-gradient(120deg,#13314f,#0b6e99);color:#fff;padding:16px clamp(14px,4vw,28px)}
+header.top h1{margin:0;font-size:clamp(16px,2.4vw,21px);font-weight:700}
+header.top p{margin:4px 0 0;font-size:clamp(11px,1.6vw,13px);opacity:.9}
+nav{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.97);backdrop-filter:saturate(1.2) blur(6px);border-bottom:1px solid var(--line);
+ display:flex;flex-wrap:wrap;gap:2px;padding:6px clamp(8px,2vw,12px);box-shadow:0 1px 6px rgba(0,0,0,.06);
+ overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+nav::-webkit-scrollbar{height:4px}nav::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:4px}
+nav button{flex:0 0 auto;border:0;background:transparent;color:var(--mut);font-size:13px;font-weight:600;padding:9px 13px;border-radius:8px;cursor:pointer;white-space:nowrap;min-height:40px}
 nav button:hover{background:#eef2f7;color:var(--ink)}
 nav button.active{background:var(--accent);color:#fff}
-main{max-width:1180px;margin:0 auto;padding:22px 18px 60px}
-.page{display:none}
+main{max-width:1180px;margin:0 auto;padding:clamp(14px,3vw,22px) clamp(12px,3vw,18px) 72px}
+.page{display:none;animation:fade .25s ease}
 .page.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+@media(max-width:900px){nav{flex-wrap:nowrap}}
 .banner{background:#fff;border-left:5px solid var(--accent);border-radius:10px;padding:14px 18px;margin:0 0 20px;box-shadow:0 1px 3px rgba(0,0,0,.05);font-size:15px}
 .banner b{color:var(--accent)}
 h2.pt{font-size:22px;margin:0 0 4px}
 .sub{color:var(--mut);font-size:13px;margin:0 0 18px}
 .grid{display:grid;gap:16px}
-.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
-@media(max-width:860px){.g2,.g3,.g4{grid-template-columns:1fr}}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}.g3{grid-template-columns:repeat(3,minmax(0,1fr))}.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media(max-width:1024px){.g4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.g2,.g3,.g4{grid-template-columns:1fr}}
+.metric .num{font-size:clamp(26px,5vw,34px)}
 .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
 .card h3{margin:0 0 2px;font-size:15px}
 .card .note{color:var(--mut);font-size:12px;margin:0 0 10px}
@@ -44,8 +52,8 @@ h2.pt{font-size:22px;margin:0 0 4px}
 .metric .num{font-size:34px;font-weight:800;line-height:1}
 .metric .lab{font-size:12.5px;color:var(--mut);margin-top:6px}
 .metric small{display:block;color:var(--mut);font-size:11px;margin-top:4px}
-.chartbox{position:relative;height:300px}
-.chartbox.tall{height:380px}
+.chartbox{position:relative;width:100%;height:clamp(260px,42vh,330px)}
+.chartbox.tall{height:clamp(320px,52vh,420px)}
 .pill{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px;color:#fff;margin-right:6px}
 .toggle{display:inline-flex;gap:4px;margin:6px 0 10px}
 .toggle button{border:1px solid var(--line);background:#fff;color:var(--mut);font-size:12px;font-weight:600;padding:5px 10px;border-radius:8px;cursor:pointer}
@@ -63,6 +71,12 @@ table.mx td.dim{text-align:left;font-weight:600}
 .legdot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:middle}
 footer{border-top:1px solid var(--line);background:#fff;color:var(--mut);font-size:12.5px;text-align:center;padding:18px}
 footer b{color:var(--ink)}
+#toTop{position:fixed;right:16px;bottom:16px;z-index:40;width:46px;height:46px;border-radius:50%;border:0;
+ background:var(--accent);color:#fff;font-size:20px;cursor:pointer;box-shadow:0 3px 10px rgba(0,0,0,.25);
+ opacity:0;visibility:hidden;transition:opacity .2s}
+#toTop.show{opacity:.92;visibility:visible}
+#toTop:hover{opacity:1}
+@media(max-width:760px){.chartbox .note,.card .note{font-size:11px}}
 .glo{font-size:13px}.glo dt{font-weight:700;margin-top:8px}.glo dd{margin:0 0 2px;color:var(--mut)}
 .warn{background:#fff7ed;border-left:4px solid #c55a11;border-radius:8px;padding:10px 14px;font-size:13px;margin:14px 0}
 </style>
@@ -252,6 +266,7 @@ footer b{color:var(--ink)}
   Diagnostic GPECT du bassin d'Issoudun — analyse agrégée et anonyme.<br>
   <b>Sophie Kirsch</b> (Ceterha) · <b>Sabrina Alamargot</b> (La Fabrique RH) · <b>Escale Digitale Solutions</b>
 </footer>
+<button id="toTop" aria-label="Revenir en haut" title="Revenir en haut">&#8593;</button>
 
 <script>__CHARTJS__</script>
 <script>
@@ -298,7 +313,9 @@ function show(id){
  document.getElementById('p-'+id).classList.add('active');
  document.querySelector('#nav button[data-id="'+id+'"]').classList.add('active');
  if(!inited[id]&&BUILD[id]){BUILD[id]();inited[id]=true;}
- window.scrollTo(0,0);
+ const ab=document.querySelector('#nav button[data-id="'+id+'"]');
+ if(ab&&ab.scrollIntoView){ab.scrollIntoView({inline:'center',block:'nearest'});}
+ window.scrollTo({top:0,behavior:'smooth'});
 }
 const NAV=[['synthese','Synthèse'],['ent','Entreprises'],['of','Org. formation'],['act','Acteurs emploi'],['syn','Syndicats'],['comp','Compétences & IA'],['cx','Croisements'],['mx','Matrice'],['lev','Leviers'],['met','Méthode']];
 document.getElementById('nav').innerHTML=NAV.map(n=>`<button data-id="${n[0]}" onclick="show('${n[0]}')">${n[1]}</button>`).join('');
@@ -471,6 +488,12 @@ BUILD.lev=function(){
  `Tableau de bord généré le ${SV._meta.genere_le}, à partir du fichier unique « source de vérité ».`;
 })();
 BUILD.synthese();inited.synthese=true;
+// bouton retour haut + recalcul navh réel
+const tt=document.getElementById('toTop');
+tt.onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
+window.addEventListener('scroll',()=>{tt.classList.toggle('show',window.scrollY>320)},{passive:true});
+function setNavH(){const n=document.getElementById('nav');if(n)document.documentElement.style.setProperty('--navh',n.offsetHeight+'px');}
+setNavH();window.addEventListener('resize',setNavH);
 </script>
 </body>
 </html>
