@@ -1,6 +1,6 @@
 # GPECT Issoudun — Résultats collège ENTREPRISES
 
-*Source : 126d3b2d-01_entreprises.xlsx.xlsx — 2026-03 (collecte) / export reçu 2026-06-28 · n=21 répondants · généré le 2026-06-28 16:35 UTC*
+*Source : 126d3b2d-01_entreprises.xlsx.xlsx — 2026-03 (collecte) / export reçu 2026-06-28 · n=21 répondants · généré le 2026-06-28 22:34 UTC*
 
 *Méthode : agrégé, question par question, anonyme ; multi-select via contains ; n= explicite. Tous les chiffres sont produits par script (`analyse/scripts/02_analyse_entreprises.py`) — aucun calcul manuel.*
 

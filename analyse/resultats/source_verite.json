@@ -1,7 +1,7 @@
 {
   "_meta": {
     "titre": "GPECT Issoudun — Source de vérité (analyse territoriale croisée)",
-    "genere_le": "2026-06-28 16:39 UTC",
+    "genere_le": "2026-06-28 22:34 UTC",
     "regle": "Construit uniquement à partir des 4 resultats_*.json. Écarts = max-min d'indicateurs déjà calculés. Agrégé, anonyme.",
     "colleges": {
       "entreprises": {
@@ -367,7 +367,7 @@
         "n_repondants": 21,
         "source": "126d3b2d-01_entreprises.xlsx.xlsx",
         "source_date": "2026-03 (collecte) / export reçu 2026-06-28",
-        "genere_le": "2026-06-28 16:35 UTC",
+        "genere_le": "2026-06-28 22:34 UTC",
         "plus_gros_employeur_ligne_interne": 5,
         "regles": "agrégé, question par question, anonyme ; multi-select via contains ; n= explicite"
       },
@@ -3277,6 +3277,7 @@
         "Q3.1_metiers_cles_themes": {
           "qid": "Q3.1",
           "type": "texte_libre_code",
+          "intitule": "Q3.1 — Listez vos 3 à 5 métiers clés ou en tension pour votre activité",
           "n_repondants": 21,
           "themes": [
             {
@@ -3344,6 +3345,7 @@
         "Q4.6_postes_turnover_themes": {
           "qid": "Q4.6",
           "type": "texte_libre_code",
+          "intitule": "Q4.6 — Sur quels postes le turnover est-il le plus marqué ?",
           "n_repondants": 21,
           "themes": [
             {
@@ -3401,6 +3403,7 @@
         "Q9.3_action_utile_themes": {
           "qid": "Q9.3",
           "type": "texte_libre_code",
+          "intitule": "Q9.3 — Si une seule action concrète devait sortir de cette démarche GPECT pour votre entreprise, laquelle serait la plus utile ?",
           "n_repondants": 21,
           "themes": [
             {
@@ -3443,6 +3446,7 @@
         "Q9.4_remarques_themes": {
           "qid": "Q9.4",
           "type": "texte_libre_code",
+          "intitule": "Q9.4 — Avez-vous des remarques, suggestions ou informations complémentaires à partager ?",
           "n_repondants": 12,
           "themes": [
             {

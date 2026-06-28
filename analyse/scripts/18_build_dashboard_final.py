@@ -28,8 +28,8 @@ COMMENTS={
 "entreprises|Q8.2_image_issoudun":"Image faible et homogène (2,3/5, jamais notée au-dessus de 3) : aucun répondant optimiste.",
 "entreprises|Q8.3_actions_collectives":"Forte appétence collective : campagne de communication commune (76 %), plateforme de recrutement mutualisée (52 %).",
 "entreprises|Q9.1_priorites_gpect":"L'attractivité écrase tout (3,9). La transmission des seniors est classée DERNIÈRE (2,5) — paradoxe avec la démographie.",
-"of|Q2.2_capacite_emergentes":"Capacité quasi nulle en cybersécurité (1,1) et faible en IA (2,3), même hors financeur — alors que 100 % des OF anticipent l'IA comme évolution majeure.",
-"of|Q4.1_offre_couvre":"Auto-évaluation élevée (4,0 ; 4,3 sans le financeur) — à confronter aux entreprises (3,1) et aux acteurs de l'emploi (2,3) : ~2 points d'écart.",
+"of|Q2.2_capacite_emergentes":"Capacité quasi nulle en cybersécurité (1,1) et faible en IA (2,3), même en écartant l'organisme acheteur — alors que 100 % des OF anticipent l'IA comme évolution majeure.",
+"of|Q4.1_offre_couvre":"Auto-évaluation élevée (4,0 ; 4,3 sans l'organisme acheteur) — à confronter aux entreprises (3,1) et aux acteurs de l'emploi (2,3) : ~2 points d'écart.",
 "of|Q5.2_maitrise_afest":"AFEST faiblement maîtrisée (2,6/5) ; 3 OF sur 7 n'en ont jamais conçu. Frein principal : la méconnaissance des entreprises.",
 "of|Q7.1_freins_offre":"Frein n°1 déclaré par les OF : la difficulté à mobiliser les entreprises (71 %).",
 "of|Q7.2_leviers":"Levier le plus demandé : un observatoire local des métiers et des compétences (71 %).",
@@ -53,7 +53,7 @@ COMMENTS={
 ORDER={
 "entreprises":[
  "#Profil de l'entreprise|Qui sont les 21 entreprises répondantes.",
- "Q0.8_statut","Q1.1_secteur","Q1.2_autre_secteur","Q1.3_effectif_tranche","Q1.4_effectif_inscrit",
+ "Q0.8_statut","Q1.1_secteur","Q1.3_effectif_tranche","Q1.4_effectif_inscrit",
  "Q1.5_recours_externes","Q1.6_volume_interim_ETP","Q1.7_volume_prestation","Q1.8_age_dirigeant",
  "#Stratégie & anticipation|Ce que les entreprises préparent pour les 3 ans à venir.",
  "Q2.1_preoccupations","Q2.2_transmission","Q2.3_evolution_effectifs","Q2.4_investissements","Q2.5_invest_competences",
@@ -85,17 +85,17 @@ ORDER={
  "#Adéquation de l'offre|Ce qui colle et ce qui manque.",
  "Q4.1_offre_couvre","Q4.2_retours_clients","Q4.3_points_inadaptes","Q4.4_metiers_a_adapter",
  "#AFEST & adaptation|Formation en situation de travail et capacité d'adaptation.",
- "Q5.1_afest_concu","Q5.2_maitrise_afest","Q5.3_freins_afest","Q5.4_formes_adaptation","Q5.5_pret_evoluer","Q5.6_conditions_evolution",
+ "Q5.1_afest_concu","Q5.2_maitrise_afest","Q5.3_freins_afest","Q5.4_formes_adaptation","Q5.5_pret_evoluer",
  "#Coopération|Avec qui et sous quelles formes.",
- "Q6.1_cooperation","Q6.2_acteurs","Q6.3_formes_coop","Q6.4_actions_collectives","Q6.5_role_actions_collectives",
+ "Q6.1_cooperation","Q6.2_acteurs","Q6.3_formes_coop","Q6.4_actions_collectives",
  "#Freins & leviers|Ce qui bloque et ce qui aiderait.","Q7.1_freins_offre","Q7.2_leviers",
  "#Prospective|Évolutions anticipées et transformations internes.",
- "Q8.1_anticipation_besoins","Q8.2_domaines_evolutions","Q8.3_nouvelles_formations","Q8.4_formations_manquantes","Q8.5_transfo_internes",
+ "Q8.1_anticipation_besoins","Q8.2_domaines_evolutions","Q8.3_nouvelles_formations","Q8.5_transfo_internes",
  "#Priorités & rôles GPECT|Place que les OF veulent prendre dans la démarche.",
  "Q9.1_priorites_gpect","Q9.2_roles","Q9.3_ateliers",
  "#Territoire|Image et freins vus côté stagiaires/alternants.",
  "Q10.1_image","Q10.2_freins_territoire","Q10.3_actions_attractivite",
- "#Ouverture|Action la plus utile et observations.","Q11.1_action_utile","Q11.2_acteur_associer","Q11.4_observations"],
+ "#Ouverture|Action la plus utile et observations.","Q11.1_action_utile","Q11.4_observations"],
 "acteurs":[
  "#Profil & publics|Qui sont les 7 acteurs de l'emploi et qui ils accompagnent.",
  "Q0.1_type","Q0.2_conseillers","Q0.3_volume_accompagnes","Q1.1_publics","Q1.2_importance_publics","Q1.3_qualif_dominante",
@@ -280,7 +280,14 @@ h3.sec span{display:block;font-weight:400;font-size:12.5px;color:var(--mut);marg
 .grid{display:grid;gap:16px}.g4{grid-template-columns:repeat(4,minmax(0,1fr))}.g3{grid-template-columns:repeat(3,minmax(0,1fr))}.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
 @media(max-width:1024px){.g4{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:760px){.g4,.g3,.g2{grid-template-columns:1fr}}
-.card{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:15px;box-shadow:0 1px 3px rgba(0,0,0,.04);display:flex;flex-direction:column}
+.card{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:15px;box-shadow:0 1px 3px rgba(0,0,0,.04);display:flex;flex-direction:column;transition:transform .16s ease,box-shadow .16s ease}
+.card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(16,41,63,.10)}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.gauto .card{animation:rise .5s ease both}
+.gauto .card:nth-child(2){animation-delay:.05s}.gauto .card:nth-child(3){animation-delay:.1s}.gauto .card:nth-child(4){animation-delay:.15s}.gauto .card:nth-child(5){animation-delay:.2s}.gauto .card:nth-child(6){animation-delay:.25s}
+.gauge{height:9px;background:#e9eef3;border-radius:6px;overflow:hidden;margin-top:10px}
+.gauge>span{display:block;height:100%;background:linear-gradient(90deg,#0b6e99,#2e8b57);border-radius:6px;width:0;transition:width .9s cubic-bezier(.2,.8,.2,1)}
+.gscale{display:flex;justify-content:space-between;font-size:10px;color:#9aa7b4;margin-top:3px}
 .card h3{margin:0 0 2px;font-size:14.5px;line-height:1.3}
 .card .note{color:var(--mut);font-size:11.5px;margin:0 0 8px}
 .metric{text-align:center;justify-content:center}
@@ -348,7 +355,9 @@ const C={ent:'#1f4e79',of:'#2e8b57',act:'#c55a11',syn:'#7030a0'};
 const COL={entreprises:'#1f4e79',of:'#2e8b57',acteurs:'#c55a11',syndicats:'#7030a0'};
 const PAL=['#1f4e79','#2e8b57','#c55a11','#7030a0','#0b6e99','#b8860b','#8d6e63','#557','#3b7','#a55'];
 Chart.defaults.font.family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif";Chart.defaults.font.size=12;Chart.defaults.color="#33414f";Chart.defaults.plugins.legend.display=false;
+Chart.defaults.animation.duration=850;Chart.defaults.animation.easing='easeOutQuart';
 const fmt=v=>(v==null?'—':String(v).replace('.',','));
+const fmt1=v=>(v==null?'—':Number(v).toFixed(1).replace('.',','));  // toujours 1 décimale
 function Q(c,k){return (SV.donnees_colleges[c]||{}).questions[k];}
 function lbl(s){s=String(s);for(let i=0;i<2;i++)s=s.replace(/^\s*Q[0-9][0-9.]*[a-z]?\s*[—–-]\s*/,'');return s;}
 function shorten(s,n){s=String(s);return s.length>(n||34)?s.slice(0,(n||34)-1)+'…':s;}
@@ -369,18 +378,20 @@ function vbar(id,labels,data,colors,max,suf){const ch=new Chart(document.getElem
 function dough(id,labels,data,colors){new Chart(document.getElementById(id),{type:'doughnut',data:{labels,datasets:[{data,backgroundColor:colors,borderWidth:2,borderColor:'#fff'}]},options:{responsive:true,maintainAspectRatio:false,cutout:'56%',plugins:{legend:{display:true,position:'bottom',labels:{boxWidth:11,font:{size:10.5}}},tooltip:{callbacks:{label:c=>' '+c.label+' : '+c.parsed}}}}});}
 function radar(id,labels,data,col){new Chart(document.getElementById(id),{type:'radar',data:{labels,datasets:[{data,backgroundColor:col+'2e',borderColor:col,borderWidth:2,pointBackgroundColor:col,pointRadius:3}]},options:{responsive:true,maintainAspectRatio:false,scales:{r:{min:0,max:5,ticks:{stepSize:1,font:{size:9}},pointLabels:{font:{size:9.5}}}},plugins:{tooltip:{callbacks:{label:c=>' '+fmt(c.parsed.r)}}}}});}
 function battChart(id,a,col){const sf=a[0]&&a[0].sans_financeur;
- if(sf){new Chart(document.getElementById(id),{type:'bar',data:{labels:a.map(x=>x.item),datasets:[{label:'Les 7',data:a.map(x=>x.moyenne),backgroundColor:col,borderRadius:4,maxBarThickness:16},{label:'Sans le financeur',data:a.map(x=>x.sans_financeur?x.sans_financeur.moyenne:null),backgroundColor:col+'66',borderRadius:4,maxBarThickness:16}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,scales:{x:{beginAtZero:true,max:5,grid:{color:'#eef2f7'}},y:{grid:{display:false},ticks:{font:{size:10}}}},plugins:{legend:{display:true,position:'bottom',labels:{boxWidth:11,font:{size:10.5}}},tooltip:{callbacks:{label:c=>' '+c.dataset.label+' : '+fmt(c.parsed.x)}}}}});}
+ if(sf){new Chart(document.getElementById(id),{type:'bar',data:{labels:a.map(x=>x.item),datasets:[{label:'Les 7 organismes',data:a.map(x=>x.moyenne),backgroundColor:col,borderRadius:4,maxBarThickness:16},{label:'Sans l\'organisme acheteur (non-formateur)',data:a.map(x=>x.sans_financeur?x.sans_financeur.moyenne:null),backgroundColor:col+'66',borderRadius:4,maxBarThickness:16}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,scales:{x:{beginAtZero:true,max:5,grid:{color:'#eef2f7'}},y:{grid:{display:false},ticks:{font:{size:10}}}},plugins:{legend:{display:true,position:'bottom',labels:{boxWidth:11,font:{size:10.5}}},tooltip:{callbacks:{label:c=>' '+c.dataset.label+' : '+fmt(c.parsed.x)}}}}});}
  else hbar(id,a.map(x=>x.item),a.map(x=>x.moyenne),col,5);}
 function verbList(arr,n){const sk=/^(ras|na|n\/a|ne sait pas|non renseign|pas de remarque|pas de partage|aucun|aucune|0)\.?$/i;
  const v=(arr||[]).filter(x=>x&&!sk.test(x.trim())&&x.trim().length>14).slice(0,n);
  return v.length?('<div style="margin-top:8px">'+v.map(x=>`<div class="verb">« ${x} »</div>`).join('')+'</div>'):'';}
 // auto render by type
-function auto(c,k){const d=Q(c,k);if(!d)return '';const cm=COMMENTS[c+'|'+k]||'';const t=d.type,id=nid(),col=COL[c],title=lbl(d.intitule);
- if(t==='echelle_1_5'){const sf=d.sans_financeur?`<br>sans le financeur : <b>${fmt(d.sans_financeur.moyenne)}</b>/5 (n=${d.sans_financeur.n})`:'';
-   return card(title,'Note moyenne sur 5',`<div class="bigrow"><div class="big">${fmt(d.moyenne)}<span>/5</span></div><div class="bigmeta">médiane ${fmt(d.mediane)} · mini ${d.min} · maxi ${d.max}<br>${d.n} répondants${sf}</div></div>`,cm);}
- if(t==='numerique'){const s2=d.sans_plus_gros?`<br>sans le plus gros employeur : <b>${fmt(d.sans_plus_gros.somme)}</b> (médiane ${fmt(d.sans_plus_gros.mediane)})`:'';
-   const nn=d.n_non_numerique_exclus?` · ${d.n_non_numerique_exclus} réponse(s) non chiffrable(s)`:'';
-   return card(title,'Total déclaré',`<div class="bigrow"><div class="big">${fmt(d.somme)}</div><div class="bigmeta">total cumulé · médiane ${fmt(d.mediane)} · ${d.n} réponses${nn}${s2}</div></div>`,cm);}
+function auto(c,k){const d=Q(c,k);if(!d)return '';const cm=COMMENTS[c+'|'+k]||'';const t=d.type,id=nid(),col=COL[c],title=lbl(d.intitule||k);
+ if(t==='echelle_1_5'){const sf=d.sans_financeur?`<br>hors organisme acheteur (non-formateur) : <b>${fmt(d.sans_financeur.moyenne)}</b>/5`:'';
+   const gid=nid();CQ.push(()=>{const e=document.getElementById(gid);if(e)e.style.width=(d.moyenne/5*100)+'%';});
+   return card(title,'Note moyenne sur 5',`<div class="bigrow"><div class="big">${fmt(d.moyenne)}<span>/5</span></div><div class="bigmeta">médiane ${fmt(d.mediane)} · mini ${d.min} · maxi ${d.max}<br>${d.n} répondants${sf}</div></div><div class="gauge"><span id="${gid}"></span></div><div class="gscale"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span></div>`,cm);}
+ if(t==='numerique'){const n=(d.n!=null?d.n:d.n_numerique);const s2=d.sans_plus_gros?`<br>sans le plus gros employeur : <b>${fmt(d.sans_plus_gros.somme)}</b> (médiane ${fmt(d.sans_plus_gros.mediane)})`:'';
+   const nnx=(d.n_non_numerique_exclus!=null?d.n_non_numerique_exclus:(d.valeurs_non_numeriques?d.valeurs_non_numeriques.length:0));
+   const nn=nnx?` · ${nnx} réponse(s) non chiffrable(s)`:'';
+   return card(title,'Total déclaré',`<div class="bigrow"><div class="big">${fmt(d.somme)}</div><div class="bigmeta">total cumulé · médiane ${fmt(d.mediane)} · ${n} réponses${nn}${s2}</div></div>`,cm);}
  if(t==='choix_unique'){const m=d.modalites;CQ.push(()=>dough(id,m.map(x=>shorten(x.modalite,30)+' ('+x.n+')'),m.map(x=>x.n),PAL));
    return card(title,'Répartition des '+d.n_repondants+' réponses',chCanvas(id),cm);}
  if(t==='multi_select'){const a=d.modalites.filter(x=>x.n>0);CQ.push(()=>hbar(id,a.map(x=>x.modalite),a.map(x=>x.pct_repondants),col,100,'%'));
@@ -436,7 +447,7 @@ BUILD.synthese=function(){const host=document.getElementById('p-synthese');const
  <div class="grid g4">${metricCard(co.entreprises.n,'Entreprises')}${metricCard(co.of.n,'Organismes de formation')}${metricCard(co.acteurs.n,"Acteurs de l'emploi")}${metricCard(co.syndicats.n,'Syndicats / orga pro')}</div>
  <div class="card" style="margin-top:16px"><h3>Les 4 plus grands écarts de perception entre acteurs</h3><p class="note">Moyennes 1-5. Plus les barres d'un même thème sont éloignées, plus les acteurs divergent.</p>${chCanvas('c-top',true)}</div>
  <div class="grid g3" style="margin-top:16px">
- ${metricCard(fmt(offre.of)+' vs '+fmt(offre.acteurs),"Offre de formation : vue par les OF vs les acteurs de l'emploi",'écart de perception majeur (~2 pts)')}
+ ${metricCard(fmt1(offre.of)+' vs '+fmt1(offre.acteurs),"Offre de formation : note des OF vs note des acteurs de l'emploi (sur 5)",'écart de perception majeur (~2 pts)')}
  ${metricCard(seniors+' %','de salariés de 45 ans et + (entreprises)','enjeu de transmission')}
  ${metricCard(fmt(afest),'AFEST : maîtrise dans les entreprises (1-5)','dispositif quasi inexistant')}
  ${metricCard(fmt(imgV),'Image du territoire notée par les entreprises (1-5)','jamais supérieure à 3')}
@@ -511,7 +522,7 @@ BUILD.plan4=function(){document.getElementById('p-plan4').innerHTML=`<div class=
  <div class="card"><p style="font-size:13px">L'<b>observatoire (A2)</b> alimente l'attractivité (A1), la pré-qualification (A6) et les compétences de demain (A3). L'<b>animation (A7)</b> conditionne la réussite de tous les autres axes. La <b>mobilité (A5)</b> est un prérequis transversal à l'accès à l'emploi et à la formation.</p></div>`;};
 BUILD.met=function(){const m=SV.donnees_colleges;document.getElementById('p-met').innerHTML=`<div class="banner">Comment ce diagnostic a été produit, et ses limites — en toute transparence.</div><h2 class="pt">Méthode &amp; repères</h2>
  <div class="grid g2"><div class="card"><h3>Périmètre &amp; principe</h3><p style="font-size:13px"><b>42 répondants</b> : 21 entreprises, 7 organismes de formation, 7 acteurs de l'emploi, 7 syndicats/organisations professionnelles. Analyse <b>agrégée et anonyme</b> (jamais structure par structure ; aucun nom ; verbatims anonymisés). Choix multiples comptés par mot-clé. Chiffres <b>vérifiés par un audit de traçabilité</b> (recalcul depuis les fichiers sources).</p></div>
- <div class="card"><h3>Prudence statistique</h3><p style="font-size:13px">Trois collèges à <b>n=7</b> : résultats en <b>tendances</b>. <b>Effet de poids</b> : un employeur ≈ la moitié de l'effectif → effectif & pyramide donnés <b>avec/sans</b>. <b>Collège formation</b> : un financeur non-formateur → capacités données <b>avec/sans</b>. Données <b>déclaratives</b> (auto-évaluations à pondérer).</p></div></div>
+ <div class="card"><h3>Prudence statistique</h3><p style="font-size:13px">Trois collèges à <b>n=7</b> : résultats en <b>tendances</b>. <b>Effet de poids</b> : un employeur ≈ la moitié de l'effectif → effectif & pyramide donnés <b>avec/sans</b>. <b>Collège formation</b> : l'un des 7 organismes achète des formations sans en dispenser (non-formateur) — il tire les moyennes de capacité vers le bas, d'où la mention « avec / sans ». Données <b>déclaratives</b> (auto-évaluations à pondérer).</p></div></div>
  <div class="card" style="margin-top:16px"><h3>Glossaire</h3><dl class="glo" style="font-size:13px;columns:2;column-gap:24px">
  <dt>GPECT</dt><dd>Gestion Prévisionnelle des Emplois et des Compétences, à l'échelle d'un Territoire.</dd>
  <dt>OF</dt><dd>Organisme de formation.</dd><dt>AFEST</dt><dd>Action de Formation En Situation de Travail (se former en travaillant, encadré).</dd>

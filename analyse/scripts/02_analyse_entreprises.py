@@ -340,7 +340,7 @@ def theme_count(idx, themes):
         mask = s.str.contains("|".join(pats), case=False, regex=True, na=False)
         out.append({"theme": lab, "n": int(mask.sum()), "pct": r1(100*mask.sum()/n)})
     out = sorted(out, key=lambda x: x["n"], reverse=True)
-    return {"n_repondants": n, "themes": out}
+    return {"intitule": str(cols[idx]), "n_repondants": n, "themes": out}
 
 R["questions"]["Q3.1_metiers_cles_themes"] = {"qid": "Q3.1", "type": "texte_libre_code",
     **theme_count(24, {
