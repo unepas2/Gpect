@@ -1,0 +1,537 @@
+FEUILLES : ['Réponses au formulaire 1']
+
+DIMENSIONS BRUTES : 7 lignes x 88 colonnes
+Lignes 100% vides : 0 
+APRÈS retrait vides : 7 x 88 | doublons stricts : 0
+
+=== COLONNES (index | remplissage | intitulé) ===
+[00]  7/7 | Horodateur
+[01]  7/7 | J'ai pris connaissance que les informations recueillies sont confidentielles et ne seront utilisées que pour les besoins de l'étude GPECT.
+[02]  7/7 | Je consens à ce que mes données soient collectées et traitées de manière anonyme dans le cadre de cette démarche GPECT territoriale.
+[03]  7/7 | Q0.0 — Nom de l'entreprise / structure ?
+[04]  7/7 | Q0.1 — Quel type de structure représentez-vous ?
+[05]  7/7 | Q0.2 — Combien de conseillers ou chargés d’accompagnement travaillent dans votre structure ?
+[06]  7/7 | Q0.3 — Combien de personnes votre structure accompagne-t-elle en moyenne chaque année ?
+[07]  7/7 | Q1.1 — Parmi les publics suivants, lesquels accompagnez-vous au cours des 12 derniers mois ?
+[08]  7/7 | Q1.2 — Quelle est l’importance de chacun de ces publics dans votre activité d’accompagnement ? [Jeunes de moins de 26 ans]
+[09]  7/7 | Q1.2 — Quelle est l’importance de chacun de ces publics dans votre activité d’accompagnement ? [Seniors de 50 ans et plus]
+[10]  7/7 | Q1.2 — Quelle est l’importance de chacun de ces publics dans votre activité d’accompagnement ? [Publics issus des QPV]
+[11]  7/7 | Q1.2 — Quelle est l’importance de chacun de ces publics dans votre activité d’accompagnement ? [Travailleurs handicapés]
+[12]  7/7 | Q1.2 — Quelle est l’importance de chacun de ces publics dans votre activité d’accompagnement ? [Personnes en reconversion professionnelle]
+[13]  7/7 | Q1.2 — Quelle est l’importance de chacun de ces publics dans votre activité d’accompagnement ? [Demandeurs d’emploi longue durée]
+[14]  7/7 | Q1.2 — Quelle est l’importance de chacun de ces publics dans votre activité d’accompagnement ? [Réfugiés / primo-arrivants]
+[15]  7/7 | Q1.3 — Quel est le niveau de qualification dominant parmi les publics que vous accompagnez ?
+[16]  7/7 | Q2.1 — Dans quelle mesure les profils des candidats que vous accompagnez correspondent-ils aux besoins actuels des entreprises du territoire ?
+[17]  7/7 | Q2.2 — Dans quelle mesure chacun des facteurs suivants explique-t-il l’inadéquation entre les candidats disponibles et les besoins des entreprises ? [Manque de compétences techniques]
+[18]  7/7 | Q2.2 — Dans quelle mesure chacun des facteurs suivants explique-t-il l’inadéquation entre les candidats disponibles et les besoins des entreprises ? [Manque de savoir-être professionnel]
+[19]  7/7 | Q2.2 — Dans quelle mesure chacun des facteurs suivants explique-t-il l’inadéquation entre les candidats disponibles et les besoins des entreprises ? [Manque de mobilité ou de transport]
+[20]  7/7 | Q2.2 — Dans quelle mesure chacun des facteurs suivants explique-t-il l’inadéquation entre les candidats disponibles et les besoins des entreprises ? [Contraintes horaires ou organisation du travail]
+[21]  7/7 | Q2.2 — Dans quelle mesure chacun des facteurs suivants explique-t-il l’inadéquation entre les candidats disponibles et les besoins des entreprises ? [Image négative des métiers industriels]
+[22]  7/7 | Q2.2 — Dans quelle mesure chacun des facteurs suivants explique-t-il l’inadéquation entre les candidats disponibles et les besoins des entreprises ? [Prétentions salariales trop élevées]
+[23]  7/7 | Q2.2 — Dans quelle mesure chacun des facteurs suivants explique-t-il l’inadéquation entre les candidats disponibles et les besoins des entreprises ? [Manque de certifications ou habilitations]
+[24]  7/7 | Q3.1 — Selon votre expérience, à quel niveau les entreprises du territoire rencontrent-elles des difficultés pour trouver les compétences suivantes ? [Usinage et mécanique industrielle]
+[25]  7/7 | Q3.1 — Selon votre expérience, à quel niveau les entreprises du territoire rencontrent-elles des difficultés pour trouver les compétences suivantes ? [Maintenance industrielle]
+[26]  7/7 | Q3.1 — Selon votre expérience, à quel niveau les entreprises du territoire rencontrent-elles des difficultés pour trouver les compétences suivantes ? [Programmation de machines CNC ou robots]
+[27]  7/7 | Q3.1 — Selon votre expérience, à quel niveau les entreprises du territoire rencontrent-elles des difficultés pour trouver les compétences suivantes ? [Qualité industrielle et métrologie]
+[28]  7/7 | Q3.1 — Selon votre expérience, à quel niveau les entreprises du territoire rencontrent-elles des difficultés pour trouver les compétences suivantes ? [Logistique industrielle et supply chain]
+[29]  7/7 | Q3.1 — Selon votre expérience, à quel niveau les entreprises du territoire rencontrent-elles des difficultés pour trouver les compétences suivantes ? [Numérique industriel (ERP, GPAO, data)]
+[30]  7/7 | Q3.1 — Selon votre expérience, à quel niveau les entreprises du territoire rencontrent-elles des difficultés pour trouver les compétences suivantes ? [CAO / DAO et lecture de plans techniques]
+[31]  7/7 | Q3.1 — Selon votre expérience, à quel niveau les entreprises du territoire rencontrent-elles des difficultés pour trouver les compétences suivantes ? [Compétences liées à la transition énergétique]
+[32]  7/7 | Q3.1 — Selon votre expérience, à quel niveau les entreprises du territoire rencontrent-elles des difficultés pour trouver les compétences suivantes ? [Sécurité et prévention des risques industriels]
+[33]  7/7 | Q3.1 — Selon votre expérience, à quel niveau les entreprises du territoire rencontrent-elles des difficultés pour trouver les compétences suivantes ? [Conduite de véhicules ou d’engins (CACES, SPL…)]
+[34]  7/7 | Q3.1 — Selon votre expérience, à quel niveau les entreprises du territoire rencontrent-elles des difficultés pour trouver les compétences suivantes ? [Compétences commerciales et relation client]
+[35]  7/7 | Q3.1 — Selon votre expérience, à quel niveau les entreprises du territoire rencontrent-elles des difficultés pour trouver les compétences suivantes ? [Management d’équipe]
+[36]  7/7 | Q4.1 — Selon vous, dans quelle mesure chacun des facteurs suivants constitue-t-il un frein à l’accès à l’emploi industriel sur le territoire ? [Mobilité et accès aux transports]
+[37]  7/7 | Q4.1 — Selon vous, dans quelle mesure chacun des facteurs suivants constitue-t-il un frein à l’accès à l’emploi industriel sur le territoire ? [Accès au logement]
+[38]  7/7 | Q4.1 — Selon vous, dans quelle mesure chacun des facteurs suivants constitue-t-il un frein à l’accès à l’emploi industriel sur le territoire ? [Garde d’enfants]
+[39]  7/7 | Q4.1 — Selon vous, dans quelle mesure chacun des facteurs suivants constitue-t-il un frein à l’accès à l’emploi industriel sur le territoire ? [Accès aux soins et à la santé]
+[40]  7/7 | Q4.1 — Selon vous, dans quelle mesure chacun des facteurs suivants constitue-t-il un frein à l’accès à l’emploi industriel sur le territoire ? [Niveau de qualification insuffisant]
+[41]  7/7 | Q4.1 — Selon vous, dans quelle mesure chacun des facteurs suivants constitue-t-il un frein à l’accès à l’emploi industriel sur le territoire ? [Difficultés avec les compétences de base (lecture, écriture, numérique)]
+[42]  7/7 | Q4.1 — Selon vous, dans quelle mesure chacun des facteurs suivants constitue-t-il un frein à l’accès à l’emploi industriel sur le territoire ? [Image des métiers industriels]
+[43]  7/7 | Q4.1 — Selon vous, dans quelle mesure chacun des facteurs suivants constitue-t-il un frein à l’accès à l’emploi industriel sur le territoire ? [Difficulté d’intégration en entreprise]
+[44]  7/7 | Q5.1 — Dans quelle mesure utilisez-vous les dispositifs suivants pour accompagner les publics vers les métiers de l’industrie ? [POEI]
+[45]  7/7 | Q5.1 — Dans quelle mesure utilisez-vous les dispositifs suivants pour accompagner les publics vers les métiers de l’industrie ? [PMSMP]
+[46]  7/7 | Q5.1 — Dans quelle mesure utilisez-vous les dispositifs suivants pour accompagner les publics vers les métiers de l’industrie ? [Formation qualifiante]
+[47]  7/7 | Q5.1 — Dans quelle mesure utilisez-vous les dispositifs suivants pour accompagner les publics vers les métiers de l’industrie ? [Parcours individualisés]
+[48]  7/7 | Q5.2 — Selon votre expérience, quel est le niveau d’efficacité des dispositifs suivants pour favoriser l’accès à l’emploi industriel ? [POEI]
+[49]  7/7 | Q5.2 — Selon votre expérience, quel est le niveau d’efficacité des dispositifs suivants pour favoriser l’accès à l’emploi industriel ? [PMSMP]
+[50]  7/7 | Q5.2 — Selon votre expérience, quel est le niveau d’efficacité des dispositifs suivants pour favoriser l’accès à l’emploi industriel ? [Formation qualifiante]
+[51]  7/7 | Q5.2 — Selon votre expérience, quel est le niveau d’efficacité des dispositifs suivants pour favoriser l’accès à l’emploi industriel ? [Parcours individualisés]
+[52]  7/7 | Q5.3 — Quelle est généralement la durée des emplois obtenus par les personnes après la mobilisation de ces dispositifs ?
+[53]  7/7 | Q6.1 — Dans quelle mesure l’offre de formation locale répond-elle aux besoins des entreprises industrielles du territoire ?
+[54]  7/7 | Q6.2 — Dans quelle mesure les domaines suivants présentent-ils un manque de formation sur le territoire ? [Maintenance industrielle]
+[55]  7/7 | Q6.2 — Dans quelle mesure les domaines suivants présentent-ils un manque de formation sur le territoire ? [Usinage / mécanique]
+[56]  7/7 | Q6.2 — Dans quelle mesure les domaines suivants présentent-ils un manque de formation sur le territoire ? [Logistique industrielle]
+[57]  7/7 | Q6.2 — Dans quelle mesure les domaines suivants présentent-ils un manque de formation sur le territoire ? [Robotique / cobotique]
+[58]  7/7 | Q6.2 — Dans quelle mesure les domaines suivants présentent-ils un manque de formation sur le territoire ? [Industrie 4.0 / intelligence artificielle]
+[59]  7/7 | Q6.2 — Dans quelle mesure les domaines suivants présentent-ils un manque de formation sur le territoire ? [Management industriel]
+[60]  7/7 | Q6.2 — Dans quelle mesure les domaines suivants présentent-ils un manque de formation sur le territoire ? [Savoir-être]
+[61]  7/7 | Q6.2 — Dans quelle mesure les domaines suivants présentent-ils un manque de formation sur le territoire ? [Sécurité industrielle]
+[62]  7/7 | Q6.2 — Dans quelle mesure les domaines suivants présentent-ils un manque de formation sur le territoire ? [Métiers du transport routier]
+[63]  7/7 | Q6.2 — Dans quelle mesure les domaines suivants présentent-ils un manque de formation sur le territoire ? [Exploitation transport]
+[64]  7/7 | Q6.2 — Dans quelle mesure les domaines suivants présentent-ils un manque de formation sur le territoire ? [Affrètement et logistique transport]
+[65]  7/7 | Q7.1 — Comment évaluez-vous le niveau de coopération actuel entre votre structure et les entreprises industrielles du territoire ? [Qualité des relations avec les entreprises]
+[66]  7/7 | Q7.1 — Comment évaluez-vous le niveau de coopération actuel entre votre structure et les entreprises industrielles du territoire ? [Anticipation des besoins de recrutement]
+[67]  7/7 | Q7.1 — Comment évaluez-vous le niveau de coopération actuel entre votre structure et les entreprises industrielles du territoire ? [Construction de parcours sur mesure]
+[68]  7/7 | Q7.1 — Comment évaluez-vous le niveau de coopération actuel entre votre structure et les entreprises industrielles du territoire ? [Partage d’informations sur les compétences attendues]
+[69]  7/7 | Q7.1 — Comment évaluez-vous le niveau de coopération actuel entre votre structure et les entreprises industrielles du territoire ? [Suivi des candidats après leur intégration]
+[70]  7/7 | Q8.1 — Selon vous, dans quelle mesure chacune des actions suivantes est-elle importante pour améliorer l’emploi industriel et l’attractivité économique du bassin d’Issoudun ? [Plateforme de recrutement mutualisée]
+[71]  7/7 | Q8.1 — Selon vous, dans quelle mesure chacune des actions suivantes est-elle importante pour améliorer l’emploi industriel et l’attractivité économique du bassin d’Issoudun ? [Parcours de pré-qualification industrielle]
+[72]  7/7 | Q8.1 — Selon vous, dans quelle mesure chacune des actions suivantes est-elle importante pour améliorer l’emploi industriel et l’attractivité économique du bassin d’Issoudun ? [Formations courtes pour les métiers en tension]
+[73]  7/7 | Q8.1 — Selon vous, dans quelle mesure chacune des actions suivantes est-elle importante pour améliorer l’emploi industriel et l’attractivité économique du bassin d’Issoudun ? [Solutions territoriales de mobilité]
+[74]  7/7 | Q8.1 — Selon vous, dans quelle mesure chacune des actions suivantes est-elle importante pour améliorer l’emploi industriel et l’attractivité économique du bassin d’Issoudun ? [Campagnes de communication sur les métiers industriels]
+[75]  7/7 | Q8.1 — Selon vous, dans quelle mesure chacune des actions suivantes est-elle importante pour améliorer l’emploi industriel et l’attractivité économique du bassin d’Issoudun ? [Mutualisation d’actions entre entreprises]
+[76]  7/7 | Q8.2 — Dans quelle mesure votre structure serait-elle prête à participer ou contribuer aux actions collectives territoriales suivantes ? [Plateforme de recrutement mutualisée pour le bassin d'Issoudun]
+[77]  7/7 | Q8.2 — Dans quelle mesure votre structure serait-elle prête à participer ou contribuer aux actions collectives territoriales suivantes ? [Actions de promotion des métiers industriels auprès des lycéens et collégiens]
+[78]  7/7 | Q8.2 — Dans quelle mesure votre structure serait-elle prête à participer ou contribuer aux actions collectives territoriales suivantes ? [Visites d'entreprises et journées portes ouvertes coordonnées]
+[79]  7/7 | Q8.2 — Dans quelle mesure votre structure serait-elle prête à participer ou contribuer aux actions collectives territoriales suivantes ? [Campagne de communication commune sur les atouts du territoire]
+[80]  7/7 | Q8.2 — Dans quelle mesure votre structure serait-elle prête à participer ou contribuer aux actions collectives territoriales suivantes ? [Groupement d'employeurs pour partager des salariés à temps partagé]
+[81]  7/7 | Q8.2 — Dans quelle mesure votre structure serait-elle prête à participer ou contribuer aux actions collectives territoriales suivantes ? [Ateliers inter-entreprises sur les bonnes pratiques RH]
+[82]  7/7 | Q8.2 — Dans quelle mesure votre structure serait-elle prête à participer ou contribuer aux actions collectives territoriales suivantes ? [Aucune participation envisagée à ce stade]
+[83]  7/7 | Q8.3 — Dans quelle mesure votre structure serait-elle intéressée pour participer aux ateliers de travail suivants dans le cadre de la démarche GPECT ? [Atelier métiers sensibles]
+[84]  7/7 | Q8.3 — Dans quelle mesure votre structure serait-elle intéressée pour participer aux ateliers de travail suivants dans le cadre de la démarche GPECT ? [Atelier attractivité et recrutement]
+[85]  7/7 | Q8.3 — Dans quelle mesure votre structure serait-elle intéressée pour participer aux ateliers de travail suivants dans le cadre de la démarche GPECT ? [Atelier ingénierie pédagogique]
+[86]  7/7 | Q8.3 — Dans quelle mesure votre structure serait-elle intéressée pour participer aux ateliers de travail suivants dans le cadre de la démarche GPECT ? [Atelier transmission des savoir-faire]
+[87]  7/7 | Q8.3 — Dans quelle mesure votre structure serait-elle intéressée pour participer aux ateliers de travail suivants dans le cadre de la démarche GPECT ? [Atelier industrie 4.0]
+
+=== APERÇU valeurs (contrôle décalage) ===
+[00] 'Horodateur'
+       - 2026-03-07 19:37:31.329000
+       - 2026-03-30 10:59:49.336000
+       - 2026-03-31 14:51:05.324000
+       - 2026-03-31 15:47:56.128000
+[01] "J'ai pris connaissance que les informations recueillies"
+       - Oui, j'en prends acte
+       - Oui, j'en prends acte
+       - Oui, j'en prends acte
+       - Oui, j'en prends acte
+[02] 'Je consens à ce que mes données soient collectées et tr'
+       - Oui, je consens
+       - Oui, je consens
+       - Oui, je consens
+       - Oui, je consens
+[03] "Q0.0 — Nom de l'entreprise / structure ?"
+       - France travail
+       - MANPOWER
+       - TRIANGLE - FLORENCE JENNETIOT
+       - ADECCO
+[04] 'Q0.1 — Quel type de structure représentez-vous ?'
+       - France Travail
+       - Agence d’intérim
+       - Agence d’intérim
+       - Agence d’intérim
+[05] 'Q0.2 — Combien de conseillers ou chargés d’accompagneme'
+       - 6 à 10 conseillers
+       - 1 à 5 conseillers
+       - 1 à 5 conseillers
+       - 1 à 5 conseillers
+[06] 'Q0.3 — Combien de personnes votre structure accompagne-'
+       - 1000 à 3000 personnes
+       - 100 à 500 personnes
+       - Moins de 100 personnes
+       - 100 à 500 personnes
+[07] 'Q1.1 — Parmi les publics suivants, lesquels accompagnez'
+       - Jeunes de moins de 26 ans, Seniors de 50 ans et plus, Publics issus de
+       - Jeunes de moins de 26 ans, Seniors de 50 ans et plus, Travailleurs han
+       - Jeunes de moins de 26 ans, Seniors de 50 ans et plus, Personnes en rec
+       - Jeunes de moins de 26 ans, Seniors de 50 ans et plus, Publics issus de
+[08] 'Q1.2 — Quelle est l’importance de chacun de ces publics'
+       - 3
+       - 4
+       - 5
+       - 5
+[09] 'Q1.2 — Quelle est l’importance de chacun de ces publics'
+       - 4
+       - 4
+       - 4
+       - 5
+[10] 'Q1.2 — Quelle est l’importance de chacun de ces publics'
+       - 3
+       - 1
+       - 1
+       - 5
+[11] 'Q1.2 — Quelle est l’importance de chacun de ces publics'
+       - 3
+       - 2
+       - 1
+       - 5
+[12] 'Q1.2 — Quelle est l’importance de chacun de ces publics'
+       - 3
+       - 3
+       - 3
+       - 5
+[13] 'Q1.2 — Quelle est l’importance de chacun de ces publics'
+       - 4
+       - 1
+       - 1
+       - 5
+[14] 'Q1.2 — Quelle est l’importance de chacun de ces publics'
+       - 5
+       - 1
+       - 1
+       - 5
+[15] 'Q1.3 — Quel est le niveau de qualification dominant par'
+       - CAP / BEP
+       - CAP / BEP
+       - CAP / BEP
+       - Bac
+[16] 'Q2.1 — Dans quelle mesure les profils des candidats que'
+       - 3
+       - 2
+       - 4
+       - 3
+[17] 'Q2.2 — Dans quelle mesure chacun des facteurs suivants '
+       - 5
+       - 4
+       - 4
+       - 5
+[18] 'Q2.2 — Dans quelle mesure chacun des facteurs suivants '
+       - 4
+       - 4
+       - 3
+       - 3
+[19] 'Q2.2 — Dans quelle mesure chacun des facteurs suivants '
+       - 3
+       - 3
+       - 4
+       - 4
+[20] 'Q2.2 — Dans quelle mesure chacun des facteurs suivants '
+       - 4
+       - 4
+       - 2
+       - 3
+[21] 'Q2.2 — Dans quelle mesure chacun des facteurs suivants '
+       - 4
+       - 3
+       - 1
+       - 2
+[22] 'Q2.2 — Dans quelle mesure chacun des facteurs suivants '
+       - 3
+       - 1
+       - 4
+       - 2
+[23] 'Q2.2 — Dans quelle mesure chacun des facteurs suivants '
+       - 4
+       - 5
+       - 4
+       - 3
+[24] 'Q3.1 — Selon votre expérience, à quel niveau les entrep'
+       - 5
+       - 5
+       - 4
+       - 5
+[25] 'Q3.1 — Selon votre expérience, à quel niveau les entrep'
+       - 5
+       - 5
+       - 5
+       - 5
+[26] 'Q3.1 — Selon votre expérience, à quel niveau les entrep'
+       - 5
+       - 5
+       - 5
+       - 5
+[27] 'Q3.1 — Selon votre expérience, à quel niveau les entrep'
+       - 4
+       - 4
+       - 4
+       - 3
+[28] 'Q3.1 — Selon votre expérience, à quel niveau les entrep'
+       - 3
+       - 3
+       - 2
+       - 3
+[29] 'Q3.1 — Selon votre expérience, à quel niveau les entrep'
+       - 5
+       - 3
+       - 3
+       - 3
+[30] 'Q3.1 — Selon votre expérience, à quel niveau les entrep'
+       - 5
+       - 5
+       - 4
+       - 4
+[31] 'Q3.1 — Selon votre expérience, à quel niveau les entrep'
+       - 5
+       - 3
+       - 5
+       - 2
+[32] 'Q3.1 — Selon votre expérience, à quel niveau les entrep'
+       - 3
+       - 3
+       - 5
+       - 2
+[33] 'Q3.1 — Selon votre expérience, à quel niveau les entrep'
+       - 2
+       - 3
+       - 2
+       - 3
+[34] 'Q3.1 — Selon votre expérience, à quel niveau les entrep'
+       - 4
+       - 3
+       - 4
+       - 2
+[35] 'Q3.1 — Selon votre expérience, à quel niveau les entrep'
+       - 4
+       - 5
+       - 4
+       - 3
+[36] 'Q4.1 — Selon vous, dans quelle mesure chacun des facteu'
+       - 4
+       - 2
+       - 4
+       - 5
+[37] 'Q4.1 — Selon vous, dans quelle mesure chacun des facteu'
+       - 4
+       - 1
+       - 1
+       - 3
+[38] 'Q4.1 — Selon vous, dans quelle mesure chacun des facteu'
+       - 3
+       - 1
+       - 1
+       - 1
+[39] 'Q4.1 — Selon vous, dans quelle mesure chacun des facteu'
+       - 4
+       - 5
+       - 1
+       - 1
+[40] 'Q4.1 — Selon vous, dans quelle mesure chacun des facteu'
+       - 5
+       - 5
+       - 5
+       - 4
+[41] 'Q4.1 — Selon vous, dans quelle mesure chacun des facteu'
+       - 3
+       - 4
+       - 2
+       - 4
+[42] 'Q4.1 — Selon vous, dans quelle mesure chacun des facteu'
+       - 5
+       - 4
+       - 1
+       - 1
+[43] 'Q4.1 — Selon vous, dans quelle mesure chacun des facteu'
+       - 4
+       - 4
+       - 1
+       - 3
+[44] 'Q5.1 — Dans quelle mesure utilisez-vous les dispositifs'
+       - 4
+       - 5
+       - 1
+       - 5
+[45] 'Q5.1 — Dans quelle mesure utilisez-vous les dispositifs'
+       - 4
+       - 5
+       - 1
+       - 4
+[46] 'Q5.1 — Dans quelle mesure utilisez-vous les dispositifs'
+       - 1
+       - 5
+       - 4
+       - 5
+[47] 'Q5.1 — Dans quelle mesure utilisez-vous les dispositifs'
+       - 1
+       - 5
+       - 1
+       - 5
+[48] 'Q5.2 — Selon votre expérience, quel est le niveau d’eff'
+       - 3
+       - 5
+       - 2
+       - 4
+[49] 'Q5.2 — Selon votre expérience, quel est le niveau d’eff'
+       - 4
+       - 4
+       - 2
+       - 2
+[50] 'Q5.2 — Selon votre expérience, quel est le niveau d’eff'
+       - 3
+       - 4
+       - 5
+       - 5
+[51] 'Q5.2 — Selon votre expérience, quel est le niveau d’eff'
+       - 2
+       - 4
+       - 5
+       - 5
+[52] 'Q5.3 — Quelle est généralement la durée des emplois obt'
+       - 4
+       - 5
+       - 3
+       - 5
+[53] 'Q6.1 — Dans quelle mesure l’offre de formation locale r'
+       - 2
+       - 2
+       - 2
+       - 3
+[54] 'Q6.2 — Dans quelle mesure les domaines suivants présent'
+       - 5
+       - 5
+       - 5
+       - 5
+[55] 'Q6.2 — Dans quelle mesure les domaines suivants présent'
+       - 5
+       - 5
+       - 5
+       - 5
+[56] 'Q6.2 — Dans quelle mesure les domaines suivants présent'
+       - 3
+       - 1
+       - 3
+       - 3
+[57] 'Q6.2 — Dans quelle mesure les domaines suivants présent'
+       - 5
+       - 5
+       - 5
+       - 5
+[58] 'Q6.2 — Dans quelle mesure les domaines suivants présent'
+       - 5
+       - 1
+       - 5
+       - 5
+[59] 'Q6.2 — Dans quelle mesure les domaines suivants présent'
+       - 4
+       - 1
+       - 5
+       - 5
+[60] 'Q6.2 — Dans quelle mesure les domaines suivants présent'
+       - 3
+       - 1
+       - 3
+       - 5
+[61] 'Q6.2 — Dans quelle mesure les domaines suivants présent'
+       - 4
+       - 1
+       - 4
+       - 3
+[62] 'Q6.2 — Dans quelle mesure les domaines suivants présent'
+       - 4
+       - 5
+       - 2
+       - 2
+[63] 'Q6.2 — Dans quelle mesure les domaines suivants présent'
+       - 5
+       - 5
+       - 5
+       - 2
+[64] 'Q6.2 — Dans quelle mesure les domaines suivants présent'
+       - 3
+       - 5
+       - 2
+       - 2
+[65] 'Q7.1 — Comment évaluez-vous le niveau de coopération ac'
+       - 3
+       - 5
+       - 5
+       - 5
+[66] 'Q7.1 — Comment évaluez-vous le niveau de coopération ac'
+       - 2
+       - 5
+       - 4
+       - 5
+[67] 'Q7.1 — Comment évaluez-vous le niveau de coopération ac'
+       - 1
+       - 2
+       - 2
+       - 5
+[68] 'Q7.1 — Comment évaluez-vous le niveau de coopération ac'
+       - 4
+       - 4
+       - 5
+       - 5
+[69] 'Q7.1 — Comment évaluez-vous le niveau de coopération ac'
+       - 4
+       - 2
+       - 5
+       - 5
+[70] 'Q8.1 — Selon vous, dans quelle mesure chacune des actio'
+       - 1
+       - 2
+       - 2
+       - 1
+[71] 'Q8.1 — Selon vous, dans quelle mesure chacune des actio'
+       - 4
+       - 3
+       - 5
+       - 4
+[72] 'Q8.1 — Selon vous, dans quelle mesure chacune des actio'
+       - 4
+       - 5
+       - 5
+       - 3
+[73] 'Q8.1 — Selon vous, dans quelle mesure chacune des actio'
+       - 4
+       - 5
+       - 5
+       - 3
+[74] 'Q8.1 — Selon vous, dans quelle mesure chacune des actio'
+       - 4
+       - 4
+       - 5
+       - 3
+[75] 'Q8.1 — Selon vous, dans quelle mesure chacune des actio'
+       - 5
+       - 4
+       - 5
+       - 1
+[76] 'Q8.2 — Dans quelle mesure votre structure serait-elle p'
+       - 3
+       - 1
+       - 1
+       - 3
+[77] 'Q8.2 — Dans quelle mesure votre structure serait-elle p'
+       - 3
+       - 5
+       - 3
+       - 3
+[78] 'Q8.2 — Dans quelle mesure votre structure serait-elle p'
+       - 2
+       - 5
+       - 5
+       - 4
+[79] 'Q8.2 — Dans quelle mesure votre structure serait-elle p'
+       - 5
+       - 5
+       - 5
+       - 4
+[80] 'Q8.2 — Dans quelle mesure votre structure serait-elle p'
+       - 4
+       - 2
+       - 1
+       - 4
+[81] 'Q8.2 — Dans quelle mesure votre structure serait-elle p'
+       - 5
+       - 5
+       - 4
+       - 3
+[82] 'Q8.2 — Dans quelle mesure votre structure serait-elle p'
+       - 1
+       - 1
+       - 1
+       - 1
+[83] 'Q8.3 — Dans quelle mesure votre structure serait-elle i'
+       - 3
+       - 5
+       - 5
+       - 4
+[84] 'Q8.3 — Dans quelle mesure votre structure serait-elle i'
+       - 2
+       - 5
+       - 5
+       - 4
+[85] 'Q8.3 — Dans quelle mesure votre structure serait-elle i'
+       - 4
+       - 5
+       - 3
+       - 1
+[86] 'Q8.3 — Dans quelle mesure votre structure serait-elle i'
+       - 1
+       - 5
+       - 4
+       - 3
+[87] 'Q8.3 — Dans quelle mesure votre structure serait-elle i'
+       - 3
+       - 5
+       - 5
+       - 1
