@@ -1,0 +1,10 @@
+# Donnees sources brutes (contiennent noms/emails/tel = NE JAMAIS committer)
+data/*.xlsx
+data/*.xls
+data/*.csv
+*.xlsx
+*.xls
+# Garder la structure des dossiers
+!.gitkeep
+__pycache__/
+*.pyc
