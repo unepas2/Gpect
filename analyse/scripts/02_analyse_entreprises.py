@@ -112,6 +112,9 @@ R["questions"]["Q0.8_statut"] = cat_counts(10, "Q0.8",
 
 # ===================== Q1 — PROFIL =====================
 R["questions"]["Q1.1_secteur"] = cat_counts(11, "Q1.1")
+R["questions"]["Q1.2_autre_secteur"] = {"qid":"Q1.2","type":"texte_libre","intitule":str(cols[12]),
+    "n_repondants":int(df[cols[12]].notna().sum()),
+    "verbatims_anonymises":[str(v).strip() for v in df[cols[12]].dropna().tolist()]}
 R["questions"]["Q1.3_effectif_tranche"] = cat_counts(13, "Q1.3")
 R["questions"]["Q1.4_effectif_inscrit"] = numeric_stats(14, "Q1.4",
     with_without_top=True, top_idx=SAFRAN_IDX)

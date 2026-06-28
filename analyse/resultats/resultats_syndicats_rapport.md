@@ -1,9 +1,9 @@
 # GPECT Issoudun — Résultats collège SYNDICATS / ORGANISATIONS PROFESSIONNELLES
 
-*Source : 574f81cd-04_syndicats.xlsx.xlsx — 2026-04/05 (collecte) / export 2026-06-28 · n=7 · généré 2026-06-28 15:57 UTC*
+*Source : 574f81cd-04_syndicats.xlsx.xlsx — 2026-04/05 (collecte) / export 2026-06-28 · n=7 · généré 2026-06-28 16:39 UTC*
 
 > ⚠️ n=7, dominante qualitative : thèmes + verbatims, aucune généralisation.
-> Composition interne : 3 patronales (CPME/UIMM/MEDEF), 2 syndicats salariés (CGT/CFE-CGC), 2 consulaires (CCI/CMA). Agrégé sur 7. Familles = grille de lecture qualitative interne, sans chiffrage par famille (anonymat à n=2-3).
+> Composition interne : 3 organisations patronales, 2 syndicats de salariés, 2 organismes consulaires (chambres). Agrégé sur 7. Familles = grille de lecture qualitative interne, sans chiffrage par famille (anonymat à n=2-3).
 
 *Chiffres : `analyse/scripts/11_analyse_syndicats.py`. Anonyme (SY01–SY07).*
 
@@ -15,16 +15,14 @@
 | Modalité | n | % |
 |---|--:|--:|
 | Organisation professionnelle / syndicale | 5 | 71.4 |
-| CCI Indre | 1 | 14.3 |
-| Organisation consulaire / représentation des artisans | 1 | 14.3 |
+| Organisation consulaire | 2 | 28.6 |
 
 **Q05 — Territoire principalement couvert** · choix unique · n=7
 
 | Modalité | n | % |
 |---|--:|--:|
 | Département | 5 | 71.4 |
-| Intercommunalité | 1 | 14.3 |
-| Communauté de Communes du Pays d'Issoudun (12 communes) | 1 | 14.3 |
+| Intercommunalité | 2 | 28.6 |
 
 **Q06 — Dynamique économique du bassin (1 faible→5 forte)** · échelle 1-5 · n=7 · moy 2.9 · méd 3.0 · éc-type 0.4 · [2-3]
 
@@ -50,7 +48,7 @@
 - « La capacité foncière professionnelle, axe routier nord sud gratuit, aéroport, »
 - « Proximité entre pouvoirs publics et entreprises ; tissu industriel fortement implanté »
 - « Réseau pour l'emploi / Coordination des acteurs / Réseau autoroutier / Data Center Miroir / Captation Porteur de projet »
-- « Tissu d'entreprises plus diversifié qu'il n'y paraît au-delà de Safran/Vuitton (Trigano, Tech Demi, ST Lizaine…) ; bons résultats d'insertion en apprentissage dans certains secteurs (automobile notamment) »
+- « Tissu d'entreprises plus diversifié qu'il n'y paraît au-delà de deux grands donneurs d'ordre (une entreprise locale, une entreprise locale, une entreprise locale…) ; bons résultats d'insertion en apprentissage dans certains secteurs (automobile notamment) »
 
 **Q09 — Selon vous, quels sont les principaux freins ou fragilités pour le développement des entreprises industrielles ?** · texte libre codé · n=7
 
@@ -69,7 +67,7 @@
 *Verbatims (anonymisés) :*
 - « Transport, pb réseau routier en transversal, Méconnaissance du territoire, logement, démographie vieillissante, désertification médicale ,niveau de qualification des demandeurs d'emploi »
 - « Difficulté de recrutement, accès de transport »
-- « Dévalorisation des métiers manuels / fermeture des Afpa / Niveau global de formation des demandeurs  d'emplois »
+- « Dévalorisation des métiers manuels / fermeture des un organisme de formation national / Niveau global de formation des demandeurs  d'emplois »
 - « Les banques qui suivent pas les projets. Les compétences non présentent sur le territoire. La fiscalité hors norme sur le département. Manque de transfert générationnel. Modernisation de l'outil de travail. Industrie métallurgique de sous-traitance. »
 - « Accessibilité du territoire (train, voiture) ; puissance électrique insuffisante (coupures fréquentes, nouvelle ligne HT nécessaire) ; ressources humaines / main d'œuvre »
 - « Capter des candidatures qualifiés et non qualifiés/ Le politique/ Mille feuille de structure »
@@ -164,18 +162,18 @@
 | Débouchés / concurrence CFA | 2 | 28.6 |
 | Éducation nationale / orientation / présentation métiers | 1 | 14.3 |
 | Méconnaissance des OF | 1 | 14.3 |
-| Disparition AFPA / report sur AFPI | 1 | 14.3 |
+| Disparition d'organismes (réseau national → branches) | 1 | 14.3 |
 | Lenteur administrative / financement / valeur des diplômes | 1 | 14.3 |
 | Tutorat / concertation amont entreprises-OF | 1 | 14.3 |
 
 *Verbatims (anonymisés) :*
 - « Education nationale qui ne présente pas les métiers, formation qui ne débouchent pas sur des emplois »
 - « Pas de connaissances sur les OF »
-- « Perte des Afpa au profit des Afpi. »
+- « Perte des un organisme de formation national au profit des un organisme de formation de branche. »
 - « Travailler sur le tutorat, concertation amont entre les entreprises et les organismes de formations »
 - « Lenteur administrative, financement ; perte de la valeur des diplômes »
 - « Difficultés de formation en interne des stagiaires/Difficulté d'intégration lors de l'entrée en formation »
-- « Maintenir les effectifs sur la durée du cursus une fois la première promotion lancée (sections qui s'équilibrent difficilement en dessous de 5-7 élèves, au-delà desquels la Région cesse d'accompagner) ; concurrence d'autres CFA selon les filières (BTP, UIMM) »
+- « Maintenir les effectifs sur la durée du cursus une fois la première promotion lancée (sections qui s'équilibrent difficilement en dessous de 5-7 élèves, au-delà desquels la Région cesse d'accompagner) ; concurrence d'autres CFA selon les filières (BTP, une branche professionnelle) »
 
 **Q16 — Quelles évolutions de l’offre de formation vous semblent prioritaires pour les 3 prochaines années ?** · texte libre codé · n=7
 
@@ -190,7 +188,7 @@
 
 *Verbatims (anonymisés) :*
 - « Apprentissage, difficultés pour les jeunes de trouver une alternance »
-- « Ecole de formation interne à Safran + Ecole SAFRAN Université »
+- « Ecole de formation interne à un grand groupe + l'école interne d'un grand groupe »
 - « Formation interne, formation des tuteurs »
 - « Apprentissage et la formation professionnelle. Contrat professionnalisation »
 - « Formation intensive, augmentation du niveau, renforcement des compétences de base »
@@ -256,7 +254,7 @@
 - « Anxiété des entreprises sur le cahier de commandes pour les pmi. »
 - « Manque de ressources internes et multitude de sollicitations »
 - « Manque de temps / Sursollicitation »
-- « Perception d'autarcie historique du tissu industriel d'Issoudun ; difficulté déjà rencontrée par d'autres acteurs (ex. collecte des Restos du Cœur) ; sentiment de "mainmise" institutionnelle de longue date sur le territoire, indépendant de la volonté des élus locaux actuels »
+- « Perception d'autarcie historique du tissu industriel d'Issoudun ; difficulté déjà rencontrée par d'autres acteurs (ex. collecte d'une association caritative) ; sentiment de "mainmise" institutionnelle de longue date sur le territoire, indépendant de la volonté des élus locaux actuels »
 
 **Q22 — Quels formats d’animation seraient les plus susceptibles de mobiliser les entreprises ?** · texte libre codé · n=7
 
@@ -352,7 +350,7 @@
 - « Ne sait pas »
 - « RAS »
 - « RAS »
-- « Que l'uimm soit partie prenante de la démarches et travailler ensemble »
+- « Que l'une branche professionnelle soit partie prenante de la démarches et travailler ensemble »
 - « Avoir les résultats de l'enquête ; identifier les besoins des entreprises, l'offre de formation et la main d'œuvre disponible (données France Travail) ; restitution « électro-choc » »
 - « RAS »
 - « Propositions très "pratico-pratiques" à horizon 2-5 ans maximum ; actions concrètes permettant aux entreprises locales de trouver main-d'œuvre et compétences, en incluant les artisans sous-traitants de l'industrie (et pas seulement les grands donneurs d'ordre) »
@@ -364,9 +362,9 @@
 - « ras »
 - « RAS »
 - « ras »
-- « Rencontrer les parlementaires après la restitution (Alix Fouchon) »
+- « Rencontrer les parlementaires après la restitution »
 - « RAS »
-- « Sujet de la restauration collective comme frein indirect à l'attractivité (absence de cantine chez Safran/Vuitton avec 2000+ salariés, crainte des artisans-traiteurs de perdre leur clientèle si une offre collective se mettait en place — projet étudiant/Leclerc évoqué comme piste) ; passerelles possibles entre artisanat et industrie via la sous-traitance, à ne pas négliger dans le diagnostic »
+- « Sujet de la restauration collective comme frein indirect à l'attractivité (absence de cantine chez deux grands donneurs d'ordre avec 2000+ salariés, crainte des artisans-traiteurs de perdre leur clientèle si une offre collective se mettait en place — projet étudiant/une enseigne de distribution évoqué comme piste) ; passerelles possibles entre artisanat et industrie via la sous-traitance, à ne pas négliger dans le diagnostic »
 
 
 ## Récapitulatif — échelles 1-5

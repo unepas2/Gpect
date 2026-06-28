@@ -4,7 +4,7 @@
     "n_repondants": 7,
     "source": "677aa4a6-02_organismes_formation.xlsx.xlsx",
     "source_date": "2026-04/05 (collecte) / export 2026-06-28",
-    "genere_le": "2026-06-28 15:40 UTC",
+    "genere_le": "2026-06-28 16:39 UTC",
     "financeur_non_dispensateur_ligne_interne": 6,
     "note_option_B": "Questions OF-spécifiques calculées AVEC 7 et SANS financeur (n=6).",
     "avertissement": "n=7 : aucune généralisation. Effectifs bruts prioritaires sur les %."
@@ -1699,6 +1699,15 @@
         }
       ]
     },
+    "Q5.6_conditions_evolution": {
+      "qid": "Q5.6",
+      "type": "texte_libre",
+      "intitule": "Q5.6 — Si sous conditions, précisez lesquelles (financières, partenariales, réglementaires…)",
+      "n_repondants": 1,
+      "verbatims_anonymises": [
+        "ACCORD DU RECTORAT"
+      ]
+    },
     "Q6.1_cooperation": {
       "qid": "Q6.1",
       "type": "echelle_1_5",
@@ -1830,6 +1839,18 @@
           "n": 1,
           "pct": 14.3
         }
+      ]
+    },
+    "Q6.5_role_actions_collectives": {
+      "qid": "Q6.5",
+      "type": "texte_libre",
+      "intitule": "Q6.5 — Si oui, lesquelles et quel a été votre rôle ?",
+      "n_repondants": 4,
+      "verbatims_anonymises": [
+        "BLOIS SPRO",
+        "RENCONTRE",
+        "Groupe de travail",
+        "Connaissance et suivi institutionnel des démarches existantes\nPas de pilotage direct de sa part"
       ]
     },
     "Q7.1_freins_offre": {
@@ -2013,6 +2034,16 @@
           "n": 1,
           "pct": 14.3
         }
+      ]
+    },
+    "Q8.4_formations_manquantes": {
+      "qid": "Q8.4",
+      "type": "texte_libre",
+      "intitule": "Q8.4 — Si oui, dans quels domaines ? (formations manquantes)",
+      "n_repondants": 2,
+      "verbatims_anonymises": [
+        "AIDE A LA PERSONNE, PETITE ENFANCE",
+        "NUMERIQUE"
       ]
     },
     "Q8.5_transfo_internes": {
@@ -2413,6 +2444,18 @@
         "Actions de communication/ valorisation du territoire et des métiers en tension",
         "ATTRACTIVITE DU TERRITOIRE",
         "Que l'animateur GPECT se rende directement en entreprise pour vulgariser la démarche (« prendre son bâton de pèlerin »), en commençant par des outils simples : pyramide des âges, compétences clés"
+      ]
+    },
+    "Q11.2_acteur_associer": {
+      "qid": "Q11.2",
+      "type": "texte_libre",
+      "intitule": "Q11.2 — Y a-t-il une entreprise ou un acteur local que vous recommanderiez d'associer à cette démarche ?",
+      "n_repondants": 4,
+      "verbatims_anonymises": [
+        "ETT/FRACE TRAVAIL",
+        "RAS",
+        "RAS",
+        "une branche professionnelle ; une branche professionnelle — groupe technique industrie"
       ]
     },
     "Q11.3_souhaite_synthese": {

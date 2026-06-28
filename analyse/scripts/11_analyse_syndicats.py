@@ -15,14 +15,39 @@ OUT_MD="/home/user/Gpect/analyse/resultats/resultats_syndicats_rapport.md"
 df=pd.read_excel(PATH,engine="openpyxl",dtype=object); c=list(df.columns); N=len(df)
 assert N==7, f"PÉRIMÈTRE {N}!=7"
 
+# --- Anonymisation des verbatims : aucun nom de tiers/personne dans les livrables ---
+_ANON=[
+ (re.compile(r"ecole\s+safran\s+universit[eé]",re.I),"l'école interne d'un grand groupe"),
+ (re.compile(r"interne\s+à\s+safran",re.I),"interne à un grand groupe"),
+ (re.compile(r"safran\s*/\s*vuitton",re.I),"deux grands donneurs d'ordre"),
+ (re.compile(r"\b(safran|vuitton)\b",re.I),"un grand groupe industriel"),
+ (re.compile(r"\b(trigano|tech\s*demi|st\s*lizaine)\b",re.I),"une entreprise locale"),
+ (re.compile(r"\bleclerc\b",re.I),"une enseigne de distribution"),
+ (re.compile(r"\b(manpower|adecco|triangle)\b",re.I),"une agence d'intérim"),
+ (re.compile(r"\bafpa\b",re.I),"un organisme de formation national"),
+ (re.compile(r"\bafpi\b",re.I),"un organisme de formation de branche"),
+ (re.compile(r"\buimm\b",re.I),"une branche professionnelle"),
+ (re.compile(r"\b(cpme|medef)\b",re.I),"une organisation patronale"),
+ (re.compile(r"\bcpe\b\s*\(branche m[eé]tallurgie\)",re.I),"une branche professionnelle"),
+ (re.compile(r"des\s+restos\s+du\s+c[oœ]ur",re.I),"d'une association caritative"),
+ (re.compile(r"restos\s+du\s+c[oœ]ur",re.I),"une association caritative"),
+ (re.compile(r"\s*\(alix\s+fouchon\)",re.I),""),
+]
+def anon(t):
+    t=str(t)
+    for p,r in _ANON: t=p.sub(r,t)
+    return t
+
 def r1(x): return None if x is None or (isinstance(x,float) and np.isnan(x)) else round(float(x),1)
 def scale(idx,qid,lab):
     s=pd.to_numeric(df[c[idx]],errors="coerce").dropna()
     return {"qid":qid,"item":lab,"type":"echelle_1_5","intitule":str(c[idx]),"n":int(s.shape[0]),
             "moyenne":r1(s.mean()),"mediane":r1(s.median()),"min":int(s.min()),"max":int(s.max()),
             "ecart_type":r1(s.std(ddof=1)) if s.shape[0]>1 else None}
-def cat(idx,qid):
-    s=df[c[idx]].dropna(); n=int(s.shape[0]); vc=s.value_counts()
+def cat(idx,qid,norm=None):
+    s=df[c[idx]].dropna()
+    if norm: s=s.map(norm)
+    n=int(s.shape[0]); vc=s.value_counts()
     return {"qid":qid,"type":"choix_unique","intitule":str(c[idx]),"n_repondants":n,
             "modalites":[{"modalite":str(k),"n":int(v),"pct":r1(100*v/n)} for k,v in vc.items()]}
 def multi(idx,qid,mods):
@@ -39,22 +64,25 @@ def theme(idx,qid,themes):
         out.append({"theme":lab,"n":int(mask.sum()),"pct":r1(100*mask.sum()/n)})
     out=sorted(out,key=lambda x:x["n"],reverse=True)
     return {"qid":qid,"type":"texte_libre_code","intitule":str(c[idx]),"n_repondants":n,
-            "themes":out,"verbatims_anonymises":[str(v).strip() for v in df[c[idx]].dropna().tolist()]}
+            "themes":out,"verbatims_anonymises":[anon(str(v).strip()) for v in df[c[idx]].dropna().tolist()]}
 def verb(idx,qid):
     return {"qid":qid,"type":"texte_libre","intitule":str(c[idx]),
             "n_repondants":int(df[c[idx]].notna().sum()),
-            "verbatims_anonymises":[str(v).strip() for v in df[c[idx]].dropna().tolist()]}
+            "verbatims_anonymises":[anon(str(v).strip()) for v in df[c[idx]].dropna().tolist()]}
 
 R={"_meta":{"college":"Syndicats / organisations professionnelles","n_repondants":N,
     "source":PATH.split("/")[-1],"source_date":"2026-04/05 (collecte) / export 2026-06-28",
     "genere_le":datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
-    "composition_interne":"3 patronales (CPME/UIMM/MEDEF), 2 syndicats salariés (CGT/CFE-CGC), 2 consulaires (CCI/CMA)",
+    "composition_interne":"3 organisations patronales, 2 syndicats de salariés, 2 organismes consulaires (chambres)",
     "note_option_1":"Agrégé sur 7. Familles = grille de lecture qualitative interne, sans chiffrage par famille (anonymat à n=2-3).",
     "avertissement":"n=7, dominante qualitative : thèmes + verbatims, aucune généralisation."},
    "questions":{}}
 q=R["questions"]
-q["Q04_type_acteur"]=cat(4,"Q04")
-q["Q05_territoire"]=cat(5,"Q05")
+_norm04=lambda x:("Organisation consulaire" if ("cci" in str(x).lower() or "consulaire" in str(x).lower())
+                  else ("Organisation professionnelle / syndicale" if "professionnelle" in str(x).lower() else str(x)))
+_norm05=lambda x:("Intercommunalité" if "commun" in str(x).lower() else str(x))
+q["Q04_type_acteur"]=cat(4,"Q04",norm=_norm04)
+q["Q05_territoire"]=cat(5,"Q05",norm=_norm05)
 q["Q06_dynamique_eco"]=scale(6,"Q06","Dynamique économique du bassin (1 faible→5 forte)")
 q["Q07_coordination_acteurs"]=scale(7,"Q07","Coordination entre acteurs économiques (1→5)")
 q["Q08_atouts"]=theme(8,"Q08",{
@@ -110,7 +138,7 @@ q["Q14_offre_adaptee"]=cat(14,"Q14")
 q["Q15_freins_formation"]=theme(15,"Q15",{
     "Éducation nationale / orientation / présentation métiers": [r"[eé]ducation nationale", r"pr[eé]sente pas", r"orientation"],
     "Méconnaissance des OF": [r"connaissance.*OF", r"pas de connaissances sur les OF"],
-    "Disparition AFPA / report sur AFPI": [r"afpa", r"afpi"],
+    "Disparition d'organismes (réseau national → branches)": [r"afpa", r"afpi"],
     "Lenteur administrative / financement / valeur des diplômes": [r"administ", r"financ", r"valeur des dipl"],
     "Tutorat / concertation amont entreprises-OF": [r"tutorat", r"concertation", r"amont"],
     "Intégration / maintien en formation / effectifs": [r"int[eé]gration", r"effectifs", r"promotion", r"cursus", r"stagiaires"],

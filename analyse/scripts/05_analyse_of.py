@@ -20,6 +20,28 @@ FIN = list(df.index[df[cols[9]].astype(str).str.contains("Collectivit|financeur"
 FIN_IDX = FIN[0] if FIN else None
 disp_idx = [i for i in df.index if i != FIN_IDX]  # dispensateurs
 
+_ANON=[
+ (re.compile(r"ecole\s+safran\s+universit[eé]",re.I),"l'école interne d'un grand groupe"),
+ (re.compile(r"interne\s+à\s+safran",re.I),"interne à un grand groupe"),
+ (re.compile(r"safran\s*/\s*vuitton",re.I),"deux grands donneurs d'ordre"),
+ (re.compile(r"\b(safran|vuitton)\b",re.I),"un grand groupe industriel"),
+ (re.compile(r"\b(trigano|tech\s*demi|st\s*lizaine)\b",re.I),"une entreprise locale"),
+ (re.compile(r"\bleclerc\b",re.I),"une enseigne de distribution"),
+ (re.compile(r"\b(manpower|adecco|triangle)\b",re.I),"une agence d'intérim"),
+ (re.compile(r"\bafpa\b",re.I),"un organisme de formation national"),
+ (re.compile(r"\bafpi\b",re.I),"un organisme de formation de branche"),
+ (re.compile(r"\buimm\b",re.I),"une branche professionnelle"),
+ (re.compile(r"\b(cpme|medef)\b",re.I),"une organisation patronale"),
+ (re.compile(r"\bcpe\b\s*\(branche m[eé]tallurgie\)",re.I),"une branche professionnelle"),
+ (re.compile(r"des\s+restos\s+du\s+c[oœ]ur",re.I),"d'une association caritative"),
+ (re.compile(r"restos\s+du\s+c[oœ]ur",re.I),"une association caritative"),
+ (re.compile(r"\s*\(alix\s+fouchon\)",re.I),""),
+]
+def anon(t):
+    t=str(t)
+    for p,r in _ANON: t=p.sub(r,t)
+    return t
+
 def r1(x): return None if x is None or (isinstance(x,float) and np.isnan(x)) else round(float(x),1)
 
 def scale_one(idx, idx_list):
@@ -73,7 +95,7 @@ def numeric_text(idx, qid):
 def verbatims(idx, qid):
     return {"qid":qid,"type":"texte_libre","intitule":str(cols[idx]),
             "n_repondants":int(df[cols[idx]].notna().sum()),
-            "verbatims_anonymises":[str(v).strip() for v in df[cols[idx]].dropna().tolist()]}
+            "verbatims_anonymises":[anon(str(v).strip()) for v in df[cols[idx]].dropna().tolist()]}
 
 R={"_meta":{"college":"Organismes de formation","n_repondants":N,
     "source":PATH.split("/")[-1],"source_date":"2026-04/05 (collecte) / export 2026-06-28",
@@ -149,6 +171,7 @@ q["Q5.4_formes_adaptation"]=multi_counts(64,"Q5.4",[
     ("Intervention en entreprise","Intervention directement"),("Co-animation avec professionnels","Co-animation"),
     ("Aucune adaptation réalisée","Aucune adaptation")])
 q["Q5.5_pret_evoluer"]=cat_counts(65,"Q5.5")
+q["Q5.6_conditions_evolution"]=verbatims(66,"Q5.6")  # précision (n faible)
 # Q6
 q["Q6.1_cooperation"]=scale_stats(67,"Q6.1",with_without=True)
 q["Q6.2_acteurs"]=multi_counts(68,"Q6.2",[
@@ -162,6 +185,7 @@ q["Q6.3_formes_coop"]=multi_counts(70,"Q6.3",[
     ("Recrutement direct en sortie","Recrutement direct"),("Suivi de cohortes / insertion","Suivi de cohortes"),
     ("Comités de pilotage / instances","Comités de pilotage")])
 q["Q6.4_actions_collectives"]=cat_counts(71,"Q6.4")
+q["Q6.5_role_actions_collectives"]=verbatims(72,"Q6.5")  # précision (n faible)
 # Q7
 q["Q7.1_freins_offre"]=multi_counts(73,"Q7.1",[
     ("Manque de financements ingénierie","financements pour l'ingénierie"),
@@ -193,6 +217,7 @@ q["Q8.2_domaines_evolutions"]=multi_counts(77,"Q8.2",[
     ("Transmission des savoir-faire / tutorat","Transmission des savoir-faire"),
     ("Anglais / compétences transversales","Anglais")])
 q["Q8.3_nouvelles_formations"]=cat_counts(78,"Q8.3")
+q["Q8.4_formations_manquantes"]=verbatims(79,"Q8.4")  # précision (n faible)
 q["Q8.5_transfo_internes"]=multi_counts(80,"Q8.5",[
     ("Offre digitale / e-learning","digitale / e-learning"),
     ("Nouvelles filières / certifications","nouvelles filières"),
@@ -236,6 +261,7 @@ q["Q10.3_actions_attractivite"]=multi_counts(93,"Q10.3",[
     ("Pas d'intérêt","pas d'intérêt")])
 # Q11
 q["Q11.1_action_utile"]=verbatims(94,"Q11.1")
+q["Q11.2_acteur_associer"]=verbatims(95,"Q11.2")  # précision (n faible)
 q["Q11.3_souhaite_synthese"]=cat_counts(96,"Q11.3")
 q["Q11.4_observations"]=verbatims(97,"Q11.4")
 

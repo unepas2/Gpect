@@ -1,6 +1,6 @@
 # GPECT Issoudun — Résultats collège ORGANISMES DE FORMATION
 
-*Source : 677aa4a6-02_organismes_formation.xlsx.xlsx — 2026-04/05 (collecte) / export 2026-06-28 · n=7 · généré 2026-06-28 15:40 UTC*
+*Source : 677aa4a6-02_organismes_formation.xlsx.xlsx — 2026-04/05 (collecte) / export 2026-06-28 · n=7 · généré 2026-06-28 16:39 UTC*
 
 > ⚠️ n=7 : aucune généralisation. Effectifs bruts prioritaires sur les %.  
 > Questions OF-spécifiques calculées AVEC 7 et SANS financeur (n=6). Le financeur n'est jamais nommé.

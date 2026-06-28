@@ -1,6 +1,6 @@
 # GPECT Issoudun — SOURCE DE VÉRITÉ (analyse territoriale croisée)
 
-*Généré 2026-06-28 16:05 UTC · Construit uniquement à partir des 4 resultats_*.json. Écarts = max-min d'indicateurs déjà calculés. Agrégé, anonyme.*
+*Généré 2026-06-28 16:39 UTC · Construit uniquement à partir des 4 resultats_*.json. Écarts = max-min d'indicateurs déjà calculés. Agrégé, anonyme.*
 
 **Périmètre : 42 répondants** — Entreprises 21 · OF 7 · Acteurs emploi 7 · Syndicats 7.
 

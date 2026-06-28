@@ -4,7 +4,7 @@
     "n_repondants": 21,
     "source": "126d3b2d-01_entreprises.xlsx.xlsx",
     "source_date": "2026-03 (collecte) / export reçu 2026-06-28",
-    "genere_le": "2026-06-28 15:19 UTC",
+    "genere_le": "2026-06-28 16:35 UTC",
     "plus_gros_employeur_ligne_interne": 5,
     "regles": "agrégé, question par question, anonyme ; multi-select via contains ; n= explicite"
   },
@@ -77,6 +77,18 @@
           "n": 1,
           "pct": 4.8
         }
+      ]
+    },
+    "Q1.2_autre_secteur": {
+      "qid": "Q1.2",
+      "type": "texte_libre",
+      "intitule": "Q1.2 — Si autre secteur, précisez",
+      "n_repondants": 4,
+      "verbatims_anonymises": [
+        "Transport de voyages",
+        "ETIRAGE TUBE A FROID DE PRCISION",
+        "METALLURGIE - comptage gaz et liquides autres que l'eau",
+        "Production et vente de gants pour les electriciens"
       ]
     },
     "Q1.3_effectif_tranche": {
