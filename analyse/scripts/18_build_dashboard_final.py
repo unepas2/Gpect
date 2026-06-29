@@ -255,79 +255,93 @@ HTML = r"""<!DOCTYPE html>
 <html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>GPECT Issoudun — Diagnostic & Plan d'action</title>
 <style>
-:root{--ent:#1f4e79;--of:#2e8b57;--act:#c55a11;--syn:#7030a0;--ink:#15233a;--mut:#5b6b7d;--bg:#eef2f7;--card:#fff;--line:#e2e8f0;--accent:#0b6e99;--navh:54px;}
+:root{--ent:#1f4e79;--of:#2e8b57;--act:#c55a11;--syn:#7030a0;--ink:#16263d;--mut:#64748b;--bg:#eef3f8;--card:#fff;--line:#e6edf4;--accent:#0b6e99;--accent2:#1f4e79;--navh:54px;
+ --sh-sm:0 1px 2px rgba(16,41,63,.05);--sh-md:0 2px 10px rgba(16,41,63,.06);--sh-lg:0 16px 40px rgba(16,41,63,.14);--r:16px;}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:calc(var(--navh) + 10px)}
-body{margin:0;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55;overflow-x:hidden}
-header.top{background:linear-gradient(120deg,#10293f,#0b6e99 70%,#2e8b57);color:#fff;padding:18px clamp(14px,4vw,30px)}
-header.top h1{margin:0;font-size:clamp(17px,2.6vw,23px);font-weight:800;letter-spacing:.2px}
-header.top p{margin:5px 0 0;font-size:clamp(11px,1.6vw,13px);opacity:.92}
-nav{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.97);backdrop-filter:saturate(1.2) blur(6px);border-bottom:1px solid var(--line);
- display:flex;gap:2px;padding:6px clamp(8px,2vw,12px);box-shadow:0 2px 8px rgba(0,0,0,.07);overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:calc(var(--navh) + 14px)}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);
+ background:radial-gradient(1200px 600px at 80% -120px,#e2ecf6 0,rgba(226,236,246,0) 60%),linear-gradient(180deg,#eef3f8,#e9eff6 40%,#eaf0f6);background-attachment:fixed;
+ line-height:1.58;overflow-x:hidden;font-feature-settings:"kern","liga","tnum"}
+::selection{background:rgba(11,110,153,.18)}
+header.top{position:relative;overflow:hidden;background:linear-gradient(120deg,#0c2236 0,#0b6e99 62%,#2e8b57 120%);color:#fff;padding:clamp(20px,4vw,30px) clamp(16px,4vw,34px)}
+header.top::after{content:"";position:absolute;inset:0;background:radial-gradient(700px 240px at 88% -60px,rgba(255,255,255,.18),transparent 70%);pointer-events:none}
+header.top h1{margin:0;font-size:clamp(18px,2.7vw,25px);font-weight:800;letter-spacing:-.2px;line-height:1.2;position:relative}
+header.top p{margin:7px 0 0;font-size:clamp(11px,1.6vw,13.5px);opacity:.9;font-weight:500;position:relative}
+nav{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.82);backdrop-filter:saturate(1.4) blur(12px);-webkit-backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid var(--line);
+ display:flex;gap:3px;padding:8px clamp(8px,2vw,14px);box-shadow:0 4px 18px rgba(16,41,63,.06);overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
 nav::-webkit-scrollbar{height:5px}nav::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:4px}
-nav button{flex:0 0 auto;border:0;background:transparent;color:var(--mut);font-size:13px;font-weight:600;padding:9px 13px;border-radius:9px;cursor:pointer;white-space:nowrap;min-height:40px}
-nav button:hover{background:#eef2f7;color:var(--ink)}
-nav button.active{background:var(--accent);color:#fff;box-shadow:0 2px 6px rgba(11,110,153,.35)}
-nav .grp{align-self:center;color:#9aa7b4;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:0 6px 0 10px;border-left:1px solid var(--line);margin-left:4px}
-main{max-width:1200px;margin:0 auto;padding:clamp(14px,3vw,22px) clamp(12px,3vw,18px) 80px}
-.page{display:none;animation:fade .25s ease}.page.active{display:block}
-@keyframes fade{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
-.banner{background:linear-gradient(110deg,#fff,#f3f8fb);border-left:5px solid var(--accent);border-radius:12px;padding:14px 18px;margin:0 0 18px;box-shadow:0 1px 4px rgba(0,0,0,.05);font-size:clamp(13px,1.7vw,15px)}
+nav button{flex:0 0 auto;border:0;background:transparent;color:var(--mut);font-size:13px;font-weight:650;padding:9px 14px;border-radius:11px;cursor:pointer;white-space:nowrap;min-height:40px;letter-spacing:.1px;transition:background .2s,color .2s,box-shadow .2s,transform .12s}
+nav button:hover{background:#eef4f9;color:var(--ink)}
+nav button:active{transform:translateY(1px)}
+nav button.active{background:linear-gradient(135deg,#0b6e99,#1f4e79);color:#fff;box-shadow:0 4px 12px rgba(11,110,153,.38)}
+nav button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+nav .grp{align-self:center;color:#94a3b8;font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.7px;padding:0 8px 0 12px;border-left:1px solid var(--line);margin-left:5px}
+main{max-width:1220px;margin:0 auto;padding:clamp(16px,3vw,26px) clamp(12px,3vw,20px) 90px}
+.page{display:none}.page.active{display:block;animation:fade .34s cubic-bezier(.2,.7,.2,1)}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.banner{background:linear-gradient(115deg,#ffffff,#f1f7fb 90%);border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:14px;padding:15px 19px;margin:0 0 20px;box-shadow:var(--sh-md);font-size:clamp(13px,1.7vw,15px)}
 .banner b{color:var(--accent)}
-h2.pt{font-size:clamp(19px,2.6vw,24px);margin:0 0 3px}
-.sub{color:var(--mut);font-size:13px;margin:0 0 16px}
-h3.sec{font-size:16px;margin:26px 0 4px;padding-left:11px;border-left:4px solid var(--accent);color:#10293f}
-h3.sec span{display:block;font-weight:400;font-size:12.5px;color:var(--mut);margin-top:2px}
-.gauto{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:16px;margin-top:12px}
-.grid{display:grid;gap:16px}.g4{grid-template-columns:repeat(4,minmax(0,1fr))}.g3{grid-template-columns:repeat(3,minmax(0,1fr))}.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+h2.pt{font-size:clamp(20px,2.8vw,26px);margin:0 0 4px;font-weight:800;letter-spacing:-.4px}
+.sub{color:var(--mut);font-size:13.5px;margin:0 0 18px}
+h3.sec{position:relative;font-size:16.5px;font-weight:750;margin:30px 0 6px;padding-left:14px;color:#0e2740}
+h3.sec::before{content:"";position:absolute;left:0;top:2px;bottom:2px;width:4px;border-radius:4px;background:linear-gradient(180deg,#0b6e99,#2e8b57)}
+h3.sec span{display:block;font-weight:450;font-size:12.5px;color:var(--mut);margin-top:3px;padding-left:0}
+.gauto{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:18px;margin-top:14px}
+.grid{display:grid;gap:18px}.g4{grid-template-columns:repeat(4,minmax(0,1fr))}.g3{grid-template-columns:repeat(3,minmax(0,1fr))}.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
 @media(max-width:1024px){.g4{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:760px){.g4,.g3,.g2{grid-template-columns:1fr}}
-.card{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:15px;box-shadow:0 1px 3px rgba(0,0,0,.04);display:flex;flex-direction:column;transition:transform .16s ease,box-shadow .16s ease}
-.card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(16,41,63,.10)}
-@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
-.gauto .card{animation:rise .5s ease both}
+.card{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:17px;box-shadow:var(--sh-sm);display:flex;flex-direction:column;transition:transform .2s cubic-bezier(.2,.7,.2,1),box-shadow .2s ease,border-color .2s}
+.card:hover{transform:translateY(-4px);box-shadow:var(--sh-lg);border-color:#d4e2ee}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.gauto .card{animation:rise .55s cubic-bezier(.2,.7,.2,1) both}
 .gauto .card:nth-child(2){animation-delay:.05s}.gauto .card:nth-child(3){animation-delay:.1s}.gauto .card:nth-child(4){animation-delay:.15s}.gauto .card:nth-child(5){animation-delay:.2s}.gauto .card:nth-child(6){animation-delay:.25s}
-.gauge{height:9px;background:#e9eef3;border-radius:6px;overflow:hidden;margin-top:10px}
-.gauge>span{display:block;height:100%;background:linear-gradient(90deg,#0b6e99,#2e8b57);border-radius:6px;width:0;transition:width .9s cubic-bezier(.2,.8,.2,1)}
-.gscale{display:flex;justify-content:space-between;font-size:10px;color:#9aa7b4;margin-top:3px}
-.card h3{margin:0 0 2px;font-size:14.5px;line-height:1.3}
-.card .note{color:var(--mut);font-size:11.5px;margin:0 0 8px}
-.metric{text-align:center;justify-content:center}
-.metric .num{font-size:clamp(26px,5vw,34px);font-weight:800;line-height:1;color:#10293f}
-.metric .lab{font-size:12px;color:var(--mut);margin-top:6px}.metric small{display:block;color:var(--mut);font-size:11px;margin-top:4px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+.gauge{height:10px;background:#e9eef3;border-radius:8px;overflow:hidden;margin-top:11px;box-shadow:inset 0 1px 2px rgba(16,41,63,.08)}
+.gauge>span{display:block;height:100%;background:linear-gradient(90deg,#0b6e99,#2e8b57);border-radius:8px;width:0;transition:width 1s cubic-bezier(.2,.8,.2,1)}
+.gscale{display:flex;justify-content:space-between;font-size:10px;color:#9aa7b4;margin-top:4px}
+.card h3{margin:0 0 2px;font-size:14.5px;line-height:1.32;font-weight:700;letter-spacing:-.1px}
+.card .note{color:var(--mut);font-size:11.5px;margin:0 0 9px}
+.metric{text-align:center;justify-content:center;background:linear-gradient(180deg,#ffffff,#fbfdff)}
+.metric .num,.big{background:linear-gradient(135deg,#0b6e99,#16263d);-webkit-background-clip:text;background-clip:text;color:#10293f;-webkit-text-fill-color:transparent}
+.metric .num{font-size:clamp(27px,5vw,36px);font-weight:850;line-height:1;letter-spacing:-1px}
+.metric .lab{font-size:12px;color:var(--mut);margin-top:7px;font-weight:550}.metric small{display:block;color:var(--mut);font-size:11px;margin-top:5px;-webkit-text-fill-color:currentColor}
 .chartbox{position:relative;width:100%;height:clamp(250px,40vh,320px)}.chartbox.tall{height:clamp(320px,52vh,440px)}
 .bigrow{display:flex;align-items:center;gap:14px;padding:6px 2px}
-.big{font-size:40px;font-weight:800;color:#10293f;line-height:1}.big span{font-size:16px;color:var(--mut);font-weight:600}
+.big{font-size:42px;font-weight:850;line-height:1;letter-spacing:-1px}.big span{font-size:16px;color:var(--mut);font-weight:650;-webkit-text-fill-color:var(--mut)}
 .bigmeta{font-size:12px;color:var(--mut)}
-.lec{background:#f1f8ed;border-left:4px solid var(--of);border-radius:8px;padding:9px 12px;margin-top:10px;font-size:12.5px;color:#27412e}
+.lec{background:linear-gradient(120deg,#f1f8ed,#eef6f0);border:1px solid #dceed0;border-left:4px solid var(--of);border-radius:10px;padding:10px 13px;margin-top:11px;font-size:12.5px;color:#27412e}
 .lec b{color:#1e5b34}
-.verb{background:#f7f9fc;border-left:3px solid var(--syn);padding:7px 11px;border-radius:6px;font-style:italic;font-size:12.5px;margin:7px 0;color:#33414f}
-table.mx{width:100%;border-collapse:collapse;font-size:13px;background:#fff;border-radius:10px;overflow:hidden}
-table.mx th,table.mx td{border:1px solid var(--line);padding:9px 10px;text-align:center}
-table.mx th{background:#10293f;color:#fff}table.mx td.dim{text-align:left;font-weight:600}
-.ec{font-weight:800;border-radius:6px;padding:2px 8px;color:#fff;display:inline-block}
+.verb{background:#f7f9fc;border-left:3px solid var(--syn);padding:8px 12px;border-radius:8px;font-style:italic;font-size:12.5px;margin:7px 0;color:#33414f}
+table.mx{width:100%;border-collapse:separate;border-spacing:0;font-size:13px;background:#fff;border-radius:12px;overflow:hidden;box-shadow:var(--sh-sm)}
+table.mx th,table.mx td{border-bottom:1px solid var(--line);border-right:1px solid var(--line);padding:10px 11px;text-align:center}
+table.mx tr td:last-child,table.mx tr th:last-child{border-right:0}table.mx tr:last-child td{border-bottom:0}
+table.mx th{background:linear-gradient(135deg,#13314c,#0e2740);color:#fff;font-weight:650}table.mx td.dim{text-align:left;font-weight:650}
+table.mx tbody tr:nth-child(even){background:#f8fafc}table.mx tbody tr:hover{background:#eef5fa}
+.ec{font-weight:800;border-radius:7px;padding:2px 9px;color:#fff;display:inline-block}
 /* PLAN */
-.fiche{border-top:5px solid var(--accent)}
-.fhead{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-.fcode{background:var(--accent);color:#fff;font-weight:800;border-radius:8px;padding:3px 10px;font-size:14px}
-.fiche h3{font-size:16px;margin:0}
-.prio{margin-left:auto;font-size:11px;font-weight:700;padding:3px 9px;border-radius:20px;color:#fff}
+.fiche{border-top:5px solid transparent;border-image:linear-gradient(90deg,#0b6e99,#2e8b57) 1}
+.fhead{display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.fcode{background:linear-gradient(135deg,#0b6e99,#1f4e79);color:#fff;font-weight:800;border-radius:10px;padding:4px 12px;font-size:14px;box-shadow:0 2px 8px rgba(11,110,153,.3)}
+.fiche h3{font-size:16px;margin:0;font-weight:750}
+.prio{margin-left:auto;font-size:11px;font-weight:750;padding:4px 11px;border-radius:20px;color:#fff;letter-spacing:.2px}
 .prio.hi{background:#b3261e}.prio.mid{background:#d97706}.prio.qw{background:#2e8b57}
-.fhz{color:var(--mut);font-size:12px;margin:6px 0 4px}
-.fiche p{margin:8px 0 2px;font-size:13px}.fiche ul{margin:4px 0 6px;padding-left:18px;font-size:13px}
-table.kpi{width:100%;border-collapse:collapse;font-size:12.5px;margin:4px 0 2px}
-table.kpi th,table.kpi td{border:1px solid var(--line);padding:6px 8px;text-align:left}table.kpi th{background:#eef4f8}
-.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.fhz{color:var(--mut);font-size:12px;margin:7px 0 4px;font-weight:550}
+.fiche p{margin:8px 0 2px;font-size:13px}.fiche ul{margin:4px 0 6px;padding-left:18px;font-size:13px}.fiche li{margin:2px 0}
+table.kpi{width:100%;border-collapse:separate;border-spacing:0;font-size:12.5px;margin:6px 0 2px;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+table.kpi th,table.kpi td{border-bottom:1px solid var(--line);padding:7px 9px;text-align:left}table.kpi tr:last-child td{border-bottom:0}
+table.kpi th{background:#eef4f8;font-weight:700}
+.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 @media(max-width:760px){.timeline{grid-template-columns:1fr}}
-.tl{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px;border-top:5px solid var(--accent)}
-.tl h4{margin:0 0 8px;font-size:14px}.tl ul{margin:0;padding-left:18px;font-size:12.5px}
-.glo dt{font-weight:700;margin-top:8px}.glo dd{margin:0;color:var(--mut)}
-.warn{background:#fff7ed;border-left:4px solid #c55a11;border-radius:8px;padding:10px 14px;font-size:12.5px;margin:12px 0}
-.src{font-size:10.5px;color:#9aa7b4;margin-top:7px;line-height:1.4}
-footer{border-top:1px solid var(--line);background:#fff;color:var(--mut);font-size:12.5px;text-align:center;padding:18px}
+.tl{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;border-top:5px solid transparent;border-image:linear-gradient(90deg,#0b6e99,#2e8b57) 1;box-shadow:var(--sh-sm)}
+.tl h4{margin:0 0 9px;font-size:14px;font-weight:750}.tl ul{margin:0;padding-left:18px;font-size:12.5px}
+.glo dt{font-weight:750;margin-top:9px}.glo dd{margin:0;color:var(--mut)}
+.warn{background:linear-gradient(120deg,#fff7ed,#fff1e0);border:1px solid #f6dcb8;border-left:4px solid #c55a11;border-radius:11px;padding:11px 15px;font-size:12.5px;margin:12px 0;color:#5b3a17}
+.src{font-size:10.5px;color:#94a3b8;margin-top:8px;line-height:1.45}
+footer{border-top:1px solid var(--line);background:#fff;color:var(--mut);font-size:12.5px;text-align:center;padding:22px}
 footer b{color:var(--ink)}
-#toTop{position:fixed;right:16px;bottom:16px;z-index:40;width:46px;height:46px;border-radius:50%;border:0;background:var(--accent);color:#fff;font-size:20px;cursor:pointer;box-shadow:0 3px 10px rgba(0,0,0,.25);opacity:0;visibility:hidden;transition:.2s}
-#toTop.show{opacity:.92;visibility:visible}
+#toTop{position:fixed;right:18px;bottom:18px;z-index:40;width:48px;height:48px;border-radius:50%;border:0;background:linear-gradient(135deg,#0b6e99,#1f4e79);color:#fff;font-size:20px;cursor:pointer;box-shadow:0 6px 18px rgba(11,110,153,.4);opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s,transform .2s}
+#toTop:hover{transform:translateY(-3px) scale(1.05)}
+#toTop.show{opacity:.95;visibility:visible}
 </style></head>
 <body>
 <header class="top"><h1>GPECT du bassin d'Issoudun — Diagnostic emploi &amp; compétences + Plan d'action</h1>
@@ -388,15 +402,19 @@ function battChart(id,a,col){const sf=a[0]&&a[0].sans_financeur;
 function verbList(arr,n){const sk=/^(ras|na|n\/a|ne sait pas|non renseign|pas de remarque|pas de partage|aucun|aucune|0)\.?$/i;
  const v=(arr||[]).filter(x=>x&&!sk.test(x.trim())&&x.trim().length>14).slice(0,n);
  return v.length?('<div style="margin-top:8px">'+v.map(x=>`<div class="verb">« ${x} »</div>`).join('')+'</div>'):'';}
-// comparaison Bassin vs France (2 barres horizontales)
-function cmp(id,bassin,france,suf){const ch=new Chart(document.getElementById(id),{type:'bar',
- data:{labels:["Bassin d'Issoudun",'France (INSEE)'],datasets:[{data:[bassin,france],backgroundColor:['#0b6e99','#b6c2cf'],borderRadius:5,maxBarThickness:40}]},
+// comparaison Bassin / Indre / France (barres horizontales) — indre nullable
+function cmp(id,bassin,indre,france,suf){
+ const labels=["Bassin d'Issoudun"],data=[bassin],cols=['#0b6e99'];
+ if(indre!=null){labels.push('Indre (dépt.)');data.push(indre);cols.push('#6f9bbd');}
+ labels.push('France (INSEE)');data.push(france);cols.push('#b6c2cf');
+ const ch=new Chart(document.getElementById(id),{type:'bar',
+ data:{labels,datasets:[{data,backgroundColor:cols,borderRadius:5,maxBarThickness:34}]},
  options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,layout:{padding:{right:50}},
   scales:{x:{beginAtZero:true,grid:{color:'#eef2f7'}},y:{grid:{display:false},ticks:{font:{size:11.5}}}},
   plugins:{tooltip:{callbacks:{label:c=>' '+fmt(c.parsed.x)+(suf||'')}}}},plugins:[valLabel]});
  ch.$suffix=suf||'';ch.update();}
-// carte de comparaison (graphe + source + lien diagnostic)
-function ccard(title,sub,bassin,france,id,suf,src,lien){CQ.push(()=>cmp(id,bassin,france,suf));
+// carte de comparaison (graphe + source + lien diagnostic) — indre nullable
+function ccard(title,sub,bassin,indre,france,id,suf,src,lien){CQ.push(()=>cmp(id,bassin,indre,france,suf));
  return `<div class="card"><h3>${title}</h3><p class="note">${sub}</p>${chCanvas(id)}<div class="src">Source : ${src}</div>${lien?`<div class="lec"><b>💡 Lien avec le diagnostic —</b> ${lien}</div>`:''}</div>`;}
 // auto render by type
 function auto(c,k){const d=Q(c,k);if(!d)return '';const cm=COMMENTS[c+'|'+k]||'';const t=d.type,id=nid(),col=COL[c],title=lbl(d.intitule||k);
@@ -489,13 +507,13 @@ BUILD.cxt=function(){const host=document.getElementById('p-cxt');const X=CX;
   ${metricCard(fmt(E.taux_chomage_recensement_pct_2022)+' %','de chômage (recensement, 2022)','15-24 ans : '+fmt(E.taux_chomage_15_24_pct)+' %')}
  </div>
 
- <h3 class="sec">Le bassin face aux repères nationaux (INSEE)<span>Définitions identiques de part et d'autre — chaque comparaison porte sa source exacte.</span></h3>
- <div class="warn">⚠️ <b>D'où viennent les chiffres « France » —</b> ils ne figurent <u>pas</u> dans les documents locaux fournis : ils proviennent de <b>publications nationales de l'INSEE / du SDES</b> (source affichée sous chaque graphique), reprises sur des définitions identiques. Un territoire rural et industriel comme le bassin <b>diverge naturellement</b> de la moyenne française (population plus âgée, davantage de logements vacants) : le repère réellement structurant est la <b>surreprésentation de l'industrie</b> (32 % des emplois contre 12,5 % en France).</div>
+ <h3 class="sec">Le bassin face à son département et à la France (INSEE)<span>Définitions identiques de part et d'autre — chaque comparaison porte sa source exacte.</span></h3>
+ <div class="warn">⚠️ <b>D'où viennent les repères —</b> ils ne figurent <u>pas</u> dans les documents locaux fournis. La colonne <b>France</b> vient de publications nationales INSEE/SDES ; la colonne <b>Indre (département)</b> est relevée sur le dossier INSEE du département. Le bassin est décrit au RP2022 (millésime des documents), l'Indre au RP2023 (dossier en ligne le plus récent) : l'écart d'un an est négligeable sur ces indicateurs structurels, et chaque année est indiquée. L'intérêt du repère départemental : il montre que le bassin <b>diverge même de son propre département</b>, déjà rural et industriel — le signal le plus fort restant la <b>surreprésentation de l'industrie</b>.</div>
  <div class="gauto">
-  ${ccard("L'industrie, ADN du territoire","Part de l'industrie dans l'emploi (2022)",I.part_industrie_emploi_pct_2022,I.comparaison_national.part_industrie_emploi_france_pct_2022,'cxt-ind','%',I.comparaison_national.source,"Le bassin est <b>2,5 fois plus industriel</b> que la moyenne nationale. C'est ce qui rend les tensions sur les métiers techniques (maintenance, usinage, machines numériques) si centrales dans l'enquête.")}
-  ${ccard("Un chômage au-dessus de la moyenne","Taux de chômage au sens du recensement (2022)",E.taux_chomage_recensement_pct_2022,E.comparaison_national.taux_chomage_recensement_france_metro_pct_2022,'cxt-cho','%',E.comparaison_national.source,"Un chômage supérieur à la moyenne <u>coexiste</u> avec de fortes difficultés de recrutement : le problème est moins le nombre de demandeurs que <b>l'adéquation des qualifications</b> (adéquation jugée 2,9/5 par les acteurs de l'emploi).")}
-  ${ccard("Un parc de logements en déprise","Part des logements vacants (2022)",LO.logements_vacants_pct_2022,LO.comparaison_national.logements_vacants_france_pct_2022,'cxt-log','%',LO.comparaison_national.source,"Près du double de la moyenne nationale, et en hausse (11,3 % en 2011). Un signal de déprise qui pèse sur l'attractivité — image notée 2,3/5 par les entreprises.")}
-  ${ccard("Une population qui vieillit","Part des 60 ans et plus",D.part_60_plus_pct,D.comparaison_national.part_60_plus_france_pct,'cxt-a60','%',D.comparaison_national.source,"Le vieillissement redouble l'enjeu démographique relevé en entreprise (47 % des salariés ont 45 ans et +) : il faut <b>à la fois</b> attirer de la main-d'œuvre <b>et</b> transmettre les savoir-faire.")}
+  ${ccard("L'industrie, ADN du territoire","Part de l'industrie dans l'emploi · bassin 2022 / Indre & France",I.part_industrie_emploi_pct_2022,I.comparaison_indre.part_pct,I.comparaison_national.part_industrie_emploi_france_pct_2022,'cxt-ind','%',I.comparaison_national.source+' — Indre : '+X._meta.source_indre,"Le bassin est <b>près de 2 fois plus industriel que l'Indre</b> (déjà très industriel) et <b>2,5 fois plus que la France</b>. C'est ce qui rend les tensions sur les métiers techniques (maintenance, usinage, machines numériques) si centrales dans l'enquête.")}
+  ${ccard("Un chômage au-dessus de la moyenne","Taux de chômage au sens du recensement · bassin 2022 / Indre & France",E.taux_chomage_recensement_pct_2022,E.comparaison_indre.taux_chomage_pct,E.comparaison_national.taux_chomage_recensement_france_metro_pct_2022,'cxt-cho','%',E.comparaison_national.source+' — Indre : '+X._meta.source_indre,"Un chômage supérieur à l'Indre comme à la France <u>coexiste</u> avec de fortes difficultés de recrutement : le problème est moins le nombre de demandeurs que <b>l'adéquation des qualifications</b> (adéquation jugée 2,9/5 par les acteurs de l'emploi).")}
+  ${ccard("Un parc de logements en déprise","Part des logements vacants · bassin 2022 / Indre & France",LO.logements_vacants_pct_2022,LO.comparaison_indre.vacants_pct,LO.comparaison_national.logements_vacants_france_pct_2022,'cxt-log','%',LO.comparaison_national.source+' — Indre : '+X._meta.source_indre,"Au-dessus de l'Indre et près du double de la France, et en hausse (11,3 % en 2011). Un signal de déprise qui pèse sur l'attractivité — image notée 2,3/5 par les entreprises.")}
+  ${ccard("Une population qui vieillit","Part des 60 ans et plus (repère France ; banding départemental non comparable)",D.part_60_plus_pct,null,D.comparaison_national.part_60_plus_france_pct,'cxt-a60','%',D.comparaison_national.source,"Le vieillissement redouble l'enjeu démographique relevé en entreprise (47 % des salariés ont 45 ans et +) : il faut <b>à la fois</b> attirer de la main-d'œuvre <b>et</b> transmettre les savoir-faire.")}
  </div>
 
  <h3 class="sec">Démographie & qualification<span>Une population âgée, peu diplômée, sur un socle d'ouvriers et de CAP-BEP.</span></h3>
@@ -534,13 +552,14 @@ BUILD.cxt=function(){const host=document.getElementById('p-cxt');const X=CX;
 
  <div class="card" style="margin-top:16px"><h3>Sources de cette page</h3><p class="src" style="font-size:12px;color:var(--mut)">
   ${X._meta.source_insee}<br>
+  Département de l'Indre : ${X._meta.source_indre}<br>
   Industrie (France) : ${I.comparaison_national.source}<br>
   Chômage (France) : ${E.comparaison_national.source}<br>
   Logements vacants (France) : ${LO.comparaison_national.source}<br>
   60 ans et + (France) : ${D.comparaison_national.source}<br>
   Diplôme (repère national) : ${DI.comparaison_national.source}<br>
   Jeunes : ${J.source}<br>
-  <i>${X._meta.verification}</i></p></div>`;
+  <i>${X._meta.verification} ${X._meta.note_vintage}</i></p></div>`;
  const a=D.ages_pct_2022, age15_44=Math.round((100-a['0_14']-a['45_59']-D.part_60_plus_pct)*10)/10;
  CQ.push(()=>dough('cxt-age',['0-14 ans','15-44 ans','45-59 ans','60 ans et +'],[a['0_14'],age15_44,a['45_59'],D.part_60_plus_pct],['#5b8fc9','#2e8b57','#c55a11','#7030a0']));
  const r=DI.repartition_pct;

@@ -3,6 +3,8 @@
     "objet": "Données de contexte territorial (INSEE) et jeunesse (Mission Locale) pour objectiver le diagnostic déclaratif GPEC-T du bassin d'Issoudun.",
     "perimetre_principal": "Intercommunalité-Métropole du Pays d'Issoudun (EPCI 243600236)",
     "source_insee": "INSEE, Dossier complet, Pays d'Issoudun (243600236), recensements RP2011/RP2016/RP2022 (exploitations principales et complémentaires), géographie au 01/01/2025 ; BPE 2024 ; SIDE 2023.",
+    "source_indre": "INSEE, Dossier complet, Département de l'Indre (36), recensement RP2023 (exploitations principales et complémentaires), géographie au 01/01/2025. Repère départemental relevé directement sur les tableaux EMP T8, EMP T4 et LOG T2.",
+    "note_vintage": "Le bassin est décrit au RP2022 (millésime des documents fournis) ; les repères du département de l'Indre proviennent du dossier en ligne le plus récent (RP2023). L'écart de millésime (1 an) est négligeable sur ces indicateurs structurels et chaque année est affichée.",
     "verification": "Chaque chiffre du Pays d'Issoudun a été relu directement sur les tableaux du dossier INSEE (pages rendues en image). Chaque repère national porte sa source exacte.",
     "note_champ": "Les chiffres ci-dessous ne proviennent PAS de l'enquête GPEC-T (déclaratif des 42 répondants) mais de sources statistiques officielles. Ils servent de toile de fond objective."
   },
@@ -31,7 +33,8 @@
     "comparaison_national": {
       "taux_chomage_recensement_france_metro_pct_2022": 11.2,
       "source": "INSEE, Recensement de la population 2022, taux de chômage au sens du recensement, France métropolitaine (11,2 % des actifs de 15 ans ou plus)."
-    }
+    },
+    "comparaison_indre": {"taux_chomage_pct": 10.9, "annee": 2023}
   },
   "industrie": {
     "part_industrie_emploi_pct_2022": 32.0,
@@ -41,7 +44,8 @@
     "comparaison_national": {
       "part_industrie_emploi_france_pct_2022": 12.5,
       "source": "INSEE, « L'emploi reste en augmentation en 2022 » / Emploi en 2022 : l'industrie représente 12,5 % des personnes en emploi en France."
-    }
+    },
+    "comparaison_indre": {"part_pct": 17.8, "annee": 2023}
   },
   "diplome_2022": {
     "champ": "Population non scolarisée de 15 ans ou plus (15 117 personnes), RP2022.",
@@ -75,7 +79,8 @@
     "comparaison_national": {
       "logements_vacants_france_pct_2022": 8.0,
       "source": "INSEE, Parc de logements / SDES, Chiffres clés du logement 2022 : ≈8 logements vacants sur 100 en France (≈8,9 % dans les communes rurales et agglomérations < 100 000 hab.)."
-    }
+    },
+    "comparaison_indre": {"vacants_pct": 12.8, "annee": 2023}
   },
   "tissu_economique": {
     "etablissements_actifs_2023": 1050,
