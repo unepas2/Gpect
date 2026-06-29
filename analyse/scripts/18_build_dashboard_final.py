@@ -9,8 +9,10 @@ import json, pathlib
 RES=pathlib.Path("/home/user/Gpect/analyse/resultats")
 DASH=pathlib.Path("/home/user/Gpect/analyse/dashboard")
 SV=json.load(open(RES/"source_verite.json",encoding="utf-8"))
+CX=json.load(open(RES/"contexte_insee.json",encoding="utf-8"))
 CHARTJS=(DASH/"chartjs.min.js").read_text(encoding="utf-8")
 SVDATA=json.dumps(SV,ensure_ascii=False)
+CXDATA=json.dumps(CX,ensure_ascii=False)
 
 # ---- Encadrés "ce que ça dit" pour les stats critiques (coll|qid) ----
 COMMENTS={
@@ -321,6 +323,7 @@ table.kpi th,table.kpi td{border:1px solid var(--line);padding:6px 8px;text-alig
 .tl h4{margin:0 0 8px;font-size:14px}.tl ul{margin:0;padding-left:18px;font-size:12.5px}
 .glo dt{font-weight:700;margin-top:8px}.glo dd{margin:0;color:var(--mut)}
 .warn{background:#fff7ed;border-left:4px solid #c55a11;border-radius:8px;padding:10px 14px;font-size:12.5px;margin:12px 0}
+.src{font-size:10.5px;color:#9aa7b4;margin-top:7px;line-height:1.4}
 footer{border-top:1px solid var(--line);background:#fff;color:var(--mut);font-size:12.5px;text-align:center;padding:18px}
 footer b{color:var(--ink)}
 #toTop{position:fixed;right:16px;bottom:16px;z-index:40;width:46px;height:46px;border-radius:50%;border:0;background:var(--accent);color:#fff;font-size:20px;cursor:pointer;box-shadow:0 3px 10px rgba(0,0,0,.25);opacity:0;visibility:hidden;transition:.2s}
@@ -332,6 +335,7 @@ footer b{color:var(--ink)}
 <nav id="nav"></nav>
 <main>
  <section class="page active" id="p-synthese"></section>
+ <section class="page" id="p-cxt"></section>
  <section class="page" id="p-ent"></section>
  <section class="page" id="p-of"></section>
  <section class="page" id="p-act"></section>
@@ -350,7 +354,7 @@ footer b{color:var(--ink)}
 <button id="toTop" title="Revenir en haut">&#8593;</button>
 <script>__CHARTJS__</script>
 <script>
-const SV=__SVDATA__, COMMENTS=__COMMENTS__, ORDER=__ORDER__, PLAN=__PLAN__;
+const SV=__SVDATA__, COMMENTS=__COMMENTS__, ORDER=__ORDER__, PLAN=__PLAN__, CX=__CXDATA__;
 const C={ent:'#1f4e79',of:'#2e8b57',act:'#c55a11',syn:'#7030a0'};
 const COL={entreprises:'#1f4e79',of:'#2e8b57',acteurs:'#c55a11',syndicats:'#7030a0'};
 const PAL=['#1f4e79','#2e8b57','#c55a11','#7030a0','#0b6e99','#b8860b','#8d6e63','#557','#3b7','#a55'];
@@ -358,6 +362,7 @@ Chart.defaults.font.family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-s
 Chart.defaults.animation.duration=850;Chart.defaults.animation.easing='easeOutQuart';
 const fmt=v=>(v==null?'—':String(v).replace('.',','));
 const fmt1=v=>(v==null?'—':Number(v).toFixed(1).replace('.',','));  // toujours 1 décimale
+const fmtT=v=>(v==null?'—':Number(v).toLocaleString('fr-FR'));        // séparateur de milliers
 function Q(c,k){return (SV.donnees_colleges[c]||{}).questions[k];}
 function lbl(s){s=String(s);for(let i=0;i<2;i++)s=s.replace(/^\s*Q[0-9][0-9.]*[a-z]?\s*[—–-]\s*/,'');return s;}
 function shorten(s,n){s=String(s);return s.length>(n||34)?s.slice(0,(n||34)-1)+'…':s;}
@@ -383,6 +388,16 @@ function battChart(id,a,col){const sf=a[0]&&a[0].sans_financeur;
 function verbList(arr,n){const sk=/^(ras|na|n\/a|ne sait pas|non renseign|pas de remarque|pas de partage|aucun|aucune|0)\.?$/i;
  const v=(arr||[]).filter(x=>x&&!sk.test(x.trim())&&x.trim().length>14).slice(0,n);
  return v.length?('<div style="margin-top:8px">'+v.map(x=>`<div class="verb">« ${x} »</div>`).join('')+'</div>'):'';}
+// comparaison Bassin vs France (2 barres horizontales)
+function cmp(id,bassin,france,suf){const ch=new Chart(document.getElementById(id),{type:'bar',
+ data:{labels:["Bassin d'Issoudun",'Moyenne France'],datasets:[{data:[bassin,france],backgroundColor:['#0b6e99','#b6c2cf'],borderRadius:5,maxBarThickness:40}]},
+ options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,layout:{padding:{right:50}},
+  scales:{x:{beginAtZero:true,grid:{color:'#eef2f7'}},y:{grid:{display:false},ticks:{font:{size:11.5}}}},
+  plugins:{tooltip:{callbacks:{label:c=>' '+fmt(c.parsed.x)+(suf||'')}}}},plugins:[valLabel]});
+ ch.$suffix=suf||'';ch.update();}
+// carte de comparaison (graphe + source + lien diagnostic)
+function ccard(title,sub,bassin,france,id,suf,src,lien){CQ.push(()=>cmp(id,bassin,france,suf));
+ return `<div class="card"><h3>${title}</h3><p class="note">${sub}</p>${chCanvas(id)}<div class="src">Source : ${src}</div>${lien?`<div class="lec"><b>💡 Lien avec le diagnostic —</b> ${lien}</div>`:''}</div>`;}
 // auto render by type
 function auto(c,k){const d=Q(c,k);if(!d)return '';const cm=COMMENTS[c+'|'+k]||'';const t=d.type,id=nid(),col=COL[c],title=lbl(d.intitule||k);
  if(t==='echelle_1_5'){const sf=d.sans_financeur?`<br>hors organisme acheteur (non-formateur) : <b>${fmt(d.sans_financeur.moyenne)}</b>/5`:'';
@@ -460,6 +475,79 @@ BUILD.synthese=function(){const host=document.getElementById('p-synthese');const
  new Chart(document.getElementById('c-top'),{type:'bar',data:{labels:[['Offre de','formation'],['Mobilité','(frein)'],['Transmission','(priorité)'],['AFEST','(maîtrise)']],datasets:cols.map((cc,i)=>({label:co[cc].libelle,data:dims.map(d=>d.valeurs[cc]??null),backgroundColor:[C.ent,C.of,C.act,C.syn][i],borderRadius:4,maxBarThickness:34}))},options:{responsive:true,maintainAspectRatio:false,scales:{y:{beginAtZero:true,max:5,grid:{color:'#eef2f7'}},x:{grid:{display:false}}},plugins:{legend:{display:true,position:'bottom',labels:{boxWidth:12,font:{size:11}}},tooltip:{callbacks:{label:c=>' '+c.dataset.label+' : '+fmt(c.parsed.y)}}}}});
  const tt=Q('entreprises','Q3.2_tension').modalites;dough('c-tens',tt.map(m=>shorten(m.modalite.replace('Oui, ','').replace('Non, ',''),26)),tt.map(m=>m.n),[C.act,'#e0a26b','#bcd']);
 };
+BUILD.cxt=function(){const host=document.getElementById('p-cxt');const X=CX;
+ const D=X.demographie,E=X.emploi_activite,I=X.industrie,DI=X.diplome_2022,MO=X.mobilite,LO=X.logement,TE=X.tissu_economique,J=X.jeunes_mission_locale_2025;
+ host.innerHTML=`<div class="banner" style="border-left-color:#b3261e"><b>À lire avec précaution —</b> cette page ne provient <u>pas</u> de l'enquête GPEC-T (le déclaratif des 42 répondants), mais de <b>sources statistiques officielles</b> (INSEE, Mission Locale). Elle sert de <b>toile de fond objective</b> pour confirmer ou nuancer ce que les acteurs déclarent. Chaque chiffre porte sa source.</div>
+ <h2 class="pt">Contexte territorial — ce que disent les données officielles</h2>
+ <p class="sub">Périmètre : ${X._meta.perimetre_principal}. Sources : INSEE (recensement 2022, BPE 2024, SIDE 2023) · Mission Locale d'Issoudun (rapport d'activités 2025).</p>
+
+ <h3 class="sec">Le bassin en chiffres clés (INSEE)<span>Population, vieillissement, emploi industriel — le décor du diagnostic.</span></h3>
+ <div class="grid g4">
+  ${metricCard(fmtT(D.population_2022),'habitants (2022)',fmt(D.evolution_2011_2022_pct)+' % depuis 2011')}
+  ${metricCard(fmt(D.part_60_plus_pct)+' %','de 60 ans et plus','vieillissement marqué')}
+  ${metricCard(fmt(I.part_industrie_emploi_pct_2022)+' %',"des emplois dans l'industrie",fmtT(I.emplois_industrie_2022)+' emplois — en hausse')}
+  ${metricCard(fmt(E.taux_chomage_recensement_pct_2022)+' %','de chômage (recensement, 2022)','15-24 ans : '+fmt(E.taux_chomage_15_24_pct)+' %')}
+ </div>
+
+ <h3 class="sec">Bassin vs France — 4 repères qui objectivent le diagnostic<span>Mêmes définitions INSEE de part et d'autre. Chaque comparaison porte sa source exacte.</span></h3>
+ <div class="gauto">
+  ${ccard("L'industrie, ADN du territoire","Part de l'industrie dans l'emploi (2022)",I.part_industrie_emploi_pct_2022,I.comparaison_national.part_industrie_emploi_france_pct_2022,'cxt-ind','%',I.comparaison_national.source,"Le bassin est <b>2,5 fois plus industriel</b> que la moyenne nationale. C'est ce qui rend les tensions sur les métiers techniques (maintenance, usinage, machines numériques) si centrales dans l'enquête.")}
+  ${ccard("Un chômage au-dessus de la moyenne","Taux de chômage au sens du recensement (2022)",E.taux_chomage_recensement_pct_2022,E.comparaison_national.taux_chomage_recensement_france_metro_pct_2022,'cxt-cho','%',E.comparaison_national.source,"Un chômage supérieur à la moyenne <u>coexiste</u> avec de fortes difficultés de recrutement : le problème est moins le nombre de demandeurs que <b>l'adéquation des qualifications</b> (adéquation jugée 2,9/5 par les acteurs de l'emploi).")}
+  ${ccard("Un parc de logements en déprise","Part des logements vacants (2022)",LO.logements_vacants_pct_2022,LO.comparaison_national.logements_vacants_france_pct_2022,'cxt-log','%',LO.comparaison_national.source,"Près du double de la moyenne nationale, et en hausse (11,3 % en 2011). Un signal de déprise qui pèse sur l'attractivité — image notée 2,3/5 par les entreprises.")}
+  ${ccard("Une population qui vieillit","Part des 60 ans et plus",D.part_60_plus_pct,D.comparaison_national.part_60_plus_france_pct,'cxt-a60','%',D.comparaison_national.source,"Le vieillissement redouble l'enjeu démographique relevé en entreprise (47 % des salariés ont 45 ans et +) : il faut <b>à la fois</b> attirer de la main-d'œuvre <b>et</b> transmettre les savoir-faire.")}
+ </div>
+
+ <h3 class="sec">Démographie & qualification<span>Une population âgée, peu diplômée, sur un socle d'ouvriers et de CAP-BEP.</span></h3>
+ <div class="grid g2">
+  <div class="card"><h3>Structure par âge (2022)</h3><p class="note">Répartition de la population par grande tranche d'âge.</p>${chCanvas('cxt-age')}<div class="src">Source : INSEE, RP2022, géographie au 01/01/2025.</div><div class="lec"><b>💡</b> Plus d'un tiers de la population a 60 ans et plus, et le cœur d'âge actif (15-44 ans) ne pèse que ~28 % : le <b>renouvellement de la main-d'œuvre</b> est un enjeu structurel.</div></div>
+  <div class="card"><h3>Un territoire d'ouvriers et de CAP-BEP</h3><p class="note">Diplôme le plus élevé — population non scolarisée de 15 ans ou plus (2022).</p>${chCanvas('cxt-dip',true)}<div class="src">Source : INSEE, RP2022. Repère national : ${DI.comparaison_national.source}</div><div class="lec"><b>💡 Lien —</b> Le CAP-BEP est le diplôme dominant (32,2 %) ; les diplômés du supérieur ne sont que <b>19,8 %</b> (≈ un tiers au niveau national). Cela éclaire l'alerte des prescripteurs sur le niveau de qualification (frein n°1, 4,3/5) et celle des syndicats sur les savoirs de base.</div></div>
+ </div>
+
+ <h3 class="sec">Mobilité & tissu économique<span>Un bassin de déplacements, porté par quelques grosses unités industrielles.</span></h3>
+ <div class="grid g3">
+  ${metricCard(fmt(MO.part_actifs_travaillant_hors_commune_pct_2022)+' %','des actifs travaillent hors de leur commune (2022)','48,4 % en 2011 — mobilité croissante')}
+  ${metricCard(fmt(E.indice_concentration_emploi_2022),'emplois pour 100 actifs résidents occupés','> 100 : le bassin attire des travailleurs')}
+  ${metricCard(fmtT(TE.etablissements_actifs_2023),'établissements actifs (2023)','industrie = '+fmt(TE.repartition_pct.industrie)+' % des établissements mais 32 % des emplois')}
+ </div>
+ <div class="lec" style="margin-top:10px"><b>💡 Lien avec le diagnostic —</b> 55 % des actifs sortent de leur commune pour travailler : la mobilité — jugée très diversement dans l'enquête (2,1/5 par les entreprises, 3,7 par les acteurs, citée par 6/7 syndicats) — est bien un <b>enjeu objectif</b>. Et l'emploi industriel repose sur quelques grosses unités, ce qui correspond à l'effet de poids du plus gros employeur observé chez les entreprises.</div>
+
+ <h3 class="sec">Les jeunes du territoire — Mission Locale (2025)<span>Jeunes de 16 à 25 ans accompagnés vers l'emploi et l'autonomie.</span></h3>
+ <div class="grid g4">
+  ${metricCard(fmtT(J.premier_accueil),'jeunes en 1er accueil (2025)',fmt(J.premier_accueil_evol_pct)+' % vs 2024')}
+  ${metricCard(fmtT(J.accompagnes),'jeunes accompagnés','majorité de 18-21 ans')}
+  ${metricCard('≈ '+fmt(J.niveau_infra_bac_1er_accueil_pct)+' %','de niveau infra-bac (1er accueil)','72,8 % parmi les accompagnés')}
+  ${metricCard(fmt(J.sans_permis_pct)+' %','sans permis de conduire',"frein de mobilité à l'insertion")}
+ </div>
+ <div class="grid g2" style="margin-top:16px">
+  <div class="card"><h3>Que deviennent les jeunes ? (entrées en situation 2025)</h3><p class="note">${fmtT(J.entrees_en_situation)} entrées en situation sur l'année.</p>${chCanvas('cxt-ml')}<div class="src">Source : ${J.source}</div><div class="lec"><b>💡 Lien —</b> L'insertion des jeunes passe surtout par <b>l'emploi direct</b> (${J.entrees_emploi}) plus que par la formation (${J.entrees_formation}) : cohérent avec un public peu qualifié et des entreprises en manque de bras. La Mission Locale est en lien avec <b>${J.entreprises_en_contact} entreprises</b> — un relais opérationnel pour la GPEC-T.</div></div>
+  <div class="card"><h3>Un public jeune, peu qualifié et peu mobile</h3><p class="note">Profil des jeunes accueillis (2025).</p>
+   <ul style="font-size:13px;margin:8px 0 0;padding-left:18px;line-height:1.7">
+    <li>Majoritairement âgés de <b>18 à 21 ans</b>, en début de parcours.</li>
+    <li><b>~70 %</b> de niveau infra-bac (1er accueil), 72,8 % parmi les accompagnés.</li>
+    <li><b>57,6 %</b> logés chez leurs parents · <b>52,5 %</b> sans permis.</li>
+    <li>Orientations France Travail en forte hausse : <b>24,2 %</b> des entrées (vs 13,7 % avant), effet de la loi Plein Emploi.</li>
+   </ul>
+   <div class="lec"><b>💡 Lien —</b> Ces freins (qualification, mobilité, autonomie) recoupent exactement le diagnostic des acteurs de l'emploi et des syndicats. La jeunesse est le <b>vivier de main-d'œuvre à sécuriser</b> pour les axes A5 (mobilité) et A6 (qualification & socles).</div>
+  </div>
+ </div>
+
+ <div class="card" style="margin-top:16px"><h3>Sources de cette page</h3><p class="src" style="font-size:12px;color:var(--mut)">
+  ${X._meta.source_insee}<br>
+  Industrie (France) : ${I.comparaison_national.source}<br>
+  Chômage (France) : ${E.comparaison_national.source}<br>
+  Logements vacants (France) : ${LO.comparaison_national.source}<br>
+  60 ans et + (France) : ${D.comparaison_national.source}<br>
+  Diplôme (repère national) : ${DI.comparaison_national.source}<br>
+  Jeunes : ${J.source}<br>
+  <i>${X._meta.verification}</i></p></div>`;
+ const a=D.ages_pct_2022, age15_44=Math.round((100-a['0_14']-a['45_59']-D.part_60_plus_pct)*10)/10;
+ CQ.push(()=>dough('cxt-age',['0-14 ans','15-44 ans','45-59 ans','60 ans et +'],[a['0_14'],age15_44,a['45_59'],D.part_60_plus_pct],['#5b8fc9','#2e8b57','#c55a11','#7030a0']));
+ const r=DI.repartition_pct;
+ CQ.push(()=>hbar('cxt-dip',['Aucun diplôme / CEP','BEPC, brevet, DNB','CAP, BEP','Bac / brevet pro','Bac +2','Bac +3 / +4','Bac +5 et +'],
+   [r.aucun_diplome_cep,r.bepc_dnb,r.cap_bep,r.bac_brevet_pro,r.bac_plus_2,r.bac_plus_3_4,r.bac_plus_5_et_plus],'#1f4e79',40,'%'));
+ CQ.push(()=>hbar('cxt-ml',['Emploi','Formation','Retour en scolarité','Alternance','Service civique','Création'],
+   [J.entrees_emploi,J.entrees_formation,J.entrees_retour_scolarite,J.entrees_alternance,J.entrees_service_civique,J.entrees_creation],'#c55a11',J.entrees_emploi));
+ CQ.forEach(f=>{try{f()}catch(e){}});CQ=[];};
 BUILD.comp=function(){const host=document.getElementById('p-comp');
  host.innerHTML=`<div class="banner"><b>En clair :</b> tout le monde anticipe l'IA et la robotique, mais l'offre locale n'est pas encore prête à les enseigner — le décalage le plus net concerne la cybersécurité.</div><h2 class="pt">Compétences &amp; intelligence artificielle</h2><p class="sub">Ce qui manque aujourd'hui et ce qu'il faudra savoir faire demain.</p>
  <div class="gauto">${auto('of','Q2.2_capacite_emergentes')}${auto('entreprises','Q6.5_competences_3_5ans')}${auto('acteurs','Q6.2_manque_formation')}${auto('of','Q8.2_domaines_evolutions')}${auto('entreprises','Q6.2_tech_manquantes')}${auto('syndicats','Q12_competences_techniques')}</div>`;
@@ -535,7 +623,7 @@ BUILD.met=function(){const m=SV.donnees_colleges;document.getElementById('p-met'
  <dt>VAE</dt><dd>Validation des Acquis de l'Expérience.</dd><dt>CFA</dt><dd>Centre de Formation d'Apprentis.</dd><dt>QPV</dt><dd>Quartier Prioritaire de la Ville.</dd></dl></div>
  <div class="card" style="margin-top:16px"><h3>Sources</h3><p style="font-size:12.5px;color:var(--mut)">Entreprises : ${m.entreprises.meta.source} (${m.entreprises.meta.source_date}).<br>Organismes de formation : ${m.of.meta.source} (${m.of.meta.source_date}).<br>Acteurs de l'emploi : ${m.acteurs.meta.source} (${m.acteurs.meta.source_date}).<br>Syndicats / orga pro : ${m.syndicats.meta.source} (${m.syndicats.meta.source_date}).<br>Tableau de bord généré à partir du fichier unique « source de vérité ».</p></div>`;};
 
-const NAV=[['synthese','Synthèse',''],['ent','Entreprises','COLLÈGES'],['of','Org. formation',''],['act','Acteurs emploi',''],['syn','Syndicats',''],['comp','Compétences & IA','TRANSVERSAL'],['cx','Croisements',''],['mx','Matrice',''],['plan1','Vue d\'ensemble','PLAN D\'ACTION'],['plan2','Fiches A1-A4',''],['plan3','Fiches A5-A7',''],['plan4','Pilotage',''],['met','Méthode','']];
+const NAV=[['synthese','Synthèse',''],['cxt','Contexte territorial','REPÈRES INSEE'],['ent','Entreprises','COLLÈGES'],['of','Org. formation',''],['act','Acteurs emploi',''],['syn','Syndicats',''],['comp','Compétences & IA','TRANSVERSAL'],['cx','Croisements',''],['mx','Matrice',''],['plan1','Vue d\'ensemble','PLAN D\'ACTION'],['plan2','Fiches A1-A4',''],['plan3','Fiches A5-A7',''],['plan4','Pilotage',''],['met','Méthode','']];
 document.getElementById('nav').innerHTML=NAV.map(n=>(n[2]?`<span class="grp">${n[2]}</span>`:'')+`<button data-id="${n[0]}" onclick="show('${n[0]}')">${n[1]}</button>`).join('');
 const inited={};
 function show(id){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.querySelectorAll('#nav button').forEach(b=>b.classList.remove('active'));
@@ -548,6 +636,7 @@ function setNavH(){const n=document.getElementById('nav');if(n)document.document
 </script></body></html>"""
 
 out=(HTML.replace("__CHARTJS__",CHARTJS).replace("__SVDATA__",SVDATA)
+     .replace("__CXDATA__",CXDATA)
      .replace("__COMMENTS__",json.dumps(COMMENTS,ensure_ascii=False))
      .replace("__ORDER__",json.dumps(ORDER,ensure_ascii=False))
      .replace("__PLAN__",json.dumps(PLAN,ensure_ascii=False)))
