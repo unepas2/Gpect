@@ -157,7 +157,7 @@ function verbList(arr,n){const sk=/^(ras|na|n\/a|ne sait pas|non renseign|pas de
  return v.length?('<div style="margin-top:8px">'+v.map(x=>`<div class="verb">« ${x} »</div>`).join('')+'</div>'):'';}
 // comparaison Bassin vs France (2 barres horizontales)
 function cmp(id,bassin,france,suf){const ch=new Chart(document.getElementById(id),{type:'bar',
- data:{labels:["Bassin d'Issoudun",'Moyenne France'],datasets:[{data:[bassin,france],backgroundColor:['#0b6e99','#b6c2cf'],borderRadius:5,maxBarThickness:40}]},
+ data:{labels:["Bassin d'Issoudun",'France (INSEE)'],datasets:[{data:[bassin,france],backgroundColor:['#0b6e99','#b6c2cf'],borderRadius:5,maxBarThickness:40}]},
  options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,layout:{padding:{right:50}},
   scales:{x:{beginAtZero:true,grid:{color:'#eef2f7'}},y:{grid:{display:false},ticks:{font:{size:11.5}}}},
   plugins:{tooltip:{callbacks:{label:c=>' '+fmt(c.parsed.x)+(suf||'')}}}},plugins:[valLabel]});
@@ -256,7 +256,8 @@ BUILD.cxt=function(){const host=document.getElementById('p-cxt');const X=CX;
   ${metricCard(fmt(E.taux_chomage_recensement_pct_2022)+' %','de chômage (recensement, 2022)','15-24 ans : '+fmt(E.taux_chomage_15_24_pct)+' %')}
  </div>
 
- <h3 class="sec">Bassin vs France — 4 repères qui objectivent le diagnostic<span>Mêmes définitions INSEE de part et d'autre. Chaque comparaison porte sa source exacte.</span></h3>
+ <h3 class="sec">Le bassin face aux repères nationaux (INSEE)<span>Définitions identiques de part et d'autre — chaque comparaison porte sa source exacte.</span></h3>
+ <div class="warn">⚠️ <b>D'où viennent les chiffres « France » —</b> ils ne figurent <u>pas</u> dans les documents locaux fournis : ils proviennent de <b>publications nationales de l'INSEE / du SDES</b> (source affichée sous chaque graphique), reprises sur des définitions identiques. Un territoire rural et industriel comme le bassin <b>diverge naturellement</b> de la moyenne française (population plus âgée, davantage de logements vacants) : le repère réellement structurant est la <b>surreprésentation de l'industrie</b> (32 % des emplois contre 12,5 % en France).</div>
  <div class="gauto">
   ${ccard("L'industrie, ADN du territoire","Part de l'industrie dans l'emploi (2022)",I.part_industrie_emploi_pct_2022,I.comparaison_national.part_industrie_emploi_france_pct_2022,'cxt-ind','%',I.comparaison_national.source,"Le bassin est <b>2,5 fois plus industriel</b> que la moyenne nationale. C'est ce qui rend les tensions sur les métiers techniques (maintenance, usinage, machines numériques) si centrales dans l'enquête.")}
   ${ccard("Un chômage au-dessus de la moyenne","Taux de chômage au sens du recensement (2022)",E.taux_chomage_recensement_pct_2022,E.comparaison_national.taux_chomage_recensement_france_metro_pct_2022,'cxt-cho','%',E.comparaison_national.source,"Un chômage supérieur à la moyenne <u>coexiste</u> avec de fortes difficultés de recrutement : le problème est moins le nombre de demandeurs que <b>l'adéquation des qualifications</b> (adéquation jugée 2,9/5 par les acteurs de l'emploi).")}
