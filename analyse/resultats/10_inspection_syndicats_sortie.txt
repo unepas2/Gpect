@@ -1,0 +1,159 @@
+FEUILLES : ['Réponses au formulaire 1']
+
+DIMENSIONS BRUTES : 7 lignes x 30 colonnes
+Lignes 100% vides : 0 
+APRÈS retrait vides : 7 x 30 | doublons stricts : 0
+
+=== COLONNES (index | remplissage | intitulé) ===
+[00]  7/7 | Horodateur
+[01]  7/7 | Nom et prénom
+[02]  7/7 | Organisation / structure
+[03]  7/7 | Fonction
+[04]  7/7 | Type d’acteur
+[05]  7/7 | Territoire principalement couvert
+[06]  7/7 | Comment évaluez-vous la dynamique économique globale du bassin d’emploi de l’Indre ?
+[07]  7/7 | Comment évaluez-vous la coordination entre les différents acteurs économiques (industrie, artisanat, services, collectivités…) sur le territoire ?
+[08]  7/7 | Selon vous, quels sont les principaux atouts du territoire pour l’industrie et les TPE/PME ?
+[09]  7/7 | Selon vous, quels sont les principaux freins ou fragilités pour le développement des entreprises industrielles ?
+[10]  7/7 | Sur quels types de métiers constatez-vous aujourd’hui les plus fortes tensions de recrutement ?
+[11]  7/7 | Les besoins en compétences des entreprises industrielles vous semblent aujourd’hui :
+[12]  7/7 | Selon vous, quelles compétences techniques doivent être prioritairement renforcées dans l’industrie sur le territoire ?
+[13]  7/7 | Selon vous, quelles compétences transversales / socles doivent être prioritairement renforcées ?
+[14]  7/7 | L’offre de formation actuelle (formation initiale, apprentissage, formation continue) vous semble-t-elle adaptée aux besoins des entreprises industrielles ?
+[15]  7/7 | Quels sont, selon vous, les principaux freins rencontrés par les structures de formation ?
+[16]  7/7 | Quelles évolutions de l’offre de formation vous semblent prioritaires pour les 3 prochaines années ?
+[17]  7/7 | Parmi les freins suivants, lesquels vous semblent les plus structurants pour l’accès à l’emploi sur le territoire ?
+[18]  7/7 | Sur une échelle de 1 à 5, à quel point la mobilité vous semble-t-elle un frein majeur à l’accès à l’emploi local ?
+[19]  7/7 | Quelles solutions concrètes vous semblent les plus pertinentes pour lever ces freins ?
+[20]  7/7 | Selon vous, le niveau d’engagement des entreprises dans les démarches collectives (GPECT, actions territoriales, etc.) est aujourd’hui :
+[21]  7/7 | Quels sont, selon vous, les principaux freins à la mobilisation des entreprises ?
+[22]  7/7 | Quels formats d’animation seraient les plus susceptibles de mobiliser les entreprises ?
+[23]  7/7 | Sur quels thèmes les entreprises industrielles seraient, selon vous, prêtes à s’engager prioritairement ?
+[24]  7/7 | Le sujet de la transmission–reprise d’entreprise vous semble-t-il :
+[25]  7/7 | Quels besoins identifiez-vous sur la transmission / reprise d’entreprises artisanales ?
+[26]  7/7 | Si vous ne pouviez proposer qu’une seule action prioritaire à mettre en œuvre dans le cadre de la GPECT, laquelle serait-elle ?
+[27]  7/7 | Quelles actions à résultats rapides vous paraissent les plus utiles pour crédibiliser la démarche auprès des entreprises et des partenaires ?
+[28]  7/7 | Quels résultats concrets attendez-vous de la démarche GPECT sur les 12 à 24 prochains mois ?
+[29]  7/7 | Souhaitez-vous ajouter des remarques, alertes ou propositions complémentaires pour nourrir le diagnostic territorial ?
+
+=== APERÇU valeurs (contrôle décalage + nature texte/échelle) ===
+[00] 'Horodateur'
+       - 2026-04-09 10:17:01.612000
+       - 2026-04-24 12:03:33.002000
+       - 2026-05-15 12:35:19.654000
+[01] 'Nom et prénom'
+       - Nathalie GATEFIN
+       - DURAND ERIC
+       - TRINQUART FLORENT
+[02] 'Organisation / structure'
+       - CPME 36
+       - CGC
+       - CGT  INDRE
+[03] 'Fonction'
+       - Déléguée Générale
+       - Délégué Syndical Central et coordinateur Groupe Safran
+       - Délégué départementa
+[04] 'Type d’acteur'
+       - Organisation professionnelle / syndicale
+       - Organisation professionnelle / syndicale
+       - Organisation professionnelle / syndicale
+[05] 'Territoire principalement couvert'
+       - Département
+       - Département
+       - Département
+[06] 'Comment évaluez-vous la dynamique économique globale du bass'
+       - 3
+       - 3
+       - 3
+[07] 'Comment évaluez-vous la coordination entre les différents ac'
+       - 4
+       - 2
+       - 3
+[08] 'Selon vous, quels sont les principaux atouts du territoire p'
+       - Place en terme de foncier, central dans la pays, Qualité de vie
+       - Le Foncier
+       - Infrastructures logistiques et routières, Prix du foncier, 
+[09] 'Selon vous, quels sont les principaux freins ou fragilités p'
+       - Transport, pb réseau routier en transversal, Méconnaissance du territoire, logement, démog
+       - Difficulté de recrutement, accès de transport
+       - Dévalorisation des métiers manuels / fermeture des Afpa / Niveau global de formation des d
+[10] 'Sur quels types de métiers constatez-vous aujourd’hui les pl'
+       - restauration (services), propreté, mécanique, 
+       - Programma manager, opérateurs, monteurs
+       - Fraiseurs, ajusteurs, tech méthodes, qualité, métiers du batiment
+[11] 'Les besoins en compétences des entreprises industrielles vou'
+       - Partiellement identifiés
+       - Peu formalisés
+       - Bien identifiés et formalisés
+[12] 'Selon vous, quelles compétences techniques doivent être prio'
+       - Mécanique, techniciens méthodes, qualiticiens
+       - Intelligence artificielle, digitalisation
+       - Tech Qualité méthodes, tous les métiers manuels
+[13] 'Selon vous, quelles compétences transversales / socles doive'
+       - Compétences élémentaires, savoir être de base
+       - Lire, écrire, compter
+       - Savoir de base, lire écrire, compter
+[14] 'L’offre de formation actuelle (formation initiale, apprentis'
+       - Peu adaptée
+       - Partiellement adaptée
+       - Peu adaptée
+[15] 'Quels sont, selon vous, les principaux freins rencontrés par'
+       - Education nationale qui ne présente pas les métiers, formation qui ne débouchent pas sur d
+       - Pas de connaissances sur les OF
+       - Perte des Afpa au profit des Afpi. 
+[16] 'Quelles évolutions de l’offre de formation vous semblent pri'
+       - Apprentissage, difficultés pour les jeunes de trouver une alternance
+       - Ecole de formation interne à Safran + Ecole SAFRAN Université
+       - Formation interne, formation des tuteurs
+[17] 'Parmi les freins suivants, lesquels vous semblent les plus s'
+       - Mobilité rurale, Logement cher ou en mauvais état, Compétences de base, Motivation des per
+       - Mobilité rurale
+       - Compétences de base
+[18] 'Sur une échelle de 1 à 5, à quel point la mobilité vous semb'
+       - 3
+       - 5
+       - 2
+[19] 'Quelles solutions concrètes vous semblent les plus pertinent'
+       - Adaptation des horaires de transport en commun aux horaires des entreprises
+       - Navette Gare vers les entreprises, restauration
+       - RAS
+[20] 'Selon vous, le niveau d’engagement des entreprises dans les '
+       - Plutôt satisfaisant
+       - Faible
+       - Moyen
+[21] 'Quels sont, selon vous, les principaux freins à la mobilisat'
+       - Temps, saturation des évènements, et réunions qui ne mènent à rien
+       - RAS
+       - Manque de collaboration entre entreprises ou dans les branches / Concurrence entre les ent
+[22] 'Quels formats d’animation seraient les plus susceptibles de '
+       - Nécessité que les entreprises voient un résultat concret
+       - Ne sait pas ce que cela pourrait apporter
+       - Ateliers courts
+[23] 'Sur quels thèmes les entreprises industrielles seraient, sel'
+       - Transmission, DUERP, accompagnement RSE
+       - Attractivité, dynamique de la ville
+       - Attractivité du territoire, donner envie aux salariés, motivation
+[24] 'Le sujet de la transmission–reprise d’entreprise vous semble'
+       - Prioritaire
+       - Secondaire
+       - Prioritaire
+[25] 'Quels besoins identifiez-vous sur la transmission / reprise '
+       - Accompagnement de session d'entreprises
+       - accompagnement
+       - Donner des aides à ceux qui en besoin. Plus pour les petites entreprise
+[26] 'Si vous ne pouviez proposer qu’une seule action prioritaire '
+       - Rencontre entreprises /demandeurs d'emploi motivés
+       - Société qui pourraient investir dans un centre de recherche, et centre d'expertise
+       - Valorisation des métiers manuels et techniques
+[27] 'Quelles actions à résultats rapides vous paraissent les plus'
+       - Ne sait pas 
+       - Transport gare/zone industrielle
+       - RAS
+[28] 'Quels résultats concrets attendez-vous de la démarche GPECT '
+       - Ne sait pas 
+       - RAS
+       - RAS
+[29] 'Souhaitez-vous ajouter des remarques, alertes ou proposition'
+       - Pas de remarques 
+       - ras
+       - RAS

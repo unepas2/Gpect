@@ -1,0 +1,582 @@
+FEUILLES : ['Réponses au formulaire 1']
+
+DIMENSIONS BRUTES : 7 lignes x 98 colonnes
+Lignes 100% vides : 0 
+DIMENSIONS APRÈS retrait vides : 7 lignes x 98 colonnes
+Doublons stricts : 0
+
+=== COLONNES (index | remplissage | intitulé) ===
+[00]  7/7 | Horodateur
+[01]  7/7 | J'ai pris connaissance que les informations recueillies sont confidentielles et ne seront utilisées que pour les besoins de l'étude GPECT.
+[02]  7/7 | Je consens à ce que mes données soient collectées et traitées de manière anonyme dans le cadre de cette démarche GPECT territoriale.
+[03]  7/7 | Q0.1 — Nom de l'organisme de formation
+[04]  7/7 | Q0.2 — Nom et prénom du contact
+[05]  7/7 | Q0.3 — Fonction / Poste
+[06]  7/7 | Q0.4 — Adresse e-mail professionnelle
+[07]  7/7 | Q0.5 — Numéro de téléphone
+[08]  7/7 | Q0.6 — Adresse postale (siège ou antenne principale)
+[09]  7/7 | Q0.7 — Type d'organisme
+[10]  1/7 | Q0.7 — Autre type d'organisme, précisez
+[11]  7/7 | Q0.8 — Votre organisme est-il certifié Qualiopi ?
+[12]  7/7 | Q0.9 — Vos formations sont-elles éligibles au CPF ?
+[13]  7/7 | Q0.10 — Votre organisme intervient principalement sur :
+[14]  7/7 | Q0.11 — Disposez-vous d'une antenne ou organisez-vous des sessions sur le bassin d'Issoudun ?
+[15]  7/7 | Q1.1 — Quels publics accueillez-vous principalement ?
+[16]  7/7 | Q1.2 — Vos formations sont principalement :
+[17]  7/7 | Q1.3 — Niveaux de certification proposés
+[18]  7/7 | Q1.4 — Capacité d'accueil annuelle approximative
+[19]  7/7 | Q1.5 — Nombre de formateurs internes (salariés)
+[20]  7/7 | Q1.6 — Nombre de formateurs externes / vacataires
+[21]  7/7 | Q1.7 — Disposez-vous de plateaux techniques adaptés à l'industrie ou aux métiers techniques ?
+[22]  7/7 | Q1.8 — Si oui, précisez les équipements ou domaines couverts
+[23]  7/7 | Q2.1 — Pour chaque domaine, évaluez le niveau de votre offre de formation actuelle sur le territoire [Usinage, mécanique et travail des métaux]
+[24]  7/7 | Q2.1 — Pour chaque domaine, évaluez le niveau de votre offre de formation actuelle sur le territoire [Maintenance industrielle et automatismes]
+[25]  7/7 | Q2.1 — Pour chaque domaine, évaluez le niveau de votre offre de formation actuelle sur le territoire [Programmation de machines (robots, automates, CNC)]
+[26]  7/7 | Q2.1 — Pour chaque domaine, évaluez le niveau de votre offre de formation actuelle sur le territoire [Qualité, contrôle et métrologie]
+[27]  7/7 | Q2.1 — Pour chaque domaine, évaluez le niveau de votre offre de formation actuelle sur le territoire [Logistique, supply chain et gestion des flux]
+[28]  7/7 | Q2.1 — Pour chaque domaine, évaluez le niveau de votre offre de formation actuelle sur le territoire [Numérique industriel, data et traçabilité (ERP, GPAO)]
+[29]  7/7 | Q2.1 — Pour chaque domaine, évaluez le niveau de votre offre de formation actuelle sur le territoire [CAO / DAO / lecture de plans techniques]
+[30]  7/7 | Q2.1 — Pour chaque domaine, évaluez le niveau de votre offre de formation actuelle sur le territoire [Transition écologique et énergétique (éco-conception)]
+[31]  7/7 | Q2.1 — Pour chaque domaine, évaluez le niveau de votre offre de formation actuelle sur le territoire [Sécurité et prévention des risques professionnels]
+[32]  7/7 | Q2.1 — Pour chaque domaine, évaluez le niveau de votre offre de formation actuelle sur le territoire [Conduite de véhicules et engins (SPL, CACES…)]
+[33]  7/7 | Q2.1 — Pour chaque domaine, évaluez le niveau de votre offre de formation actuelle sur le territoire [Compétences commerciales et relation client]
+[34]  7/7 | Q2.1 — Pour chaque domaine, évaluez le niveau de votre offre de formation actuelle sur le territoire [Management et gestion d'équipe]
+[35]  7/7 | Q2.2 — Pour chaque compétence émergente, évaluez la capacité actuelle de votre organisme à former [Intelligence artificielle]
+[36]  7/7 | Q2.2 — Pour chaque compétence émergente, évaluez la capacité actuelle de votre organisme à former [Automatisation, cobotique et robotique avancée]
+[37]  7/7 | Q2.2 — Pour chaque compétence émergente, évaluez la capacité actuelle de votre organisme à former [Maintenance avancée et prédictive]
+[38]  7/7 | Q2.2 — Pour chaque compétence émergente, évaluez la capacité actuelle de votre organisme à former [Transition énergétique et décarbonation]
+[39]  7/7 | Q2.2 — Pour chaque compétence émergente, évaluez la capacité actuelle de votre organisme à former [Cybersécurité industrielle]
+[40]  7/7 | Q2.2 — Pour chaque compétence émergente, évaluez la capacité actuelle de votre organisme à former [Management de la performance et pilotage par indicateurs]
+[41]  7/7 | Q2.2 — Pour chaque compétence émergente, évaluez la capacité actuelle de votre organisme à former [Conduite du changement et gestion de projet]
+[42]  7/7 | Q2.2 — Pour chaque compétence émergente, évaluez la capacité actuelle de votre organisme à former [Transmission des savoir-faire et tutorat]
+[43]  7/7 | Q2.3 — Développez-vous des formations sur mesure pour des entreprises du territoire ?
+[44]  7/7 | Q3.1 — Comment évaluez-vous votre connaissance des besoins en compétences des entreprises du bassin d'Issoudun ?
+[45]  7/7 | Q3.2 — Quelles sources vous permettent d'identifier les besoins des entreprises ?
+[46]  7/7 | Q3.3 — Sur quels secteurs du bassin votre connaissance est-elle la plus forte ou la plus faible ? [Industrie agroalimentaire]
+[47]  7/7 | Q3.3 — Sur quels secteurs du bassin votre connaissance est-elle la plus forte ou la plus faible ? [Métallurgie, usinage et travail des métaux]
+[48]  7/7 | Q3.3 — Sur quels secteurs du bassin votre connaissance est-elle la plus forte ou la plus faible ? [Aéronautique / Défense]
+[49]  7/7 | Q3.3 — Sur quels secteurs du bassin votre connaissance est-elle la plus forte ou la plus faible ? [Industrie automobile]
+[50]  7/7 | Q3.3 — Sur quels secteurs du bassin votre connaissance est-elle la plus forte ou la plus faible ? [Maroquinerie et industrie du luxe]
+[51]  7/7 | Q3.3 — Sur quels secteurs du bassin votre connaissance est-elle la plus forte ou la plus faible ? [Fabrication mécanique et construction tubulaire]
+[52]  7/7 | Q3.3 — Sur quels secteurs du bassin votre connaissance est-elle la plus forte ou la plus faible ? [Transport routier et logistique]
+[53]  7/7 | Q3.3 — Sur quels secteurs du bassin votre connaissance est-elle la plus forte ou la plus faible ? [Services aux entreprises et ingénierie]
+[54]  7/7 | Q3.4 — Quels métiers ou filières vous semblent aujourd'hui les plus en tension sur le territoire ?
+[55]  7/7 | Q4.1 — Selon vous, votre offre de formation couvre-t-elle bien les besoins des entreprises du territoire ?
+[56]  7/7 | Q4.2 — Quels retours avez-vous reçus de vos clients entreprises sur l'adéquation de votre offre ?
+[57]  7/7 | Q4.3 — Sur quels points votre offre vous semble-t-elle insuffisamment adaptée ?
+[58]  3/7 | Q4.3 — Autres lacunes, précisez
+[59]  5/7 | Q4.4 — Quels métiers ou compétences nécessiteraient une adaptation prioritaire de votre offre ?
+[60]  7/7 | Q5.1 — Avez-vous déjà conçu ou accompagné des parcours AFEST pour des entreprises ?
+[61]  7/7 | Q5.2 — Évaluez la maîtrise de l'ingénierie AFEST par votre équipe pédagogique
+[62]  7/7 | Q5.3 — Quels sont, selon vous, les principaux freins au déploiement de l'AFEST sur le territoire ?
+[63]  1/7 | Q5.3 — Autres freins AFEST, précisez
+[64]  7/7 | Q5.4 — Sous quelles formes avez-vous déjà adapté votre offre pour des entreprises du territoire ?
+[65]  7/7 | Q5.5 — Seriez-vous prêt(e) à faire évoluer votre offre pour mieux répondre aux besoins du territoire ?
+[66]  1/7 | Q5.6 — Si sous conditions, précisez lesquelles (financières, partenariales, réglementaires…)
+[67]  7/7 | Q6.1 — Comment qualifieriez-vous le niveau de coopération de votre organisme avec les entreprises du territoire ?
+[68]  7/7 | Q6.2 — Avec quels acteurs emploi-formation travaillez-vous sur le territoire ?
+[69]  6/7 | Q6.2 — OPCO / autres partenaires, précisez
+[70]  7/7 | Q6.3 — Sous quelles formes se traduit votre coopération avec les entreprises ?
+[71]  7/7 | Q6.4 — Avez-vous participé à des actions collectives territoriales (GPECT, CPRDFOP, SPRO…) ?
+[72]  4/7 | Q6.5 — Si oui, lesquelles et quel a été votre rôle ?
+[73]  7/7 | Q7.1 — Quels sont les principaux freins au développement ou à l'adaptation de votre offre ?
+[74]  1/7 | Q7.1 — Autres freins, précisez
+[75]  7/7 | Q7.2 — Quels leviers vous sembleraient les plus utiles pour mieux répondre aux besoins ?
+[76]  7/7 | Q8.1 — Anticipez-vous une évolution significative des besoins de formation sur le territoire à horizon 2-5 ans ?
+[77]  7/7 | Q8.2 — Sur quels domaines les évolutions seront-elles les plus marquées ?
+[78]  7/7 | Q8.3 — Pensez-vous que le territoire nécessite la création de nouvelles formations qui n'existent pas encore localement ?
+[79]  2/7 | Q8.4 — Si oui, dans quels domaines ? (formations manquantes)
+[80]  7/7 | Q8.5 — Votre organisme envisage-t-il des transformations internes à cet horizon ?
+[81]  7/7 | Q9.1 — Parmi les thématiques suivantes, lesquelles vous semblent prioritaires pour la GPECT d'Issoudun ? [Connaissance du marché du travail local et des métiers en tension]
+[82]  7/7 | Q9.1 — Parmi les thématiques suivantes, lesquelles vous semblent prioritaires pour la GPECT d'Issoudun ? [Aide au recrutement et sourcing de candidats]
+[83]  7/7 | Q9.1 — Parmi les thématiques suivantes, lesquelles vous semblent prioritaires pour la GPECT d'Issoudun ? [Développement de l'offre de formation locale]
+[84]  7/7 | Q9.1 — Parmi les thématiques suivantes, lesquelles vous semblent prioritaires pour la GPECT d'Issoudun ? [Mutualisation inter-entreprises (emploi partagé, formations groupées)]
+[85]  7/7 | Q9.1 — Parmi les thématiques suivantes, lesquelles vous semblent prioritaires pour la GPECT d'Issoudun ? [Attractivité du territoire et communication externe]
+[86]  7/7 | Q9.1 — Parmi les thématiques suivantes, lesquelles vous semblent prioritaires pour la GPECT d'Issoudun ? [Gestion des seniors et transmission des savoir-faire]
+[87]  7/7 | Q9.1 — Parmi les thématiques suivantes, lesquelles vous semblent prioritaires pour la GPECT d'Issoudun ? [Développement de l'alternance et des liens avec les écoles]
+[88]  7/7 | Q9.1 — Parmi les thématiques suivantes, lesquelles vous semblent prioritaires pour la GPECT d'Issoudun ? [Accompagnement à la transition numérique et à l'Industrie 4.0]
+[89]  7/7 | Q9.2 — Quel(s) rôle(s) pensez-vous pouvoir jouer dans la démarche GPECT territoriale ?
+[90]  7/7 | Q9.3 — Seriez-vous intéressé(e) par des ateliers de co-construction GPECT ?
+[91]  7/7 | Q10.1 — Comment évaluez-vous l'image d'Issoudun et de son bassin industriel auprès de vos stagiaires et alternants ?
+[92]  7/7 | Q10.2 — Quels freins territoriaux identifiez-vous auprès des publics que vous accueillez ?
+[93]  7/7 | Q10.3 — Sur quelles actions collectives d'attractivité seriez-vous prêt(e) à vous engager ?
+[94]  7/7 | Q11.1 — Si une seule action concrète devait sortir de cette démarche GPECT pour votre organisme, laquelle serait la plus utile ?
+[95]  4/7 | Q11.2 — Y a-t-il une entreprise ou un acteur local que vous recommanderiez d'associer à cette démarche ?
+[96]  7/7 | Q11.3 — Souhaitez-vous recevoir une synthèse des résultats du diagnostic ?
+[97]  3/7 | Q11.4 — Avez-vous des observations, suggestions ou besoins complémentaires à partager ?
+
+=== APERÇU : valeurs non nulles de chaque colonne (contrôle décalage) ===
+[00] 'Horodateur'
+       - 2026-04-23 16:21:18.048000
+       - 2026-05-19 15:22:11.053000
+       - 2026-05-20 15:41:07.028000
+       - 2026-05-28 18:10:58.167000
+[01] "J'ai pris connaissance que les informations recueillies"
+       - Oui, j'en prends acte
+       - Oui, j'en prends acte
+       - Oui, j'en prends acte
+       - Oui, j'en prends acte
+[02] 'Je consens à ce que mes données soient collectées et tr'
+       - Oui, je consens
+       - Oui, je consens
+       - Oui, je consens
+       - Oui, je consens
+[03] "Q0.1 — Nom de l'organisme de formation"
+       - IFCA
+       - Afpi Centre Val de Loire
+       - LYCEE D'ALEMBERT
+       - AFPA
+[04] 'Q0.2 — Nom et prénom du contact'
+       - FREDERIQUE GALLIEN
+       - Sylvie Prunier
+       - Manon DELIOUX
+       - Veronique BAILLARGEAT 
+[05] 'Q0.3 — Fonction / Poste'
+       - Déléguée territorialle et conseillére en formation
+       - Conseillère Emploi Formation / Responsable de Site 
+       - Responsable bureau des entreprises
+       - DIRECTRICE
+[06] 'Q0.4 — Adresse e-mail professionnelle'
+       - frederique.g@ifca-groupe.com
+       - s.prunier@poleformation-uimmcvdl.fr
+       - bde-lpo03600024F@ac-orleans-tours.fr
+       - Veronique.baillargeat@afpa.fr et cecric.barret@afpa.fr
+[07] 'Q0.5 — Numéro de téléphone'
+       - 0623898534
+       - 0673845449
+       - 0254037600
+       - 06 09 30 69 71
+[08] 'Q0.6 — Adresse postale (siège ou antenne principale)'
+       - Boulevard D'anvaux
+       - ZIAP - Rue Georges Clémenceau Bâtiment 620 Porte B 36130 Déols
+       - 8 RUE DE LA LIMOISE
+       - ISSOUDUN
+[09] "Q0.7 — Type d'organisme"
+       - Organisme de formation privé, CFA (Centre de Formation d'Apprentis)
+       - Organisme de formation privé
+       - Lycée professionnel
+       - ETABLISSEMENT PUBLIC INDUSTRIELLE ET COMMERCIALE (soumis au code des m
+[10] "Q0.7 — Autre type d'organisme, précisez"
+       - Collectivité régionale (financeur / acheteur de formations)
+[11] 'Q0.8 — Votre organisme est-il certifié Qualiopi ?'
+       - Oui, certifié
+       - Oui, certifié
+       - Oui, certifié
+       - Oui, certifié
+[12] 'Q0.9 — Vos formations sont-elles éligibles au CPF ?'
+       - Majoritairement éligibles
+       - Partiellement éligibles
+       - Non renseigné
+       - Majoritairement éligibles
+[13] 'Q0.10 — Votre organisme intervient principalement sur :'
+       - Région Centre-Val de Loire
+       - Issoudun et son agglomération, Département de l'Indre (hors Issoudun),
+       - National
+       - Issoudun et son agglomération, Département de l'Indre (hors Issoudun)
+[14] "Q0.11 — Disposez-vous d'une antenne ou organisez-vous d"
+       - Oui, sessions régulières
+       - Oui, sessions régulières
+       - Oui, antenne permanente
+       - Oui, antenne permanente
+[15] 'Q1.1 — Quels publics accueillez-vous principalement ?'
+       - Demandeurs d'emploi, Salariés en poste (formation continue), Jeunes en
+       - Demandeurs d'emploi, Salariés en poste (formation continue), Jeunes en
+       - Scolaires / lycéens, Demandeurs d'emploi, Jeunes en alternance (appren
+       - Demandeurs d'emploi, Salariés en poste (formation continue), Jeunes en
+[16] 'Q1.2 — Vos formations sont principalement :'
+       - Continues (salariés / adultes), En alternance (apprentissage / Pro-A),
+       - Continues (salariés / adultes), En alternance (apprentissage / Pro-A),
+       - Initiales (scolaires), En alternance (apprentissage / Pro-A), Certifia
+       - Continues (salariés / adultes), En alternance (apprentissage / Pro-A),
+[17] 'Q1.3 — Niveaux de certification proposés'
+       - Infra-bac (niv. 1 à 2), CAP / BEP (niv. 3), Baccalauréat (niv. 4), BTS
+       - Infra-bac (niv. 1 à 2), CAP / BEP (niv. 3), Baccalauréat (niv. 4), BTS
+       - CAP / BEP (niv. 3), Baccalauréat (niv. 4), BTS / BUT (niv. 5)
+       - Infra-bac (niv. 1 à 2), CAP / BEP (niv. 3), Baccalauréat (niv. 4), BTS
+[18] "Q1.4 — Capacité d'accueil annuelle approximative"
+       - > 500 stagiaires/an
+       - 50 à 200 stagiaires/an
+       - > 500 stagiaires/an
+       - > 500 stagiaires/an
+[19] 'Q1.5 — Nombre de formateurs internes (salariés)'
+       - 11
+       - 5
+       - 50
+       - 15
+[20] 'Q1.6 — Nombre de formateurs externes / vacataires'
+       - 11
+       - 250
+       - 50
+       - 10
+[21] 'Q1.7 — Disposez-vous de plateaux techniques adaptés à l'
+       - Oui, totalement équipés
+       - Oui, totalement équipés
+       - Oui, totalement équipés
+       - Oui, totalement équipés
+[22] 'Q1.8 — Si oui, précisez les équipements ou domaines cou'
+       - Industrie, métallurgie, logistique, maroquinerie, maintenance, électri
+       - Usinage, Maintenance, Soudure, Chaudronnerie + 2 salles de cours 
+       - MECANIQUE,LOGISTIQUE,MAROQUINERIE,CONDUITE ROUTIERE
+       - SOUDURE, MELAGE, manequin sst, electrique, 
+[23] 'Q2.1 — Pour chaque domaine, évaluez le niveau de votre '
+       - 4
+       - 5
+       - 3
+       - 5
+[24] 'Q2.1 — Pour chaque domaine, évaluez le niveau de votre '
+       - 5
+       - 5
+       - 3
+       - 1
+[25] 'Q2.1 — Pour chaque domaine, évaluez le niveau de votre '
+       - 5
+       - 4
+       - 2
+       - 1
+[26] 'Q2.1 — Pour chaque domaine, évaluez le niveau de votre '
+       - 3
+       - 5
+       - 1
+       - 1
+[27] 'Q2.1 — Pour chaque domaine, évaluez le niveau de votre '
+       - 5
+       - 5
+       - 5
+       - 1
+[28] 'Q2.1 — Pour chaque domaine, évaluez le niveau de votre '
+       - 3
+       - 4
+       - 2
+       - 1
+[29] 'Q2.1 — Pour chaque domaine, évaluez le niveau de votre '
+       - 5
+       - 5
+       - 2
+       - 2
+[30] 'Q2.1 — Pour chaque domaine, évaluez le niveau de votre '
+       - 3
+       - 4
+       - 2
+       - 5
+[31] 'Q2.1 — Pour chaque domaine, évaluez le niveau de votre '
+       - 5
+       - 5
+       - 2
+       - 5
+[32] 'Q2.1 — Pour chaque domaine, évaluez le niveau de votre '
+       - 5
+       - 5
+       - 5
+       - 1
+[33] 'Q2.1 — Pour chaque domaine, évaluez le niveau de votre '
+       - 2
+       - 5
+       - 4
+       - 3
+[34] 'Q2.1 — Pour chaque domaine, évaluez le niveau de votre '
+       - 5
+       - 5
+       - 4
+       - 4
+[35] 'Q2.2 — Pour chaque compétence émergente, évaluez la cap'
+       - 1
+       - 4
+       - 1
+       - 3
+[36] 'Q2.2 — Pour chaque compétence émergente, évaluez la cap'
+       - 5
+       - 3
+       - 1
+       - 1
+[37] 'Q2.2 — Pour chaque compétence émergente, évaluez la cap'
+       - 5
+       - 5
+       - 1
+       - 1
+[38] 'Q2.2 — Pour chaque compétence émergente, évaluez la cap'
+       - 4
+       - 5
+       - 1
+       - 1
+[39] 'Q2.2 — Pour chaque compétence émergente, évaluez la cap'
+       - 2
+       - 1
+       - 1
+       - 1
+[40] 'Q2.2 — Pour chaque compétence émergente, évaluez la cap'
+       - 5
+       - 5
+       - 2
+       - 5
+[41] 'Q2.2 — Pour chaque compétence émergente, évaluez la cap'
+       - 5
+       - 5
+       - 2
+       - 4
+[42] 'Q2.2 — Pour chaque compétence émergente, évaluez la cap'
+       - 5
+       - 5
+       - 2
+       - 4
+[43] 'Q2.3 — Développez-vous des formations sur mesure pour d'
+       - Oui, régulièrement
+       - Oui, régulièrement
+       - Non, et ce n'est pas envisagé
+       - Oui, régulièrement
+[44] 'Q3.1 — Comment évaluez-vous votre connaissance des beso'
+       - 3
+       - 4
+       - 2
+       - 2
+[45] "Q3.2 — Quelles sources vous permettent d'identifier les"
+       - Contacts directs avec les entreprises, Participation à des instances l
+       - Contacts directs avec les entreprises, Participation à des instances l
+       - Contacts directs avec les entreprises, Données France Travail / observ
+       - Contacts directs avec les entreprises, Données France Travail / observ
+[46] 'Q3.3 — Sur quels secteurs du bassin votre connaissance '
+       - 4
+       - 3
+       - 2
+       - 1
+[47] 'Q3.3 — Sur quels secteurs du bassin votre connaissance '
+       - 4
+       - 5
+       - 3
+       - 3
+[48] 'Q3.3 — Sur quels secteurs du bassin votre connaissance '
+       - 5
+       - 5
+       - 3
+       - 2
+[49] 'Q3.3 — Sur quels secteurs du bassin votre connaissance '
+       - 5
+       - 5
+       - 4
+       - 2
+[50] 'Q3.3 — Sur quels secteurs du bassin votre connaissance '
+       - 5
+       - 1
+       - 5
+       - 2
+[51] 'Q3.3 — Sur quels secteurs du bassin votre connaissance '
+       - 3
+       - 5
+       - 2
+       - 2
+[52] 'Q3.3 — Sur quels secteurs du bassin votre connaissance '
+       - 2
+       - 3
+       - 5
+       - 3
+[53] 'Q3.3 — Sur quels secteurs du bassin votre connaissance '
+       - 5
+       - 4
+       - 2
+       - 4
+[54] "Q3.4 — Quels métiers ou filières vous semblent aujourd'"
+       - Technicien usinage, maintenance, conduite le ligne
+       - Monteur Câbleur, Usinage, Chaudronnier/Soudeur
+       - ras
+       - industrie armement service à la personne
+[55] 'Q4.1 — Selon vous, votre offre de formation couvre-t-el'
+       - 4
+       - 5
+       - 4
+       - 4
+[56] 'Q4.2 — Quels retours avez-vous reçus de vos clients ent'
+       - 4
+       - 5
+       - 4
+       - 4
+[57] 'Q4.3 — Sur quels points votre offre vous semble-t-elle '
+       - Éloignement géographique
+       - Coût pédagogique trop élevé pour les PME
+       - Niveaux de qualification non adaptés
+       - Éloignement géographique, Coût pédagogique trop élevé pour les PME
+[58] 'Q4.3 — Autres lacunes, précisez'
+       - Cout pédagogiques, plateaux 
+       - RAS
+       - Difficulté à mobiliser les entreprises en amont Écart entre niveau rée
+[59] 'Q4.4 — Quels métiers ou compétences nécessiteraient une'
+       - IA 
+       - IA
+       - maintenance pompe à chaleur frigorifique
+       - FORMATION SECRETARIAT ET COMPTABILITE. ANGLAIS
+[60] 'Q5.1 — Avez-vous déjà conçu ou accompagné des parcours '
+       - Régulièrement
+       - 1 à 2 cas ponctuels
+       - Jamais
+       - Régulièrement
+[61] "Q5.2 — Évaluez la maîtrise de l'ingénierie AFEST par vo"
+       - 5
+       - 3
+       - 1
+       - 5
+[62] 'Q5.3 — Quels sont, selon vous, les principaux freins au'
+       - Résistance ou méconnaissance des entreprises
+       - Complexité du référentiel et de la traçabilité
+       - Complexité du référentiel et de la traçabilité, 
+       - Résistance ou méconnaissance des entreprises, Absence de modèle économ
+[63] 'Q5.3 — Autres freins AFEST, précisez'
+       - RAS
+[64] 'Q5.4 — Sous quelles formes avez-vous déjà adapté votre '
+       - Création de nouveaux modules, Révision de contenus existants, Modulari
+       - Création de nouveaux modules, Révision de contenus existants, Modulari
+       - Renforcement de l'alternance, Co-animation avec des professionnels
+       - Création de nouveaux modules, Révision de contenus existants, Formatio
+[65] 'Q5.5 — Seriez-vous prêt(e) à faire évoluer votre offre '
+       - Oui, sans condition particulière
+       - Oui, sans condition particulière
+       - Oui, sous certaines conditions
+       - Oui, sans condition particulière
+[66] 'Q5.6 — Si sous conditions, précisez lesquelles (financi'
+       - ACCORD DU RECTORAT
+[67] 'Q6.1 — Comment qualifieriez-vous le niveau de coopérati'
+       - 4
+       - 5
+       - 4
+       - 3
+[68] 'Q6.2 — Avec quels acteurs emploi-formation travaillez-v'
+       - France Travail (ex-Pôle Emploi), Mission Locale de l'Indre, Cap Emploi
+       - France Travail (ex-Pôle Emploi), Mission Locale de l'Indre, Cap Emploi
+       - France Travail (ex-Pôle Emploi), OPCO (précisez ci-dessous), Autres or
+       - France Travail (ex-Pôle Emploi), Mission Locale de l'Indre, Cap Emploi
+[69] 'Q6.2 — OPCO / autres partenaires, précisez'
+       - TOUS ET LE PLUS OPCO 2I
+       - ETT
+       - OPCO MOBILITE , OPCO2I
+       - RAS
+[70] 'Q6.3 — Sous quelles formes se traduit votre coopération'
+       - Co-construction de contenus pédagogiques, Accueil d'alternants, Visite
+       - Co-construction de contenus pédagogiques, Accueil d'alternants, Visite
+       - Accueil d'alternants, Visites / immersions en entreprise, Intervention
+       - Co-construction de contenus pédagogiques, Accueil d'alternants, Visite
+[71] 'Q6.4 — Avez-vous participé à des actions collectives te'
+       - Oui
+       - Non
+       - Oui
+       - Oui
+[72] 'Q6.5 — Si oui, lesquelles et quel a été votre rôle ?'
+       - BLOIS SPRO 
+       - RENCONTRE 
+       - Groupe de travail
+       - Connaissance et suivi institutionnel des démarches existantes Pas de p
+[73] 'Q7.1 — Quels sont les principaux freins au développemen'
+       - Manque de financements pour l'ingénierie, Absence ou vétusté des plate
+       - Faible attractivité de certains métiers
+       - Manque de financements pour l'ingénierie, Absence ou vétusté des plate
+       - Difficulté à mobiliser les entreprises
+[74] 'Q7.1 — Autres freins, précisez'
+       - Difficulté à mobiliser les entreprises ; Manque de financements pour l
+[75] 'Q7.2 — Quels leviers vous sembleraient les plus utiles '
+       - Financement dédié à l'adaptation pédagogique, Outil de repérage et d'o
+       - Plateforme mutualisée de plateaux techniques, Construction de parcours
+       - Financement dédié à l'adaptation pédagogique
+       - Plateforme mutualisée de plateaux techniques, Construction de parcours
+[76] 'Q8.1 — Anticipez-vous une évolution significative des b'
+       - 4
+       - 4
+       - 2
+       - 4
+[77] 'Q8.2 — Sur quels domaines les évolutions seront-elles l'
+       - Intelligence artificielle, Automatisation / cobotique / robotique avan
+       - Intelligence artificielle, Automatisation / cobotique / robotique avan
+       - Intelligence artificielle, Automatisation / cobotique / robotique avan
+       - Intelligence artificielle
+[78] 'Q8.3 — Pensez-vous que le territoire nécessite la créat'
+       - Non
+       - Probablement
+       - Probablement
+       - Probablement
+[79] 'Q8.4 — Si oui, dans quels domaines ? (formations manqua'
+       - AIDE A LA PERSONNE, PETITE ENFANCE  
+       - NUMERIQUE
+[80] 'Q8.5 — Votre organisme envisage-t-il des transformation'
+       - Développement de l'offre digitale / e-learning, Création de nouvelles 
+       - Développement de l'offre digitale / e-learning, Création de nouvelles 
+       - Création de nouvelles filières / certifications, Renforcement des part
+       - Création de nouvelles filières / certifications
+[81] 'Q9.1 — Parmi les thématiques suivantes, lesquelles vous'
+       - 4
+       - 5
+       - 4
+       - 4
+[82] 'Q9.1 — Parmi les thématiques suivantes, lesquelles vous'
+       - 1
+       - 5
+       - 2
+       - 3
+[83] 'Q9.1 — Parmi les thématiques suivantes, lesquelles vous'
+       - 2
+       - 5
+       - 3
+       - 3
+[84] 'Q9.1 — Parmi les thématiques suivantes, lesquelles vous'
+       - 4
+       - 4
+       - 2
+       - 3
+[85] 'Q9.1 — Parmi les thématiques suivantes, lesquelles vous'
+       - 5
+       - 5
+       - 5
+       - 3
+[86] 'Q9.1 — Parmi les thématiques suivantes, lesquelles vous'
+       - 5
+       - 5
+       - 2
+       - 3
+[87] 'Q9.1 — Parmi les thématiques suivantes, lesquelles vous'
+       - 5
+       - 5
+       - 5
+       - 3
+[88] 'Q9.1 — Parmi les thématiques suivantes, lesquelles vous'
+       - 5
+       - 4
+       - 3
+       - 3
+[89] 'Q9.2 — Quel(s) rôle(s) pensez-vous pouvoir jouer dans l'
+       - Informer sur l'offre de formation existante, Adapter l'offre aux besoi
+       - Informer sur l'offre de formation existante, Adapter l'offre aux besoi
+       - Informer sur l'offre de formation existante, Accueillir des publics en
+       - Co-construire des parcours avec les entreprises, Contribuer à l'attrac
+[90] 'Q9.3 — Seriez-vous intéressé(e) par des ateliers de co-'
+       - Atelier « Métiers sensibles et compétences clés du territoire », Ateli
+       - Atelier « Métiers sensibles et compétences clés du territoire », Ateli
+       - Non, je ne souhaite pas participer à des ateliers
+       - Atelier « Métiers sensibles et compétences clés du territoire », Ateli
+[91] "Q10.1 — Comment évaluez-vous l'image d'Issoudun et de s"
+       - 3
+       - 4
+       - 3
+       - 3
+[92] 'Q10.2 — Quels freins territoriaux identifiez-vous auprè'
+       - Manque de transports en commun et de solutions de mobilité, Difficulté
+       - Image globale du territoire peu attractive
+       - Offre de logement insuffisante ou trop chère, Offre de soins et de san
+       - Offre de logement insuffisante ou trop chère, Offre de soins et de san
+[93] "Q10.3 — Sur quelles actions collectives d'attractivité "
+       - Promotion des métiers industriels auprès des lycéens/collégiens, Visit
+       - Visites d'entreprises et journées portes ouvertes coordonnées, Partici
+       - Promotion des métiers industriels auprès des lycéens/collégiens, Visit
+       - Campagne de communication commune sur les atouts du territoire
+[94] 'Q11.1 — Si une seule action concrète devait sortir de c'
+       - Communication sur les atouts du territoire
+       - Bien lister les besoins en formation /recrutement
+       - Etablir des partenariats pérene avec les entreprises
+       - COMMENT ON EMBARQUE LES ENTREPRISES DU TERRITOIRES
+[95] 'Q11.2 — Y a-t-il une entreprise ou un acteur local que '
+       - ETT/FRACE TRAVAIL
+       - RAS
+       - RAS
+       - UIMM ; CPE (branche métallurgie) — groupe technique industrie
+[96] 'Q11.3 — Souhaitez-vous recevoir une synthèse des résult'
+       - Oui
+       - Oui
+       - Oui
+       - Non
+[97] 'Q11.4 — Avez-vous des observations, suggestions ou beso'
+       - RAS
+       - RAS
+       - Le frein principal n'est pas le manque de candidats mais la difficulté

@@ -1,0 +1,2880 @@
+{
+  "_meta": {
+    "college": "Organismes de formation",
+    "n_repondants": 7,
+    "source": "677aa4a6-02_organismes_formation.xlsx.xlsx",
+    "source_date": "2026-04/05 (collecte) / export 2026-06-28",
+    "genere_le": "2026-06-28 16:39 UTC",
+    "financeur_non_dispensateur_ligne_interne": 6,
+    "note_option_B": "Questions OF-spécifiques calculées AVEC 7 et SANS financeur (n=6).",
+    "avertissement": "n=7 : aucune généralisation. Effectifs bruts prioritaires sur les %."
+  },
+  "questions": {
+    "Q0.7_type": {
+      "qid": "Q0.7",
+      "type": "choix_unique",
+      "intitule": "Q0.7 — Type d'organisme",
+      "n_repondants": 7,
+      "modalites": [
+        {
+          "modalite": "Organisme de formation privé, CFA (Centre de Formation d'Apprentis)",
+          "n": 1,
+          "pct": 14.3
+        },
+        {
+          "modalite": "Organisme de formation privé",
+          "n": 1,
+          "pct": 14.3
+        },
+        {
+          "modalite": "Lycée professionnel",
+          "n": 1,
+          "pct": 14.3
+        },
+        {
+          "modalite": "ETABLISSEMENT PUBLIC INDUSTRIELLE ET COMMERCIALE (soumis au code des marchés publiques)",
+          "n": 1,
+          "pct": 14.3
+        },
+        {
+          "modalite": "Université / IUT",
+          "n": 1,
+          "pct": 14.3
+        },
+        {
+          "modalite": "GRETA / CAFOC",
+          "n": 1,
+          "pct": 14.3
+        },
+        {
+          "modalite": "Collectivité régionale (financeur / acheteur de formations)",
+          "n": 1,
+          "pct": 14.3
+        }
+      ]
+    },
+    "Q0.8_qualiopi": {
+      "qid": "Q0.8",
+      "type": "choix_unique",
+      "intitule": "Q0.8 — Votre organisme est-il certifié Qualiopi ?",
+      "n_repondants": 7,
+      "modalites": [
+        {
+          "modalite": "Oui, certifié",
+          "n": 5,
+          "pct": 71.4
+        },
+        {
+          "modalite": "Non",
+          "n": 2,
+          "pct": 28.6
+        }
+      ]
+    },
+    "Q0.9_cpf": {
+      "qid": "Q0.9",
+      "type": "choix_unique",
+      "intitule": "Q0.9 — Vos formations sont-elles éligibles au CPF ?",
+      "n_repondants": 7,
+      "modalites": [
+        {
+          "modalite": "Majoritairement éligibles",
+          "n": 3,
+          "pct": 42.9
+        },
+        {
+          "modalite": "Non renseigné",
+          "n": 2,
+          "pct": 28.6
+        },
+        {
+          "modalite": "Partiellement éligibles",
+          "n": 1,
+          "pct": 14.3
+        },
+        {
+          "modalite": "Aucune formation éligible",
+          "n": 1,
+          "pct": 14.3
+        }
+      ]
+    },
+    "Q0.10_perimetre": {
+      "qid": "Q0.10",
+      "type": "multi_select",
+      "intitule": "Q0.10 — Votre organisme intervient principalement sur :",
+      "n_repondants": 7,
+      "modalites": [
+        {
+          "modalite": "Indre hors Issoudun",
+          "n": 4,
+          "pct_repondants": 57.1
+        },
+        {
+          "modalite": "Issoudun et agglomération",
+          "n": 3,
+          "pct_repondants": 42.9
+        },
+        {
+          "modalite": "Région Centre-Val de Loire",
+          "n": 2,
+          "pct_repondants": 28.6
+        },
+        {
+          "modalite": "National",
+          "n": 1,
+          "pct_repondants": 14.3
+        }
+      ]
+    },
+    "Q0.11_presence_issoudun": {
+      "qid": "Q0.11",
+      "type": "choix_unique",
+      "intitule": "Q0.11 — Disposez-vous d'une antenne ou organisez-vous des sessions sur le bassin d'Issoudun ?",
+      "n_repondants": 7,
+      "modalites": [
+        {
+          "modalite": "Oui, antenne permanente",
+          "n": 3,
+          "pct": 42.9
+        },
+        {
+          "modalite": "Oui, sessions régulières",
+          "n": 2,
+          "pct": 28.6
+        },
+        {
+          "modalite": "Oui, sessions ponctuelles",
+          "n": 1,
+          "pct": 14.3
+        },
+        {
+          "modalite": "Non, aucune implantation locale",
+          "n": 1,
+          "pct": 14.3
+        }
+      ]
+    },
+    "Q1.1_publics": {
+      "qid": "Q1.1",
+      "type": "multi_select",
+      "intitule": "Q1.1 — Quels publics accueillez-vous principalement ?",
+      "n_repondants": 7,
+      "modalites": [
+        {
+          "modalite": "Demandeurs d'emploi",
+          "n": 7,
+          "pct_repondants": 100.0
+        },
+        {
+          "modalite": "Jeunes en alternance",
+          "n": 6,
+          "pct_repondants": 85.7
+        },
+        {
+          "modalite": "Reconversion professionnelle",
+          "n": 5,
+          "pct_repondants": 71.4
+        },
+        {
+          "modalite": "Situation de handicap",
+          "n": 5,
+          "pct_repondants": 71.4
+        },
+        {
+          "modalite": "Salariés en poste (continue)",
+          "n": 4,
+          "pct_repondants": 57.1
+        },
+        {
+          "modalite": "Allophones / sous main de justice",
+          "n": 3,
+          "pct_repondants": 42.9
+        },
+        {
+          "modalite": "Scolaires / lycéens",
+          "n": 2,
+          "pct_repondants": 28.6
+        },
+        {
+          "modalite": "Indépendants / dirigeants",
+          "n": 2,
+          "pct_repondants": 28.6
+        }
+      ]
+    },
+    "Q1.2_type_formations": {
+      "qid": "Q1.2",
+      "type": "multi_select",
+      "intitule": "Q1.2 — Vos formations sont principalement :",
+      "n_repondants": 7,
+      "modalites": [
+        {
+          "modalite": "En alternance",
+          "n": 6,
+          "pct_repondants": 85.7
+        },
+        {
+          "modalite": "Certifiantes / diplômantes",
+          "n": 6,
+          "pct_repondants": 85.7
+        },
+        {
+          "modalite": "Continues (adultes)",
+          "n": 5,
+          "pct_repondants": 71.4
+        },
+        {
+          "modalite": "Sur mesure / intra",
+          "n": 5,
+          "pct_repondants": 71.4
+        },
+        {
+          "modalite": "Courtes / modulaires",
+          "n": 4,
+          "pct_repondants": 57.1
+        },
+        {
+          "modalite": "VAE",
+          "n": 4,
+          "pct_repondants": 57.1
+        },
+        {
+          "modalite": "Blocs de compétences",
+          "n": 3,
+          "pct_repondants": 42.9
+        },
+        {
+          "modalite": "Initiales (scolaires)",
+          "n": 2,
+          "pct_repondants": 28.6
+        }
+      ]
+    },
+    "Q1.3_niveaux": {
+      "qid": "Q1.3",
+      "type": "multi_select",
+      "intitule": "Q1.3 — Niveaux de certification proposés",
+      "n_repondants": 7,
+      "modalites": [
+        {
+          "modalite": "CAP / BEP",
+          "n": 6,
+          "pct_repondants": 85.7
+        },
+        {
+          "modalite": "BTS / BUT",
+          "n": 6,
+          "pct_repondants": 85.7
+        },
+        {
+          "modalite": "Infra-bac",
+          "n": 5,
+          "pct_repondants": 71.4
+        },
+        {
+          "modalite": "Baccalauréat",
+          "n": 5,
+          "pct_repondants": 71.4
+        },
+        {
+          "modalite": "Licence / Bachelor",
+          "n": 3,
+          "pct_repondants": 42.9
+        }
+      ]
+    },
+    "Q1.4_capacite": {
+      "qid": "Q1.4",
+      "type": "choix_unique",
+      "intitule": "Q1.4 — Capacité d'accueil annuelle approximative",
+      "n_repondants": 7,
+      "modalites": [
+        {
+          "modalite": "> 500 stagiaires/an",
+          "n": 5,
+          "pct": 71.4
+        },
+        {
+          "modalite": "50 à 200 stagiaires/an",
+          "n": 1,
+          "pct": 14.3
+        },
+        {
+          "modalite": "200 à 500 stagiaires/an",
+          "n": 1,
+          "pct": 14.3
+        }
+      ]
+    },
+    "Q1.5_formateurs_internes": {
+      "qid": "Q1.5",
+      "type": "numerique",
+      "intitule": "Q1.5 — Nombre de formateurs internes (salariés)",
+      "n_numerique": 6,
+      "valeurs_non_numeriques": [
+        "20 et 25 formateurs INDRE"
+      ],
+      "valeurs_numeriques": [
+        0,
+        5,
+        11,
+        15,
+        45,
+        50
+      ],
+      "mediane": 13.0,
+      "min": 0.0,
+      "max": 50.0,
+      "somme": 126.0
+    },
+    "Q1.6_formateurs_externes": {
+      "qid": "Q1.6",
+      "type": "numerique",
+      "intitule": "Q1.6 — Nombre de formateurs externes / vacataires",
+      "n_numerique": 6,
+      "valeurs_non_numeriques": [
+        "Entre 0 et 5 par an "
+      ],
+      "valeurs_numeriques": [
+        0,
+        10,
+        11,
+        50,
+        70,
+        250
+      ],
+      "mediane": 30.5,
+      "min": 0.0,
+      "max": 250.0,
+      "somme": 391.0
+    },
+    "Q1.7_plateaux": {
+      "qid": "Q1.7",
+      "type": "choix_unique",
+      "intitule": "Q1.7 — Disposez-vous de plateaux techniques adaptés à l'industrie ou aux métiers techniques ?",
+      "n_repondants": 7,
+      "modalites": [
+        {
+          "modalite": "Oui, totalement équipés",
+          "n": 6,
+          "pct": 85.7
+        },
+        {
+          "modalite": "Non, aucun plateau technique",
+          "n": 1,
+          "pct": 14.3
+        }
+      ]
+    },
+    "Q1.8_equipements": {
+      "qid": "Q1.8",
+      "type": "texte_libre",
+      "intitule": "Q1.8 — Si oui, précisez les équipements ou domaines couverts",
+      "n_repondants": 7,
+      "verbatims_anonymises": [
+        "Industrie, métallurgie, logistique, maroquinerie, maintenance, électricité - Plateau fixe et déployable",
+        "Usinage, Maintenance, Soudure, Chaudronnerie + 2 salles de cours",
+        "MECANIQUE,LOGISTIQUE,MAROQUINERIE,CONDUITE ROUTIERE",
+        "SOUDURE, MELAGE, manequin sst, electrique,",
+        "AUTOMATISME/ELECTRICITE",
+        "ELECTRICITE INDUSTRIE ET AGENT D ENTRETIEN,MAROQUINERIE, MECANIQUE",
+        "0"
+      ]
+    },
+    "Q2.1_niveau_offre": {
+      "qid": "Q2.1",
+      "type": "batterie_echelle_1_5",
+      "intitule": "Niveau de l'offre actuelle par domaine (1 faible→5 fort)",
+      "n_items": 12,
+      "items": [
+        {
+          "item": "Usinage, mécanique et travail des métaux",
+          "n": 7,
+          "moyenne": 3.7,
+          "mediane": 4.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.5,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 3.8,
+            "mediane": 4.5,
+            "min": 1,
+            "max": 5,
+            "ecart_type": 1.6
+          }
+        },
+        {
+          "item": "Maintenance industrielle et automatismes",
+          "n": 7,
+          "moyenne": 3.9,
+          "mediane": 5.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.6,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 4.0,
+            "mediane": 5.0,
+            "min": 1,
+            "max": 5,
+            "ecart_type": 1.7
+          }
+        },
+        {
+          "item": "Programmation de machines (robots, automates, CNC)",
+          "n": 7,
+          "moyenne": 3.4,
+          "mediane": 4.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.5,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 3.5,
+            "mediane": 4.0,
+            "min": 1,
+            "max": 5,
+            "ecart_type": 1.6
+          }
+        },
+        {
+          "item": "Qualité, contrôle et métrologie",
+          "n": 7,
+          "moyenne": 2.7,
+          "mediane": 3.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.8,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 2.7,
+            "mediane": 2.0,
+            "min": 1,
+            "max": 5,
+            "ecart_type": 2.0
+          }
+        },
+        {
+          "item": "Logistique, supply chain et gestion des flux",
+          "n": 7,
+          "moyenne": 3.7,
+          "mediane": 5.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.7,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 3.8,
+            "mediane": 5.0,
+            "min": 1,
+            "max": 5,
+            "ecart_type": 1.8
+          }
+        },
+        {
+          "item": "Numérique industriel, data et traçabilité (ERP, GPAO)",
+          "n": 7,
+          "moyenne": 2.7,
+          "mediane": 3.0,
+          "min": 1,
+          "max": 4,
+          "ecart_type": 1.1,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 2.7,
+            "mediane": 2.5,
+            "min": 1,
+            "max": 4,
+            "ecart_type": 1.2
+          }
+        },
+        {
+          "item": "CAO / DAO / lecture de plans techniques",
+          "n": 7,
+          "moyenne": 3.3,
+          "mediane": 3.0,
+          "min": 2,
+          "max": 5,
+          "ecart_type": 1.3,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 3.3,
+            "mediane": 3.0,
+            "min": 2,
+            "max": 5,
+            "ecart_type": 1.4
+          }
+        },
+        {
+          "item": "Transition écologique et énergétique (éco-conception)",
+          "n": 7,
+          "moyenne": 3.0,
+          "mediane": 3.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.3,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 3.0,
+            "mediane": 3.0,
+            "min": 1,
+            "max": 5,
+            "ecart_type": 1.4
+          }
+        },
+        {
+          "item": "Sécurité et prévention des risques professionnels",
+          "n": 7,
+          "moyenne": 3.1,
+          "mediane": 3.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.9,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 3.2,
+            "mediane": 3.5,
+            "min": 1,
+            "max": 5,
+            "ecart_type": 2.0
+          }
+        },
+        {
+          "item": "Conduite de véhicules et engins (SPL, CACES…)",
+          "n": 7,
+          "moyenne": 3.0,
+          "mediane": 3.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 2.0,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 3.0,
+            "mediane": 3.0,
+            "min": 1,
+            "max": 5,
+            "ecart_type": 2.2
+          }
+        },
+        {
+          "item": "Compétences commerciales et relation client",
+          "n": 7,
+          "moyenne": 3.3,
+          "mediane": 3.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.5,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 3.3,
+            "mediane": 3.5,
+            "min": 1,
+            "max": 5,
+            "ecart_type": 1.6
+          }
+        },
+        {
+          "item": "Management et gestion d'équipe",
+          "n": 7,
+          "moyenne": 3.9,
+          "mediane": 4.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.5,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 4.0,
+            "mediane": 4.5,
+            "min": 1,
+            "max": 5,
+            "ecart_type": 1.5
+          }
+        }
+      ],
+      "classement_par_moyenne": [
+        {
+          "item": "Maintenance industrielle et automatismes",
+          "n": 7,
+          "moyenne": 3.9,
+          "mediane": 5.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.6,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 4.0,
+            "mediane": 5.0,
+            "min": 1,
+            "max": 5,
+            "ecart_type": 1.7
+          }
+        },
+        {
+          "item": "Management et gestion d'équipe",
+          "n": 7,
+          "moyenne": 3.9,
+          "mediane": 4.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.5,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 4.0,
+            "mediane": 4.5,
+            "min": 1,
+            "max": 5,
+            "ecart_type": 1.5
+          }
+        },
+        {
+          "item": "Usinage, mécanique et travail des métaux",
+          "n": 7,
+          "moyenne": 3.7,
+          "mediane": 4.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.5,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 3.8,
+            "mediane": 4.5,
+            "min": 1,
+            "max": 5,
+            "ecart_type": 1.6
+          }
+        },
+        {
+          "item": "Logistique, supply chain et gestion des flux",
+          "n": 7,
+          "moyenne": 3.7,
+          "mediane": 5.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.7,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 3.8,
+            "mediane": 5.0,
+            "min": 1,
+            "max": 5,
+            "ecart_type": 1.8
+          }
+        },
+        {
+          "item": "Programmation de machines (robots, automates, CNC)",
+          "n": 7,
+          "moyenne": 3.4,
+          "mediane": 4.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.5,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 3.5,
+            "mediane": 4.0,
+            "min": 1,
+            "max": 5,
+            "ecart_type": 1.6
+          }
+        },
+        {
+          "item": "CAO / DAO / lecture de plans techniques",
+          "n": 7,
+          "moyenne": 3.3,
+          "mediane": 3.0,
+          "min": 2,
+          "max": 5,
+          "ecart_type": 1.3,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 3.3,
+            "mediane": 3.0,
+            "min": 2,
+            "max": 5,
+            "ecart_type": 1.4
+          }
+        },
+        {
+          "item": "Compétences commerciales et relation client",
+          "n": 7,
+          "moyenne": 3.3,
+          "mediane": 3.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.5,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 3.3,
+            "mediane": 3.5,
+            "min": 1,
+            "max": 5,
+            "ecart_type": 1.6
+          }
+        },
+        {
+          "item": "Sécurité et prévention des risques professionnels",
+          "n": 7,
+          "moyenne": 3.1,
+          "mediane": 3.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.9,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 3.2,
+            "mediane": 3.5,
+            "min": 1,
+            "max": 5,
+            "ecart_type": 2.0
+          }
+        },
+        {
+          "item": "Transition écologique et énergétique (éco-conception)",
+          "n": 7,
+          "moyenne": 3.0,
+          "mediane": 3.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.3,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 3.0,
+            "mediane": 3.0,
+            "min": 1,
+            "max": 5,
+            "ecart_type": 1.4
+          }
+        },
+        {
+          "item": "Conduite de véhicules et engins (SPL, CACES…)",
+          "n": 7,
+          "moyenne": 3.0,
+          "mediane": 3.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 2.0,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 3.0,
+            "mediane": 3.0,
+            "min": 1,
+            "max": 5,
+            "ecart_type": 2.2
+          }
+        },
+        {
+          "item": "Qualité, contrôle et métrologie",
+          "n": 7,
+          "moyenne": 2.7,
+          "mediane": 3.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.8,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 2.7,
+            "mediane": 2.0,
+            "min": 1,
+            "max": 5,
+            "ecart_type": 2.0
+          }
+        },
+        {
+          "item": "Numérique industriel, data et traçabilité (ERP, GPAO)",
+          "n": 7,
+          "moyenne": 2.7,
+          "mediane": 3.0,
+          "min": 1,
+          "max": 4,
+          "ecart_type": 1.1,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 2.7,
+            "mediane": 2.5,
+            "min": 1,
+            "max": 4,
+            "ecart_type": 1.2
+          }
+        }
+      ]
+    },
+    "Q2.2_capacite_emergentes": {
+      "qid": "Q2.2",
+      "type": "batterie_echelle_1_5",
+      "intitule": "Capacité à former aux compétences émergentes (1→5)",
+      "n_items": 8,
+      "items": [
+        {
+          "item": "Intelligence artificielle",
+          "n": 7,
+          "moyenne": 2.3,
+          "mediane": 3.0,
+          "min": 1,
+          "max": 4,
+          "ecart_type": 1.3,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 2.5,
+            "mediane": 3.0,
+            "min": 1,
+            "max": 4,
+            "ecart_type": 1.2
+          }
+        },
+        {
+          "item": "Automatisation, cobotique et robotique avancée",
+          "n": 7,
+          "moyenne": 2.7,
+          "mediane": 3.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.8,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 3.0,
+            "mediane": 3.0,
+            "min": 1,
+            "max": 5,
+            "ecart_type": 1.8
+          }
+        },
+        {
+          "item": "Maintenance avancée et prédictive",
+          "n": 7,
+          "moyenne": 2.9,
+          "mediane": 3.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.9,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 3.2,
+            "mediane": 3.5,
+            "min": 1,
+            "max": 5,
+            "ecart_type": 1.8
+          }
+        },
+        {
+          "item": "Transition énergétique et décarbonation",
+          "n": 7,
+          "moyenne": 2.4,
+          "mediane": 2.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.6,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 2.7,
+            "mediane": 2.5,
+            "min": 1,
+            "max": 5,
+            "ecart_type": 1.6
+          }
+        },
+        {
+          "item": "Cybersécurité industrielle",
+          "n": 7,
+          "moyenne": 1.1,
+          "mediane": 1.0,
+          "min": 1,
+          "max": 2,
+          "ecart_type": 0.4,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 1.2,
+            "mediane": 1.0,
+            "min": 1,
+            "max": 2,
+            "ecart_type": 0.4
+          }
+        },
+        {
+          "item": "Management de la performance et pilotage par indicateurs",
+          "n": 7,
+          "moyenne": 3.4,
+          "mediane": 5.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 2.0,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 3.8,
+            "mediane": 5.0,
+            "min": 1,
+            "max": 5,
+            "ecart_type": 1.8
+          }
+        },
+        {
+          "item": "Conduite du changement et gestion de projet",
+          "n": 7,
+          "moyenne": 3.3,
+          "mediane": 4.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.9,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 3.7,
+            "mediane": 4.5,
+            "min": 1,
+            "max": 5,
+            "ecart_type": 1.8
+          }
+        },
+        {
+          "item": "Transmission des savoir-faire et tutorat",
+          "n": 7,
+          "moyenne": 3.3,
+          "mediane": 4.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.9,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 3.7,
+            "mediane": 4.5,
+            "min": 1,
+            "max": 5,
+            "ecart_type": 1.8
+          }
+        }
+      ],
+      "classement_par_moyenne": [
+        {
+          "item": "Management de la performance et pilotage par indicateurs",
+          "n": 7,
+          "moyenne": 3.4,
+          "mediane": 5.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 2.0,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 3.8,
+            "mediane": 5.0,
+            "min": 1,
+            "max": 5,
+            "ecart_type": 1.8
+          }
+        },
+        {
+          "item": "Conduite du changement et gestion de projet",
+          "n": 7,
+          "moyenne": 3.3,
+          "mediane": 4.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.9,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 3.7,
+            "mediane": 4.5,
+            "min": 1,
+            "max": 5,
+            "ecart_type": 1.8
+          }
+        },
+        {
+          "item": "Transmission des savoir-faire et tutorat",
+          "n": 7,
+          "moyenne": 3.3,
+          "mediane": 4.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.9,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 3.7,
+            "mediane": 4.5,
+            "min": 1,
+            "max": 5,
+            "ecart_type": 1.8
+          }
+        },
+        {
+          "item": "Maintenance avancée et prédictive",
+          "n": 7,
+          "moyenne": 2.9,
+          "mediane": 3.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.9,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 3.2,
+            "mediane": 3.5,
+            "min": 1,
+            "max": 5,
+            "ecart_type": 1.8
+          }
+        },
+        {
+          "item": "Automatisation, cobotique et robotique avancée",
+          "n": 7,
+          "moyenne": 2.7,
+          "mediane": 3.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.8,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 3.0,
+            "mediane": 3.0,
+            "min": 1,
+            "max": 5,
+            "ecart_type": 1.8
+          }
+        },
+        {
+          "item": "Transition énergétique et décarbonation",
+          "n": 7,
+          "moyenne": 2.4,
+          "mediane": 2.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.6,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 2.7,
+            "mediane": 2.5,
+            "min": 1,
+            "max": 5,
+            "ecart_type": 1.6
+          }
+        },
+        {
+          "item": "Intelligence artificielle",
+          "n": 7,
+          "moyenne": 2.3,
+          "mediane": 3.0,
+          "min": 1,
+          "max": 4,
+          "ecart_type": 1.3,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 2.5,
+            "mediane": 3.0,
+            "min": 1,
+            "max": 4,
+            "ecart_type": 1.2
+          }
+        },
+        {
+          "item": "Cybersécurité industrielle",
+          "n": 7,
+          "moyenne": 1.1,
+          "mediane": 1.0,
+          "min": 1,
+          "max": 2,
+          "ecart_type": 0.4,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 1.2,
+            "mediane": 1.0,
+            "min": 1,
+            "max": 2,
+            "ecart_type": 0.4
+          }
+        }
+      ]
+    },
+    "Q2.3_sur_mesure": {
+      "qid": "Q2.3",
+      "type": "choix_unique",
+      "intitule": "Q2.3 — Développez-vous des formations sur mesure pour des entreprises du territoire ?",
+      "n_repondants": 7,
+      "modalites": [
+        {
+          "modalite": "Oui, régulièrement",
+          "n": 4,
+          "pct": 57.1
+        },
+        {
+          "modalite": "Non, et ce n'est pas envisagé",
+          "n": 2,
+          "pct": 28.6
+        },
+        {
+          "modalite": "Oui, ponctuellement",
+          "n": 1,
+          "pct": 14.3
+        }
+      ]
+    },
+    "Q3.1_connaissance_besoins": {
+      "qid": "Q3.1",
+      "type": "echelle_1_5",
+      "intitule": "Q3.1 — Comment évaluez-vous votre connaissance des besoins en compétences des entreprises du bassin d'Issoudun ?",
+      "n": 7,
+      "moyenne": 3.0,
+      "mediane": 3.0,
+      "min": 2,
+      "max": 4,
+      "ecart_type": 0.8,
+      "sans_financeur": {
+        "n": 6,
+        "moyenne": 3.0,
+        "mediane": 3.0,
+        "min": 2,
+        "max": 4,
+        "ecart_type": 0.9
+      }
+    },
+    "Q3.2_sources": {
+      "qid": "Q3.2",
+      "type": "multi_select",
+      "intitule": "Q3.2 — Quelles sources vous permettent d'identifier les besoins des entreprises ?",
+      "n_repondants": 7,
+      "modalites": [
+        {
+          "modalite": "Contacts directs entreprises",
+          "n": 6,
+          "pct_repondants": 85.7
+        },
+        {
+          "modalite": "Données France Travail / observatoires",
+          "n": 6,
+          "pct_repondants": 85.7
+        },
+        {
+          "modalite": "Veille sectorielle (OPCO, branches)",
+          "n": 5,
+          "pct_repondants": 71.4
+        },
+        {
+          "modalite": "Instances locales (clubs, syndicats)",
+          "n": 4,
+          "pct_repondants": 57.1
+        },
+        {
+          "modalite": "Retours d'alternants / stagiaires",
+          "n": 4,
+          "pct_repondants": 57.1
+        },
+        {
+          "modalite": "Études sectorielles / CCI",
+          "n": 2,
+          "pct_repondants": 28.6
+        }
+      ]
+    },
+    "Q3.3_connaissance_secteurs": {
+      "qid": "Q3.3",
+      "type": "batterie_echelle_1_5",
+      "intitule": "Connaissance par secteur du bassin (1→5)",
+      "n_items": 8,
+      "items": [
+        {
+          "item": "Industrie agroalimentaire",
+          "n": 7,
+          "moyenne": 1.9,
+          "mediane": 1.0,
+          "min": 1,
+          "max": 4,
+          "ecart_type": 1.2,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 2.0,
+            "mediane": 1.5,
+            "min": 1,
+            "max": 4,
+            "ecart_type": 1.3
+          }
+        },
+        {
+          "item": "Métallurgie, usinage et travail des métaux",
+          "n": 7,
+          "moyenne": 3.0,
+          "mediane": 3.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.5,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 3.3,
+            "mediane": 3.5,
+            "min": 1,
+            "max": 5,
+            "ecart_type": 1.4
+          }
+        },
+        {
+          "item": "Aéronautique / Défense",
+          "n": 7,
+          "moyenne": 3.3,
+          "mediane": 3.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.5,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 3.7,
+            "mediane": 3.5,
+            "min": 2,
+            "max": 5,
+            "ecart_type": 1.2
+          }
+        },
+        {
+          "item": "Industrie automobile",
+          "n": 7,
+          "moyenne": 3.4,
+          "mediane": 4.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.5,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 3.8,
+            "mediane": 4.0,
+            "min": 2,
+            "max": 5,
+            "ecart_type": 1.2
+          }
+        },
+        {
+          "item": "Maroquinerie et industrie du luxe",
+          "n": 7,
+          "moyenne": 3.3,
+          "mediane": 4.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.9,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 3.7,
+            "mediane": 4.5,
+            "min": 1,
+            "max": 5,
+            "ecart_type": 1.8
+          }
+        },
+        {
+          "item": "Fabrication mécanique et construction tubulaire",
+          "n": 7,
+          "moyenne": 2.4,
+          "mediane": 2.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.4,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 2.7,
+            "mediane": 2.5,
+            "min": 1,
+            "max": 5,
+            "ecart_type": 1.4
+          }
+        },
+        {
+          "item": "Transport routier et logistique",
+          "n": 7,
+          "moyenne": 2.9,
+          "mediane": 3.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.7,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 3.2,
+            "mediane": 3.0,
+            "min": 1,
+            "max": 5,
+            "ecart_type": 1.6
+          }
+        },
+        {
+          "item": "Services aux entreprises et ingénierie",
+          "n": 7,
+          "moyenne": 3.1,
+          "mediane": 3.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.3,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 3.5,
+            "mediane": 3.5,
+            "min": 2,
+            "max": 5,
+            "ecart_type": 1.0
+          }
+        }
+      ],
+      "classement_par_moyenne": [
+        {
+          "item": "Industrie automobile",
+          "n": 7,
+          "moyenne": 3.4,
+          "mediane": 4.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.5,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 3.8,
+            "mediane": 4.0,
+            "min": 2,
+            "max": 5,
+            "ecart_type": 1.2
+          }
+        },
+        {
+          "item": "Aéronautique / Défense",
+          "n": 7,
+          "moyenne": 3.3,
+          "mediane": 3.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.5,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 3.7,
+            "mediane": 3.5,
+            "min": 2,
+            "max": 5,
+            "ecart_type": 1.2
+          }
+        },
+        {
+          "item": "Maroquinerie et industrie du luxe",
+          "n": 7,
+          "moyenne": 3.3,
+          "mediane": 4.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.9,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 3.7,
+            "mediane": 4.5,
+            "min": 1,
+            "max": 5,
+            "ecart_type": 1.8
+          }
+        },
+        {
+          "item": "Services aux entreprises et ingénierie",
+          "n": 7,
+          "moyenne": 3.1,
+          "mediane": 3.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.3,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 3.5,
+            "mediane": 3.5,
+            "min": 2,
+            "max": 5,
+            "ecart_type": 1.0
+          }
+        },
+        {
+          "item": "Métallurgie, usinage et travail des métaux",
+          "n": 7,
+          "moyenne": 3.0,
+          "mediane": 3.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.5,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 3.3,
+            "mediane": 3.5,
+            "min": 1,
+            "max": 5,
+            "ecart_type": 1.4
+          }
+        },
+        {
+          "item": "Transport routier et logistique",
+          "n": 7,
+          "moyenne": 2.9,
+          "mediane": 3.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.7,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 3.2,
+            "mediane": 3.0,
+            "min": 1,
+            "max": 5,
+            "ecart_type": 1.6
+          }
+        },
+        {
+          "item": "Fabrication mécanique et construction tubulaire",
+          "n": 7,
+          "moyenne": 2.4,
+          "mediane": 2.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.4,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 2.7,
+            "mediane": 2.5,
+            "min": 1,
+            "max": 5,
+            "ecart_type": 1.4
+          }
+        },
+        {
+          "item": "Industrie agroalimentaire",
+          "n": 7,
+          "moyenne": 1.9,
+          "mediane": 1.0,
+          "min": 1,
+          "max": 4,
+          "ecart_type": 1.2,
+          "sans_financeur": {
+            "n": 6,
+            "moyenne": 2.0,
+            "mediane": 1.5,
+            "min": 1,
+            "max": 4,
+            "ecart_type": 1.3
+          }
+        }
+      ]
+    },
+    "Q3.4_metiers_tension": {
+      "qid": "Q3.4",
+      "type": "texte_libre",
+      "intitule": "Q3.4 — Quels métiers ou filières vous semblent aujourd'hui les plus en tension sur le territoire ?",
+      "n_repondants": 7,
+      "verbatims_anonymises": [
+        "Technicien usinage, maintenance, conduite le ligne",
+        "Monteur Câbleur, Usinage, Chaudronnier/Soudeur",
+        "ras",
+        "industrie armement service à la personne",
+        "RAS",
+        "Métiers du batiments",
+        "Maintenance industrielle ; Soudage / chaudronnerie ; Conduite (transport de marchandises et de voyageurs)"
+      ]
+    },
+    "Q4.1_offre_couvre": {
+      "qid": "Q4.1",
+      "type": "echelle_1_5",
+      "intitule": "Q4.1 — Selon vous, votre offre de formation couvre-t-elle bien les besoins des entreprises du territoire ?",
+      "n": 7,
+      "moyenne": 4.0,
+      "mediane": 4.0,
+      "min": 2,
+      "max": 5,
+      "ecart_type": 1.0,
+      "sans_financeur": {
+        "n": 6,
+        "moyenne": 4.3,
+        "mediane": 4.0,
+        "min": 4,
+        "max": 5,
+        "ecart_type": 0.5
+      }
+    },
+    "Q4.2_retours_clients": {
+      "qid": "Q4.2",
+      "type": "echelle_1_5",
+      "intitule": "Q4.2 — Quels retours avez-vous reçus de vos clients entreprises sur l'adéquation de votre offre ?",
+      "n": 7,
+      "moyenne": 4.0,
+      "mediane": 4.0,
+      "min": 3,
+      "max": 5,
+      "ecart_type": 0.6,
+      "sans_financeur": {
+        "n": 6,
+        "moyenne": 4.2,
+        "mediane": 4.0,
+        "min": 4,
+        "max": 5,
+        "ecart_type": 0.4
+      }
+    },
+    "Q4.3_points_inadaptes": {
+      "qid": "Q4.3",
+      "type": "multi_select",
+      "intitule": "Q4.3 — Sur quels points votre offre vous semble-t-elle insuffisamment adaptée ?",
+      "n_repondants": 7,
+      "modalites": [
+        {
+          "modalite": "Éloignement géographique",
+          "n": 2,
+          "pct_repondants": 28.6
+        },
+        {
+          "modalite": "Coût pédagogique trop élevé PME",
+          "n": 2,
+          "pct_repondants": 28.6
+        },
+        {
+          "modalite": "Niveaux de qualification non adaptés",
+          "n": 2,
+          "pct_repondants": 28.6
+        },
+        {
+          "modalite": "Durée des parcours trop rigide",
+          "n": 1,
+          "pct_repondants": 14.3
+        },
+        {
+          "modalite": "Volume de sessions insuffisant",
+          "n": 1,
+          "pct_repondants": 14.3
+        },
+        {
+          "modalite": "Aucune lacune identifiée",
+          "n": 1,
+          "pct_repondants": 14.3
+        }
+      ]
+    },
+    "Q4.4_metiers_a_adapter": {
+      "qid": "Q4.4",
+      "type": "texte_libre",
+      "intitule": "Q4.4 — Quels métiers ou compétences nécessiteraient une adaptation prioritaire de votre offre ?",
+      "n_repondants": 5,
+      "verbatims_anonymises": [
+        "IA",
+        "IA",
+        "maintenance pompe à chaleur frigorifique",
+        "FORMATION SECRETARIAT ET COMPTABILITE. ANGLAIS",
+        "Industrie : maintenance, soudage\nBesoins jugés forts par les branches professionnelles, mais mobilisation insuffisante des entreprises en amont"
+      ]
+    },
+    "Q5.1_afest_concu": {
+      "qid": "Q5.1",
+      "type": "choix_unique",
+      "intitule": "Q5.1 — Avez-vous déjà conçu ou accompagné des parcours AFEST pour des entreprises ?",
+      "n_repondants": 7,
+      "modalites": [
+        {
+          "modalite": "Jamais",
+          "n": 3,
+          "pct": 42.9
+        },
+        {
+          "modalite": "Régulièrement",
+          "n": 2,
+          "pct": 28.6
+        },
+        {
+          "modalite": "1 à 2 cas ponctuels",
+          "n": 2,
+          "pct": 28.6
+        }
+      ]
+    },
+    "Q5.2_maitrise_afest": {
+      "qid": "Q5.2",
+      "type": "echelle_1_5",
+      "intitule": "Q5.2 — Évaluez la maîtrise de l'ingénierie AFEST par votre équipe pédagogique",
+      "n": 7,
+      "moyenne": 2.6,
+      "mediane": 2.0,
+      "min": 1,
+      "max": 5,
+      "ecart_type": 1.8,
+      "sans_financeur": {
+        "n": 6,
+        "moyenne": 2.8,
+        "mediane": 2.5,
+        "min": 1,
+        "max": 5,
+        "ecart_type": 1.8
+      }
+    },
+    "Q5.3_freins_afest": {
+      "qid": "Q5.3",
+      "type": "multi_select",
+      "intitule": "Q5.3 — Quels sont, selon vous, les principaux freins au déploiement de l'AFEST sur le territoire ?",
+      "n_repondants": 7,
+      "modalites": [
+        {
+          "modalite": "Résistance / méconnaissance des entreprises",
+          "n": 3,
+          "pct_repondants": 42.9
+        },
+        {
+          "modalite": "Complexité du référentiel et traçabilité",
+          "n": 2,
+          "pct_repondants": 28.6
+        },
+        {
+          "modalite": "Absence de modèle économique viable",
+          "n": 2,
+          "pct_repondants": 28.6
+        },
+        {
+          "modalite": "Difficulté à identifier les situations apprenantes",
+          "n": 1,
+          "pct_repondants": 14.3
+        },
+        {
+          "modalite": "Méconnaissance par les OPCO locaux",
+          "n": 1,
+          "pct_repondants": 14.3
+        },
+        {
+          "modalite": "Pas de demandes / manque de personnel",
+          "n": 1,
+          "pct_repondants": 14.3
+        }
+      ]
+    },
+    "Q5.4_formes_adaptation": {
+      "qid": "Q5.4",
+      "type": "multi_select",
+      "intitule": "Q5.4 — Sous quelles formes avez-vous déjà adapté votre offre pour des entreprises du territoire ?",
+      "n_repondants": 7,
+      "modalites": [
+        {
+          "modalite": "Création de nouveaux modules",
+          "n": 5,
+          "pct_repondants": 71.4
+        },
+        {
+          "modalite": "Révision de contenus",
+          "n": 4,
+          "pct_repondants": 57.1
+        },
+        {
+          "modalite": "Intervention en entreprise",
+          "n": 4,
+          "pct_repondants": 57.1
+        },
+        {
+          "modalite": "Formation sur mesure intra",
+          "n": 3,
+          "pct_repondants": 42.9
+        },
+        {
+          "modalite": "Co-animation avec professionnels",
+          "n": 3,
+          "pct_repondants": 42.9
+        },
+        {
+          "modalite": "Modularisation / blocs",
+          "n": 2,
+          "pct_repondants": 28.6
+        },
+        {
+          "modalite": "Renforcement de l'alternance",
+          "n": 2,
+          "pct_repondants": 28.6
+        },
+        {
+          "modalite": "Aucune adaptation réalisée",
+          "n": 1,
+          "pct_repondants": 14.3
+        }
+      ]
+    },
+    "Q5.5_pret_evoluer": {
+      "qid": "Q5.5",
+      "type": "choix_unique",
+      "intitule": "Q5.5 — Seriez-vous prêt(e) à faire évoluer votre offre pour mieux répondre aux besoins du territoire ?",
+      "n_repondants": 7,
+      "modalites": [
+        {
+          "modalite": "Oui, sans condition particulière",
+          "n": 4,
+          "pct": 57.1
+        },
+        {
+          "modalite": "Non, pas d'évolution envisagée",
+          "n": 2,
+          "pct": 28.6
+        },
+        {
+          "modalite": "Oui, sous certaines conditions",
+          "n": 1,
+          "pct": 14.3
+        }
+      ]
+    },
+    "Q5.6_conditions_evolution": {
+      "qid": "Q5.6",
+      "type": "texte_libre",
+      "intitule": "Q5.6 — Si sous conditions, précisez lesquelles (financières, partenariales, réglementaires…)",
+      "n_repondants": 1,
+      "verbatims_anonymises": [
+        "ACCORD DU RECTORAT"
+      ]
+    },
+    "Q6.1_cooperation": {
+      "qid": "Q6.1",
+      "type": "echelle_1_5",
+      "intitule": "Q6.1 — Comment qualifieriez-vous le niveau de coopération de votre organisme avec les entreprises du territoire ?",
+      "n": 7,
+      "moyenne": 3.6,
+      "mediane": 4.0,
+      "min": 2,
+      "max": 5,
+      "ecart_type": 1.0,
+      "sans_financeur": {
+        "n": 6,
+        "moyenne": 3.8,
+        "mediane": 4.0,
+        "min": 3,
+        "max": 5,
+        "ecart_type": 0.8
+      }
+    },
+    "Q6.2_acteurs": {
+      "qid": "Q6.2",
+      "type": "multi_select",
+      "intitule": "Q6.2 — Avec quels acteurs emploi-formation travaillez-vous sur le territoire ?",
+      "n_repondants": 7,
+      "modalites": [
+        {
+          "modalite": "France Travail",
+          "n": 6,
+          "pct_repondants": 85.7
+        },
+        {
+          "modalite": "Collectivités (CC/Dép./Région)",
+          "n": 6,
+          "pct_repondants": 85.7
+        },
+        {
+          "modalite": "Entreprises locales (directement)",
+          "n": 6,
+          "pct_repondants": 85.7
+        },
+        {
+          "modalite": "Mission Locale de l'Indre",
+          "n": 5,
+          "pct_repondants": 71.4
+        },
+        {
+          "modalite": "OPCO",
+          "n": 5,
+          "pct_repondants": 71.4
+        },
+        {
+          "modalite": "Autres OF",
+          "n": 5,
+          "pct_repondants": 71.4
+        },
+        {
+          "modalite": "Cap Emploi",
+          "n": 4,
+          "pct_repondants": 57.1
+        },
+        {
+          "modalite": "Chambres consulaires (CCI/CMA)",
+          "n": 3,
+          "pct_repondants": 42.9
+        }
+      ]
+    },
+    "Q6.3_formes_coop": {
+      "qid": "Q6.3",
+      "type": "multi_select",
+      "intitule": "Q6.3 — Sous quelles formes se traduit votre coopération avec les entreprises ?",
+      "n_repondants": 7,
+      "modalites": [
+        {
+          "modalite": "Accueil d'alternants",
+          "n": 6,
+          "pct_repondants": 85.7
+        },
+        {
+          "modalite": "Visites / immersions",
+          "n": 6,
+          "pct_repondants": 85.7
+        },
+        {
+          "modalite": "Intervention de professionnels",
+          "n": 6,
+          "pct_repondants": 85.7
+        },
+        {
+          "modalite": "Co-construction de contenus",
+          "n": 4,
+          "pct_repondants": 57.1
+        },
+        {
+          "modalite": "Recrutement direct en sortie",
+          "n": 4,
+          "pct_repondants": 57.1
+        },
+        {
+          "modalite": "Suivi de cohortes / insertion",
+          "n": 2,
+          "pct_repondants": 28.6
+        },
+        {
+          "modalite": "Comités de pilotage / instances",
+          "n": 2,
+          "pct_repondants": 28.6
+        }
+      ]
+    },
+    "Q6.4_actions_collectives": {
+      "qid": "Q6.4",
+      "type": "choix_unique",
+      "intitule": "Q6.4 — Avez-vous participé à des actions collectives territoriales (GPECT, CPRDFOP, SPRO…) ?",
+      "n_repondants": 7,
+      "modalites": [
+        {
+          "modalite": "Oui",
+          "n": 4,
+          "pct": 57.1
+        },
+        {
+          "modalite": "Non",
+          "n": 2,
+          "pct": 28.6
+        },
+        {
+          "modalite": "Je ne sais pas",
+          "n": 1,
+          "pct": 14.3
+        }
+      ]
+    },
+    "Q6.5_role_actions_collectives": {
+      "qid": "Q6.5",
+      "type": "texte_libre",
+      "intitule": "Q6.5 — Si oui, lesquelles et quel a été votre rôle ?",
+      "n_repondants": 4,
+      "verbatims_anonymises": [
+        "BLOIS SPRO",
+        "RENCONTRE",
+        "Groupe de travail",
+        "Connaissance et suivi institutionnel des démarches existantes\nPas de pilotage direct de sa part"
+      ]
+    },
+    "Q7.1_freins_offre": {
+      "qid": "Q7.1",
+      "type": "multi_select",
+      "intitule": "Q7.1 — Quels sont les principaux freins au développement ou à l'adaptation de votre offre ?",
+      "n_repondants": 7,
+      "modalites": [
+        {
+          "modalite": "Difficulté à mobiliser les entreprises",
+          "n": 5,
+          "pct_repondants": 71.4
+        },
+        {
+          "modalite": "Manque de financements ingénierie",
+          "n": 4,
+          "pct_repondants": 57.1
+        },
+        {
+          "modalite": "Faible attractivité de certains métiers",
+          "n": 4,
+          "pct_repondants": 57.1
+        },
+        {
+          "modalite": "Plateaux techniques absents/vétustes",
+          "n": 3,
+          "pct_repondants": 42.9
+        },
+        {
+          "modalite": "Manque de RH internes",
+          "n": 2,
+          "pct_repondants": 28.6
+        },
+        {
+          "modalite": "Concurrence entre OF",
+          "n": 2,
+          "pct_repondants": 28.6
+        },
+        {
+          "modalite": "Faible volume de demande",
+          "n": 2,
+          "pct_repondants": 28.6
+        },
+        {
+          "modalite": "Contraintes réglementaires / certif",
+          "n": 1,
+          "pct_repondants": 14.3
+        }
+      ]
+    },
+    "Q7.2_leviers": {
+      "qid": "Q7.2",
+      "type": "multi_select",
+      "intitule": "Q7.2 — Quels leviers vous sembleraient les plus utiles pour mieux répondre aux besoins ?",
+      "n_repondants": 7,
+      "modalites": [
+        {
+          "modalite": "Observatoire local des métiers",
+          "n": 5,
+          "pct_repondants": 71.4
+        },
+        {
+          "modalite": "Financement dédié adaptation pédago",
+          "n": 4,
+          "pct_repondants": 57.1
+        },
+        {
+          "modalite": "Plateforme mutualisée de plateaux techniques",
+          "n": 3,
+          "pct_repondants": 42.9
+        },
+        {
+          "modalite": "Parcours communs entre OF",
+          "n": 3,
+          "pct_repondants": 42.9
+        },
+        {
+          "modalite": "Réseau structuré d'acteurs locaux",
+          "n": 3,
+          "pct_repondants": 42.9
+        },
+        {
+          "modalite": "Outil de repérage/orientation publics",
+          "n": 3,
+          "pct_repondants": 42.9
+        },
+        {
+          "modalite": "Cartographie partagée de l'offre",
+          "n": 3,
+          "pct_repondants": 42.9
+        },
+        {
+          "modalite": "Ingénierie partagée avec entreprises",
+          "n": 2,
+          "pct_repondants": 28.6
+        }
+      ]
+    },
+    "Q8.1_anticipation_besoins": {
+      "qid": "Q8.1",
+      "type": "echelle_1_5",
+      "intitule": "Q8.1 — Anticipez-vous une évolution significative des besoins de formation sur le territoire à horizon 2-5 ans ?",
+      "n": 7,
+      "moyenne": 3.1,
+      "mediane": 4.0,
+      "min": 1,
+      "max": 4,
+      "ecart_type": 1.2
+    },
+    "Q8.2_domaines_evolutions": {
+      "qid": "Q8.2",
+      "type": "multi_select",
+      "intitule": "Q8.2 — Sur quels domaines les évolutions seront-elles les plus marquées ?",
+      "n_repondants": 7,
+      "modalites": [
+        {
+          "modalite": "Intelligence artificielle",
+          "n": 7,
+          "pct_repondants": 100.0
+        },
+        {
+          "modalite": "Automatisation / cobotique / robotique",
+          "n": 5,
+          "pct_repondants": 71.4
+        },
+        {
+          "modalite": "Cybersécurité industrielle",
+          "n": 5,
+          "pct_repondants": 71.4
+        },
+        {
+          "modalite": "Transition énergétique et décarbonation",
+          "n": 4,
+          "pct_repondants": 57.1
+        },
+        {
+          "modalite": "Maintenance avancée et prédictive",
+          "n": 3,
+          "pct_repondants": 42.9
+        },
+        {
+          "modalite": "Transmission des savoir-faire / tutorat",
+          "n": 2,
+          "pct_repondants": 28.6
+        },
+        {
+          "modalite": "Anglais / compétences transversales",
+          "n": 2,
+          "pct_repondants": 28.6
+        },
+        {
+          "modalite": "Management de la performance",
+          "n": 1,
+          "pct_repondants": 14.3
+        },
+        {
+          "modalite": "Conduite du changement / projet",
+          "n": 1,
+          "pct_repondants": 14.3
+        }
+      ]
+    },
+    "Q8.3_nouvelles_formations": {
+      "qid": "Q8.3",
+      "type": "choix_unique",
+      "intitule": "Q8.3 — Pensez-vous que le territoire nécessite la création de nouvelles formations qui n'existent pas encore localement ?",
+      "n_repondants": 7,
+      "modalites": [
+        {
+          "modalite": "Probablement",
+          "n": 4,
+          "pct": 57.1
+        },
+        {
+          "modalite": "Non",
+          "n": 2,
+          "pct": 28.6
+        },
+        {
+          "modalite": "Je ne sais pas",
+          "n": 1,
+          "pct": 14.3
+        }
+      ]
+    },
+    "Q8.4_formations_manquantes": {
+      "qid": "Q8.4",
+      "type": "texte_libre",
+      "intitule": "Q8.4 — Si oui, dans quels domaines ? (formations manquantes)",
+      "n_repondants": 2,
+      "verbatims_anonymises": [
+        "AIDE A LA PERSONNE, PETITE ENFANCE",
+        "NUMERIQUE"
+      ]
+    },
+    "Q8.5_transfo_internes": {
+      "qid": "Q8.5",
+      "type": "multi_select",
+      "intitule": "Q8.5 — Votre organisme envisage-t-il des transformations internes à cet horizon ?",
+      "n_repondants": 7,
+      "modalites": [
+        {
+          "modalite": "Nouvelles filières / certifications",
+          "n": 5,
+          "pct_repondants": 71.4
+        },
+        {
+          "modalite": "Renforcement partenariats entreprises",
+          "n": 5,
+          "pct_repondants": 71.4
+        },
+        {
+          "modalite": "Embauche de formateurs",
+          "n": 4,
+          "pct_repondants": 57.1
+        },
+        {
+          "modalite": "Offre digitale / e-learning",
+          "n": 3,
+          "pct_repondants": 42.9
+        },
+        {
+          "modalite": "Investissement plateaux techniques",
+          "n": 3,
+          "pct_repondants": 42.9
+        },
+        {
+          "modalite": "Extension géographique",
+          "n": 2,
+          "pct_repondants": 28.6
+        },
+        {
+          "modalite": "Mutualisation avec d'autres OF",
+          "n": 2,
+          "pct_repondants": 28.6
+        },
+        {
+          "modalite": "Aucune transformation prévue",
+          "n": 1,
+          "pct_repondants": 14.3
+        }
+      ]
+    },
+    "Q9.1_priorites_gpect": {
+      "qid": "Q9.1",
+      "type": "batterie_echelle_1_5",
+      "intitule": "Priorités GPECT (1 faible→5 très haute)",
+      "n_items": 8,
+      "items": [
+        {
+          "item": "Connaissance du marché du travail local et des métiers en tension",
+          "n": 7,
+          "moyenne": 4.0,
+          "mediane": 4.0,
+          "min": 3,
+          "max": 5,
+          "ecart_type": 0.6
+        },
+        {
+          "item": "Aide au recrutement et sourcing de candidats",
+          "n": 7,
+          "moyenne": 2.3,
+          "mediane": 2.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.5
+        },
+        {
+          "item": "Développement de l'offre de formation locale",
+          "n": 7,
+          "moyenne": 2.6,
+          "mediane": 3.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.4
+        },
+        {
+          "item": "Mutualisation inter-entreprises (emploi partagé, formations groupées)",
+          "n": 7,
+          "moyenne": 3.0,
+          "mediane": 3.0,
+          "min": 1,
+          "max": 4,
+          "ecart_type": 1.2
+        },
+        {
+          "item": "Attractivité du territoire et communication externe",
+          "n": 7,
+          "moyenne": 3.3,
+          "mediane": 3.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.8
+        },
+        {
+          "item": "Gestion des seniors et transmission des savoir-faire",
+          "n": 7,
+          "moyenne": 2.9,
+          "mediane": 3.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.7
+        },
+        {
+          "item": "Développement de l'alternance et des liens avec les écoles",
+          "n": 7,
+          "moyenne": 3.9,
+          "mediane": 5.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.6
+        },
+        {
+          "item": "Accompagnement à la transition numérique et à l'Industrie 4.0",
+          "n": 7,
+          "moyenne": 3.3,
+          "mediane": 3.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.3
+        }
+      ],
+      "classement_par_moyenne": [
+        {
+          "item": "Connaissance du marché du travail local et des métiers en tension",
+          "n": 7,
+          "moyenne": 4.0,
+          "mediane": 4.0,
+          "min": 3,
+          "max": 5,
+          "ecart_type": 0.6
+        },
+        {
+          "item": "Développement de l'alternance et des liens avec les écoles",
+          "n": 7,
+          "moyenne": 3.9,
+          "mediane": 5.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.6
+        },
+        {
+          "item": "Attractivité du territoire et communication externe",
+          "n": 7,
+          "moyenne": 3.3,
+          "mediane": 3.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.8
+        },
+        {
+          "item": "Accompagnement à la transition numérique et à l'Industrie 4.0",
+          "n": 7,
+          "moyenne": 3.3,
+          "mediane": 3.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.3
+        },
+        {
+          "item": "Mutualisation inter-entreprises (emploi partagé, formations groupées)",
+          "n": 7,
+          "moyenne": 3.0,
+          "mediane": 3.0,
+          "min": 1,
+          "max": 4,
+          "ecart_type": 1.2
+        },
+        {
+          "item": "Gestion des seniors et transmission des savoir-faire",
+          "n": 7,
+          "moyenne": 2.9,
+          "mediane": 3.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.7
+        },
+        {
+          "item": "Développement de l'offre de formation locale",
+          "n": 7,
+          "moyenne": 2.6,
+          "mediane": 3.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.4
+        },
+        {
+          "item": "Aide au recrutement et sourcing de candidats",
+          "n": 7,
+          "moyenne": 2.3,
+          "mediane": 2.0,
+          "min": 1,
+          "max": 5,
+          "ecart_type": 1.5
+        }
+      ]
+    },
+    "Q9.2_roles": {
+      "qid": "Q9.2",
+      "type": "multi_select",
+      "intitule": "Q9.2 — Quel(s) rôle(s) pensez-vous pouvoir jouer dans la démarche GPECT territoriale ?",
+      "n_repondants": 7,
+      "modalites": [
+        {
+          "modalite": "Informer sur l'offre existante",
+          "n": 5,
+          "pct_repondants": 71.4
+        },
+        {
+          "modalite": "Contribuer à l'attractivité (lycées)",
+          "n": 5,
+          "pct_repondants": 71.4
+        },
+        {
+          "modalite": "Co-construire des parcours",
+          "n": 4,
+          "pct_repondants": 57.1
+        },
+        {
+          "modalite": "Adapter l'offre aux besoins",
+          "n": 3,
+          "pct_repondants": 42.9
+        },
+        {
+          "modalite": "Accueillir alternance / VAE",
+          "n": 3,
+          "pct_repondants": 42.9
+        },
+        {
+          "modalite": "Participer à des groupes de travail",
+          "n": 3,
+          "pct_repondants": 42.9
+        },
+        {
+          "modalite": "Animer des ateliers de sensibilisation",
+          "n": 2,
+          "pct_repondants": 28.6
+        },
+        {
+          "modalite": "Déployer des parcours AFEST",
+          "n": 2,
+          "pct_repondants": 28.6
+        }
+      ]
+    },
+    "Q9.3_ateliers": {
+      "qid": "Q9.3",
+      "type": "multi_select",
+      "intitule": "Q9.3 — Seriez-vous intéressé(e) par des ateliers de co-construction GPECT ?",
+      "n_repondants": 7,
+      "modalites": [
+        {
+          "modalite": "Métiers sensibles & compétences clés",
+          "n": 4,
+          "pct_repondants": 57.1
+        },
+        {
+          "modalite": "Attractivité et recrutement territorial",
+          "n": 2,
+          "pct_repondants": 28.6
+        },
+        {
+          "modalite": "Formation & ingénierie pédagogique mutualisée",
+          "n": 2,
+          "pct_repondants": 28.6
+        },
+        {
+          "modalite": "Transmission savoir-faire & seniors",
+          "n": 2,
+          "pct_repondants": 28.6
+        },
+        {
+          "modalite": "Industrie 4.0 et compétences de demain",
+          "n": 2,
+          "pct_repondants": 28.6
+        },
+        {
+          "modalite": "Ne souhaite pas participer",
+          "n": 2,
+          "pct_repondants": 28.6
+        }
+      ]
+    },
+    "Q10.1_image": {
+      "qid": "Q10.1",
+      "type": "echelle_1_5",
+      "intitule": "Q10.1 — Comment évaluez-vous l'image d'Issoudun et de son bassin industriel auprès de vos stagiaires et alternants ?",
+      "n": 7,
+      "moyenne": 3.1,
+      "mediane": 3.0,
+      "min": 3,
+      "max": 4,
+      "ecart_type": 0.4
+    },
+    "Q10.2_freins_territoire": {
+      "qid": "Q10.2",
+      "type": "multi_select",
+      "intitule": "Q10.2 — Quels freins territoriaux identifiez-vous auprès des publics que vous accueillez ?",
+      "n_repondants": 7,
+      "modalites": [
+        {
+          "modalite": "Image du territoire peu attractive",
+          "n": 5,
+          "pct_repondants": 71.4
+        },
+        {
+          "modalite": "Transports / mobilité",
+          "n": 4,
+          "pct_repondants": 57.1
+        },
+        {
+          "modalite": "Soins et santé insuffisants",
+          "n": 3,
+          "pct_repondants": 42.9
+        },
+        {
+          "modalite": "Logement insuffisant/cher",
+          "n": 2,
+          "pct_repondants": 28.6
+        },
+        {
+          "modalite": "Emploi du conjoint difficile",
+          "n": 1,
+          "pct_repondants": 14.3
+        },
+        {
+          "modalite": "Services à la personne (crèches/gardes)",
+          "n": 1,
+          "pct_repondants": 14.3
+        },
+        {
+          "modalite": "Animation culturelle/sportive",
+          "n": 1,
+          "pct_repondants": 14.3
+        },
+        {
+          "modalite": "Aucun frein territorial",
+          "n": 1,
+          "pct_repondants": 14.3
+        }
+      ]
+    },
+    "Q10.3_actions_attractivite": {
+      "qid": "Q10.3",
+      "type": "multi_select",
+      "intitule": "Q10.3 — Sur quelles actions collectives d'attractivité seriez-vous prêt(e) à vous engager ?",
+      "n_repondants": 7,
+      "modalites": [
+        {
+          "modalite": "Visites / portes ouvertes coordonnées",
+          "n": 4,
+          "pct_repondants": 57.1
+        },
+        {
+          "modalite": "Promotion métiers industriels (scolaires)",
+          "n": 3,
+          "pct_repondants": 42.9
+        },
+        {
+          "modalite": "Campagne de communication commune",
+          "n": 3,
+          "pct_repondants": 42.9
+        },
+        {
+          "modalite": "Participation à un groupement d'employeurs",
+          "n": 2,
+          "pct_repondants": 28.6
+        },
+        {
+          "modalite": "Ateliers inter-entreprises RH",
+          "n": 2,
+          "pct_repondants": 28.6
+        },
+        {
+          "modalite": "Pas d'intérêt",
+          "n": 2,
+          "pct_repondants": 28.6
+        }
+      ]
+    },
+    "Q11.1_action_utile": {
+      "qid": "Q11.1",
+      "type": "texte_libre",
+      "intitule": "Q11.1 — Si une seule action concrète devait sortir de cette démarche GPECT pour votre organisme, laquelle serait la plus utile ?",
+      "n_repondants": 7,
+      "verbatims_anonymises": [
+        "Communication sur les atouts du territoire",
+        "Bien lister les besoins en formation /recrutement",
+        "Etablir des partenariats pérene avec les entreprises",
+        "COMMENT ON EMBARQUE LES ENTREPRISES DU TERRITOIRES",
+        "Actions de communication/ valorisation du territoire et des métiers en tension",
+        "ATTRACTIVITE DU TERRITOIRE",
+        "Que l'animateur GPECT se rende directement en entreprise pour vulgariser la démarche (« prendre son bâton de pèlerin »), en commençant par des outils simples : pyramide des âges, compétences clés"
+      ]
+    },
+    "Q11.2_acteur_associer": {
+      "qid": "Q11.2",
+      "type": "texte_libre",
+      "intitule": "Q11.2 — Y a-t-il une entreprise ou un acteur local que vous recommanderiez d'associer à cette démarche ?",
+      "n_repondants": 4,
+      "verbatims_anonymises": [
+        "ETT/FRACE TRAVAIL",
+        "RAS",
+        "RAS",
+        "une branche professionnelle ; une branche professionnelle — groupe technique industrie"
+      ]
+    },
+    "Q11.3_souhaite_synthese": {
+      "qid": "Q11.3",
+      "type": "choix_unique",
+      "intitule": "Q11.3 — Souhaitez-vous recevoir une synthèse des résultats du diagnostic ?",
+      "n_repondants": 7,
+      "modalites": [
+        {
+          "modalite": "Oui",
+          "n": 4,
+          "pct": 57.1
+        },
+        {
+          "modalite": "Non",
+          "n": 3,
+          "pct": 42.9
+        }
+      ]
+    },
+    "Q11.4_observations": {
+      "qid": "Q11.4",
+      "type": "texte_libre",
+      "intitule": "Q11.4 — Avez-vous des observations, suggestions ou besoins complémentaires à partager ?",
+      "n_repondants": 3,
+      "verbatims_anonymises": [
+        "RAS",
+        "RAS",
+        "Le frein principal n'est pas le manque de candidats mais la difficulté à mobiliser les entreprises en amont (modèle « défi ») ; déficit d'accompagnement et de tutorat en entreprise (intégration défaillante des stagiaires et intérimaires, taux d'échec élevé observé dans le transport) ; décalage croissant entre le niveau réel des demandeurs d'emploi (souvent infra-CAP) et les exigences des entreprises"
+      ]
+    }
+  },
+  "recap_echelles": [
+    {
+      "qid": "Q2.1",
+      "item": "Usinage, mécanique et travail des métaux",
+      "moyenne": 3.7,
+      "mediane": 4.0,
+      "ecart_type": 1.5,
+      "n": 7,
+      "moy_sans_financeur": 3.8
+    },
+    {
+      "qid": "Q2.1",
+      "item": "Maintenance industrielle et automatismes",
+      "moyenne": 3.9,
+      "mediane": 5.0,
+      "ecart_type": 1.6,
+      "n": 7,
+      "moy_sans_financeur": 4.0
+    },
+    {
+      "qid": "Q2.1",
+      "item": "Programmation de machines (robots, automates, CNC)",
+      "moyenne": 3.4,
+      "mediane": 4.0,
+      "ecart_type": 1.5,
+      "n": 7,
+      "moy_sans_financeur": 3.5
+    },
+    {
+      "qid": "Q2.1",
+      "item": "Qualité, contrôle et métrologie",
+      "moyenne": 2.7,
+      "mediane": 3.0,
+      "ecart_type": 1.8,
+      "n": 7,
+      "moy_sans_financeur": 2.7
+    },
+    {
+      "qid": "Q2.1",
+      "item": "Logistique, supply chain et gestion des flux",
+      "moyenne": 3.7,
+      "mediane": 5.0,
+      "ecart_type": 1.7,
+      "n": 7,
+      "moy_sans_financeur": 3.8
+    },
+    {
+      "qid": "Q2.1",
+      "item": "Numérique industriel, data et traçabilité (ERP, GPAO)",
+      "moyenne": 2.7,
+      "mediane": 3.0,
+      "ecart_type": 1.1,
+      "n": 7,
+      "moy_sans_financeur": 2.7
+    },
+    {
+      "qid": "Q2.1",
+      "item": "CAO / DAO / lecture de plans techniques",
+      "moyenne": 3.3,
+      "mediane": 3.0,
+      "ecart_type": 1.3,
+      "n": 7,
+      "moy_sans_financeur": 3.3
+    },
+    {
+      "qid": "Q2.1",
+      "item": "Transition écologique et énergétique (éco-conception)",
+      "moyenne": 3.0,
+      "mediane": 3.0,
+      "ecart_type": 1.3,
+      "n": 7,
+      "moy_sans_financeur": 3.0
+    },
+    {
+      "qid": "Q2.1",
+      "item": "Sécurité et prévention des risques professionnels",
+      "moyenne": 3.1,
+      "mediane": 3.0,
+      "ecart_type": 1.9,
+      "n": 7,
+      "moy_sans_financeur": 3.2
+    },
+    {
+      "qid": "Q2.1",
+      "item": "Conduite de véhicules et engins (SPL, CACES…)",
+      "moyenne": 3.0,
+      "mediane": 3.0,
+      "ecart_type": 2.0,
+      "n": 7,
+      "moy_sans_financeur": 3.0
+    },
+    {
+      "qid": "Q2.1",
+      "item": "Compétences commerciales et relation client",
+      "moyenne": 3.3,
+      "mediane": 3.0,
+      "ecart_type": 1.5,
+      "n": 7,
+      "moy_sans_financeur": 3.3
+    },
+    {
+      "qid": "Q2.1",
+      "item": "Management et gestion d'équipe",
+      "moyenne": 3.9,
+      "mediane": 4.0,
+      "ecart_type": 1.5,
+      "n": 7,
+      "moy_sans_financeur": 4.0
+    },
+    {
+      "qid": "Q2.2",
+      "item": "Intelligence artificielle",
+      "moyenne": 2.3,
+      "mediane": 3.0,
+      "ecart_type": 1.3,
+      "n": 7,
+      "moy_sans_financeur": 2.5
+    },
+    {
+      "qid": "Q2.2",
+      "item": "Automatisation, cobotique et robotique avancée",
+      "moyenne": 2.7,
+      "mediane": 3.0,
+      "ecart_type": 1.8,
+      "n": 7,
+      "moy_sans_financeur": 3.0
+    },
+    {
+      "qid": "Q2.2",
+      "item": "Maintenance avancée et prédictive",
+      "moyenne": 2.9,
+      "mediane": 3.0,
+      "ecart_type": 1.9,
+      "n": 7,
+      "moy_sans_financeur": 3.2
+    },
+    {
+      "qid": "Q2.2",
+      "item": "Transition énergétique et décarbonation",
+      "moyenne": 2.4,
+      "mediane": 2.0,
+      "ecart_type": 1.6,
+      "n": 7,
+      "moy_sans_financeur": 2.7
+    },
+    {
+      "qid": "Q2.2",
+      "item": "Cybersécurité industrielle",
+      "moyenne": 1.1,
+      "mediane": 1.0,
+      "ecart_type": 0.4,
+      "n": 7,
+      "moy_sans_financeur": 1.2
+    },
+    {
+      "qid": "Q2.2",
+      "item": "Management de la performance et pilotage par indicateurs",
+      "moyenne": 3.4,
+      "mediane": 5.0,
+      "ecart_type": 2.0,
+      "n": 7,
+      "moy_sans_financeur": 3.8
+    },
+    {
+      "qid": "Q2.2",
+      "item": "Conduite du changement et gestion de projet",
+      "moyenne": 3.3,
+      "mediane": 4.0,
+      "ecart_type": 1.9,
+      "n": 7,
+      "moy_sans_financeur": 3.7
+    },
+    {
+      "qid": "Q2.2",
+      "item": "Transmission des savoir-faire et tutorat",
+      "moyenne": 3.3,
+      "mediane": 4.0,
+      "ecart_type": 1.9,
+      "n": 7,
+      "moy_sans_financeur": 3.7
+    },
+    {
+      "qid": "Q3.1",
+      "item": "—",
+      "moyenne": 3.0,
+      "mediane": 3.0,
+      "ecart_type": 0.8,
+      "n": 7,
+      "moy_sans_financeur": 3.0
+    },
+    {
+      "qid": "Q3.3",
+      "item": "Industrie agroalimentaire",
+      "moyenne": 1.9,
+      "mediane": 1.0,
+      "ecart_type": 1.2,
+      "n": 7,
+      "moy_sans_financeur": 2.0
+    },
+    {
+      "qid": "Q3.3",
+      "item": "Métallurgie, usinage et travail des métaux",
+      "moyenne": 3.0,
+      "mediane": 3.0,
+      "ecart_type": 1.5,
+      "n": 7,
+      "moy_sans_financeur": 3.3
+    },
+    {
+      "qid": "Q3.3",
+      "item": "Aéronautique / Défense",
+      "moyenne": 3.3,
+      "mediane": 3.0,
+      "ecart_type": 1.5,
+      "n": 7,
+      "moy_sans_financeur": 3.7
+    },
+    {
+      "qid": "Q3.3",
+      "item": "Industrie automobile",
+      "moyenne": 3.4,
+      "mediane": 4.0,
+      "ecart_type": 1.5,
+      "n": 7,
+      "moy_sans_financeur": 3.8
+    },
+    {
+      "qid": "Q3.3",
+      "item": "Maroquinerie et industrie du luxe",
+      "moyenne": 3.3,
+      "mediane": 4.0,
+      "ecart_type": 1.9,
+      "n": 7,
+      "moy_sans_financeur": 3.7
+    },
+    {
+      "qid": "Q3.3",
+      "item": "Fabrication mécanique et construction tubulaire",
+      "moyenne": 2.4,
+      "mediane": 2.0,
+      "ecart_type": 1.4,
+      "n": 7,
+      "moy_sans_financeur": 2.7
+    },
+    {
+      "qid": "Q3.3",
+      "item": "Transport routier et logistique",
+      "moyenne": 2.9,
+      "mediane": 3.0,
+      "ecart_type": 1.7,
+      "n": 7,
+      "moy_sans_financeur": 3.2
+    },
+    {
+      "qid": "Q3.3",
+      "item": "Services aux entreprises et ingénierie",
+      "moyenne": 3.1,
+      "mediane": 3.0,
+      "ecart_type": 1.3,
+      "n": 7,
+      "moy_sans_financeur": 3.5
+    },
+    {
+      "qid": "Q4.1",
+      "item": "—",
+      "moyenne": 4.0,
+      "mediane": 4.0,
+      "ecart_type": 1.0,
+      "n": 7,
+      "moy_sans_financeur": 4.3
+    },
+    {
+      "qid": "Q4.2",
+      "item": "—",
+      "moyenne": 4.0,
+      "mediane": 4.0,
+      "ecart_type": 0.6,
+      "n": 7,
+      "moy_sans_financeur": 4.2
+    },
+    {
+      "qid": "Q5.2",
+      "item": "—",
+      "moyenne": 2.6,
+      "mediane": 2.0,
+      "ecart_type": 1.8,
+      "n": 7,
+      "moy_sans_financeur": 2.8
+    },
+    {
+      "qid": "Q6.1",
+      "item": "—",
+      "moyenne": 3.6,
+      "mediane": 4.0,
+      "ecart_type": 1.0,
+      "n": 7,
+      "moy_sans_financeur": 3.8
+    },
+    {
+      "qid": "Q8.1",
+      "item": "—",
+      "moyenne": 3.1,
+      "mediane": 4.0,
+      "ecart_type": 1.2,
+      "n": 7,
+      "moy_sans_financeur": null
+    },
+    {
+      "qid": "Q9.1",
+      "item": "Connaissance du marché du travail local et des métiers en tension",
+      "moyenne": 4.0,
+      "mediane": 4.0,
+      "ecart_type": 0.6,
+      "n": 7,
+      "moy_sans_financeur": null
+    },
+    {
+      "qid": "Q9.1",
+      "item": "Aide au recrutement et sourcing de candidats",
+      "moyenne": 2.3,
+      "mediane": 2.0,
+      "ecart_type": 1.5,
+      "n": 7,
+      "moy_sans_financeur": null
+    },
+    {
+      "qid": "Q9.1",
+      "item": "Développement de l'offre de formation locale",
+      "moyenne": 2.6,
+      "mediane": 3.0,
+      "ecart_type": 1.4,
+      "n": 7,
+      "moy_sans_financeur": null
+    },
+    {
+      "qid": "Q9.1",
+      "item": "Mutualisation inter-entreprises (emploi partagé, formations groupées)",
+      "moyenne": 3.0,
+      "mediane": 3.0,
+      "ecart_type": 1.2,
+      "n": 7,
+      "moy_sans_financeur": null
+    },
+    {
+      "qid": "Q9.1",
+      "item": "Attractivité du territoire et communication externe",
+      "moyenne": 3.3,
+      "mediane": 3.0,
+      "ecart_type": 1.8,
+      "n": 7,
+      "moy_sans_financeur": null
+    },
+    {
+      "qid": "Q9.1",
+      "item": "Gestion des seniors et transmission des savoir-faire",
+      "moyenne": 2.9,
+      "mediane": 3.0,
+      "ecart_type": 1.7,
+      "n": 7,
+      "moy_sans_financeur": null
+    },
+    {
+      "qid": "Q9.1",
+      "item": "Développement de l'alternance et des liens avec les écoles",
+      "moyenne": 3.9,
+      "mediane": 5.0,
+      "ecart_type": 1.6,
+      "n": 7,
+      "moy_sans_financeur": null
+    },
+    {
+      "qid": "Q9.1",
+      "item": "Accompagnement à la transition numérique et à l'Industrie 4.0",
+      "moyenne": 3.3,
+      "mediane": 3.0,
+      "ecart_type": 1.3,
+      "n": 7,
+      "moy_sans_financeur": null
+    },
+    {
+      "qid": "Q10.1",
+      "item": "—",
+      "moyenne": 3.1,
+      "mediane": 3.0,
+      "ecart_type": 0.4,
+      "n": 7,
+      "moy_sans_financeur": null
+    }
+  ]
+}

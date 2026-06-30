@@ -1,0 +1,131 @@
+{
+  "_meta": {
+    "objet": "Données de contexte territorial (INSEE) et jeunesse (Mission Locale) pour objectiver le diagnostic déclaratif GPEC-T du bassin d'Issoudun.",
+    "perimetre_principal": "Intercommunalité-Métropole du Pays d'Issoudun (EPCI 243600236)",
+    "source_insee": "INSEE, Dossier complet, Pays d'Issoudun (243600236), recensements RP2011/RP2016/RP2022 (exploitations principales et complémentaires), géographie au 01/01/2025 ; BPE 2024 ; SIDE 2023.",
+    "source_indre": "INSEE, Dossier complet, Département de l'Indre (36), recensement RP2023 (exploitations principales et complémentaires), géographie au 01/01/2025. Repère départemental relevé directement sur les tableaux EMP T8, EMP T4 et LOG T2.",
+    "note_vintage": "Le bassin est décrit au RP2022 (millésime des documents fournis) ; les repères du département de l'Indre proviennent du dossier en ligne le plus récent (RP2023). L'écart de millésime (1 an) est négligeable sur ces indicateurs structurels et chaque année est affichée.",
+    "verification": "Chaque chiffre du Pays d'Issoudun a été relu directement sur les tableaux du dossier INSEE (pages rendues en image). Chaque repère national porte sa source exacte.",
+    "note_champ": "Les chiffres ci-dessous ne proviennent PAS de l'enquête GPEC-T (déclaratif des 42 répondants) mais de sources statistiques officielles. Ils servent de toile de fond objective."
+  },
+  "demographie": {
+    "population_2022": 18778,
+    "evolution_2011_2022_pct": -12.4,
+    "densite_hab_km2": 60.4,
+    "ages_pct_2022": {"0_14": 13.8, "45_59": 21.6, "60_74": 21.3, "75_plus": 15.1},
+    "part_60_plus_pct": 36.4,
+    "familles_monoparentales_pct": 17.2,
+    "comparaison_national": {
+      "part_60_plus_france_pct": 27.0,
+      "source": "INSEE, Estimations de population, part des 60 ans ou plus, France, au 01/01/2021 (≈27 %)."
+    }
+  },
+  "emploi_activite": {
+    "population_15_64_2022": 10822,
+    "taux_activite_pct": 75.3,
+    "taux_emploi_pct": 66.1,
+    "taux_chomage_recensement_pct_2022": 12.2,
+    "taux_chomage_recensement_pct_2011": 13.0,
+    "taux_chomage_15_24_pct": 23.4,
+    "nombre_emplois_zone_2022": 8457,
+    "indice_concentration_emploi_2022": 116.1,
+    "salaries_temps_partiel_pct": 10.6,
+    "comparaison_national": {
+      "taux_chomage_recensement_france_metro_pct_2022": 11.2,
+      "source": "INSEE, Recensement de la population 2022, taux de chômage au sens du recensement, France métropolitaine (11,2 % des actifs de 15 ans ou plus)."
+    },
+    "comparaison_indre": {"taux_chomage_pct": 10.9, "annee": 2023}
+  },
+  "industrie": {
+    "part_industrie_emploi_pct_2022": 32.0,
+    "emplois_industrie_2022": 2689,
+    "part_industrie_emploi_pct_2011": 27.1,
+    "part_ouvriers_csp_pct": 29.9,
+    "comparaison_national": {
+      "part_industrie_emploi_france_pct_2022": 12.5,
+      "source": "INSEE, « L'emploi reste en augmentation en 2022 » / Emploi en 2022 : l'industrie représente 12,5 % des personnes en emploi en France."
+    },
+    "comparaison_indre": {"part_pct": 17.8, "annee": 2023}
+  },
+  "diplome_2022": {
+    "champ": "Population non scolarisée de 15 ans ou plus (15 117 personnes), RP2022.",
+    "repartition_pct": {
+      "aucun_diplome_cep": 26.6,
+      "bepc_dnb": 5.4,
+      "cap_bep": 32.2,
+      "bac_brevet_pro": 15.9,
+      "bac_plus_2": 9.0,
+      "bac_plus_3_4": 6.0,
+      "bac_plus_5_et_plus": 4.8
+    },
+    "part_superieur_pct": 19.8,
+    "part_infra_bac_pct": 64.2,
+    "comparaison_national": {
+      "repere": "Au niveau national, un peu plus d'un tiers des adultes (25 ans et plus) sont diplômés de l'enseignement supérieur en 2022.",
+      "source": "INSEE, France, portrait social 2022 (niveau de diplôme de la population). Champ légèrement différent (25 ans et + vs 15 ans et + non scolarisés) : à lire comme un ordre de grandeur."
+    }
+  },
+  "mobilite": {
+    "part_actifs_travaillant_hors_commune_pct_2022": 55.2,
+    "part_actifs_travaillant_hors_commune_pct_2011": 48.4,
+    "permis_b_jeunes_1er_accueil_pct": 30.1,
+    "sans_permis_jeunes_1er_accueil_pct": 52.5
+  },
+  "logement": {
+    "logements_vacants_pct_2022": 15.4,
+    "logements_vacants_pct_2011": 11.3,
+    "nombre_logements_vacants_2022": 1793,
+    "residences_principales_pct_2022": 80.1,
+    "comparaison_national": {
+      "logements_vacants_france_pct_2022": 8.0,
+      "source": "INSEE, Parc de logements / SDES, Chiffres clés du logement 2022 : ≈8 logements vacants sur 100 en France (≈8,9 % dans les communes rurales et agglomérations < 100 000 hab.)."
+    },
+    "comparaison_indre": {"vacants_pct": 12.8, "annee": 2023}
+  },
+  "tissu_economique": {
+    "etablissements_actifs_2023": 1050,
+    "repartition_pct": {
+      "commerce_transport_hcr": 27.9,
+      "admin_enseignement_sante_social": 15.4,
+      "activites_spe_scientifiques_soutien": 13.0,
+      "industrie": 11.8,
+      "construction": 9.8
+    },
+    "source": "INSEE, Système d'information sur la démographie d'entreprises (SIDE), établissements actifs au 31/12/2023."
+  },
+  "equipements_sante_formation_2024": {
+    "medecins_generalistes": 11,
+    "chirurgiens_dentistes": 7,
+    "infirmiers": 27,
+    "pharmacies": 9,
+    "ecoles": 18,
+    "colleges": 3,
+    "lycees_general_techno": 2,
+    "lycees_pro_agricole": 2,
+    "source": "INSEE, Base permanente des équipements (BPE 2024), géographie au 01/01/2025."
+  },
+  "jeunes_mission_locale_2025": {
+    "source": "Mission Locale d'Issoudun, Rapport d'activités 2025.",
+    "champ": "Jeunes de 16 à 25 ans du territoire (3 communautés de communes).",
+    "premier_accueil": 236,
+    "premier_accueil_evol_pct": -4.8,
+    "accompagnes": 541,
+    "accompagnes_evol_pct": -4.25,
+    "part_18_21_ans_majoritaire": true,
+    "niveau_infra_bac_1er_accueil_pct": 69.9,
+    "niveau_infra_bac_accompagnes_pct": 72.8,
+    "sans_permis_pct": 52.5,
+    "loges_chez_parents_pct": 57.6,
+    "orientation_france_travail_pct_2025": 24.2,
+    "orientation_france_travail_pct_avant": 13.7,
+    "entrees_en_situation": 530,
+    "entrees_emploi": 396,
+    "entrees_formation": 82,
+    "entrees_retour_scolarite": 23,
+    "entrees_alternance": 19,
+    "entrees_service_civique": 9,
+    "entrees_creation": 1,
+    "entreprises_en_contact": 109,
+    "heures_pmsmp": 3166
+  }
+}

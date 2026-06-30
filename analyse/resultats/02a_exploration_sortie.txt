@@ -1,0 +1,525 @@
+################################################################################
+# A1 — INVESTIGATION PYRAMIDE DES ÂGES (Q4.1.1 -> Q4.1.8)
+################################################################################
+Légende colonnes pyramide :
+   [42] Q4.1.1 — Hommes de moins de 30 ans
+   [43] Q4.1.2 — Femmes de moins de 30 ans
+   [44] Q4.1.3 — Hommes de 31 à 44 ans
+   [45] Q4.1.4 — Femmes de 31 à 44 ans
+   [46] Q4.1.5 — Hommes de 45 à 59 ans
+   [47] Q4.1.6 — Femmes de 45 à 59 ans
+   [48] Q4.1.7 — Hommes de 60 ans et +
+   [49] Q4.1.8 — Femmes de 60 ans et +
+
+lig |  H<30  F<30 H31-44 F31-44 H45-59 F45-59  H60+  F60+ | somme_pyr | Q1.4_inscrit | decimal?
+  0 |     80      0      5      2      5      4      2      0 | somme=   98.00 | Q1.4=    26 | band=10 à 49 salariés
+  1 |      0      0      1     12     10      0      0      0 | somme=   23.00 | Q1.4=    23 | band=10 à 49 salariés
+  2 |     11      4     23      4     58     17      3      5 | somme=  125.00 | Q1.4=   125 | band=50 à 249 salariés
+  3 |      0      0      0      0     13      7      5      0 | somme=   25.00 | Q1.4=    25 | band=10 à 49 salariés
+  4 |      0      0      5      0     10      2      0      0 | somme=   17.00 | Q1.4=    17 | band=10 à 49 salariés
+  5 |    154     76    401    156    512    156     53     17 | somme= 1525.00 | Q1.4=  1550 | band=250 salariés et plus
+  6 |     23     11     25     10      7      5      5      4 | somme=   90.00 | Q1.4=    88 | band=50 à 249 salariés
+  7 |   0.50   0.20   0.25   0.50   0.15   0.15   0.10   0.10 | somme=    1.95 | Q1.4=    31 | band=Moins de 10 salariés  <-- DÉCIMAUX
+  8 |      0      0      0      0      2     21      1      0 | somme=   24.00 | Q1.4=     4 | band=Moins de 10 salariés
+  9 |      4      0      7      0      7      2      1      0 | somme=   21.00 | Q1.4=    20 | band=10 à 49 salariés
+ 10 |      0      2      3      3      8      3      0      0 | somme=   19.00 | Q1.4=    19 | band=10 à 49 salariés
+ 11 |     33     98     44    170     40    185      6     41 | somme=  617.00 | Q1.4=   596 | band=250 salariés et plus
+ 12 |      0      0      0      0      0      0      0      0 | somme=    0.00 | Q1.4=    97 | band=50 à 249 salariés
+ 13 |      1      0      1      0      0      0      0      0 | somme=    2.00 | Q1.4=     2 | band=Moins de 10 salariés
+ 14 |      5      0     10      0      9      2      0      0 | somme=   26.00 | Q1.4=    24 | band=10 à 49 salariés
+ 15 |     22      2     24      7     10      5      1      0 | somme=   71.00 | Q1.4=    71 | band=50 à 249 salariés
+ 16 |     10      2     13      4     27      5      2      2 | somme=   65.00 | Q1.4=    66 | band=50 à 249 salariés
+ 17 |     34      6     32     15     25      3      3      3 | somme=  121.00 | Q1.4=   121 | band=50 à 249 salariés
+ 18 |     32      5     53      9     81     11      7      0 | somme=  198.00 | Q1.4=   198 | band=50 à 249 salariés
+ 19 |      2      1      0      0      7      5      0      0 | somme=   15.00 | Q1.4=    15 | band=10 à 49 salariés
+ 20 |      5      2     18     11     18     13      2      2 | somme=   71.00 | Q1.4=    71 | band=50 à 249 salariés
+
+################################################################################
+# VALEURS & EFFECTIFS — COLONNES À CHOIX UNIQUE / CATÉGORIELLES
+################################################################################
+
+--- [10] Q0.8 Statut juridique (brut) | n_rempli=21
+      11  | SAS
+       5  | SA
+       2  | SARL
+       1  | sas
+       1  | SA 
+       1  | sarl
+
+--- [11] Q1.1 Secteur | n_rempli=21
+      10  | Métallurgie, usinage et travail des métaux
+       4  | Transport routier et logistique
+       3  | Autre (préciser ci-dessous)
+       1  | Industrie agroalimentaire
+       1  | Imprimerie et communication
+       1  | Maroquinerie et industrie du luxe
+       1  | Aéronautique
+
+--- [13] Q1.3 Effectif total (tranche) | n_rempli=21
+       8  | 10 à 49 salariés
+       8  | 50 à 249 salariés
+       3  | Moins de 10 salariés
+       2  | 250 salariés et plus
+
+--- [15] Q1.5 Recours ressources externes | n_rempli=21
+       7  | Intérim (préciser le volume moyen en ETP ci-dessous)
+       7  | Intérim (préciser le volume moyen en ETP ci-dessous), Prestation de services industriels ou logistiques
+       4  | Aucun recours à des ressources externes
+       2  | Prestation de services industriels ou logistiques
+       1  | Intérim (préciser le volume moyen en ETP ci-dessous), Prestation de services industriels ou logistiques, Aucun recours à des ressources externes
+
+--- [18] Q1.8 Tranche âge dirigeant | n_rempli=21
+      11  | 45 à 54 ans
+       4  | 55 à 59 ans
+       4  | Moins de 45 ans
+       2  | 60 ans et plus
+
+--- [20] Q2.2 Transmission/cession | n_rempli=21
+      17  | Non
+       2  | Oui, projet déjà défini ou en cours
+       2  | Oui, en cours de réflexion
+
+--- [21] Q2.3 Évolution effectifs 3 ans | n_rempli=21
+      13  | À la hausse (recrutements prévus)
+       7  | Stable (pas de variation significative)
+       1  | À la baisse (réduction d'effectifs envisagée)
+
+--- [22] Q2.4 Investissements prévus | n_rempli=21
+      13  | Oui, investissements planifiés et budgétés
+       6  | Non
+       2  | Oui, à l'étude
+
+--- [23] Q2.5 Investissements -> compétences | n_rempli=16
+       9  | Non, les compétences actuelles sont suffisantes
+       7  | Oui, des besoins de formation sont identifiés
+
+--- [25] Q3.2 Tension recrutement | n_rempli=21
+      13  | Oui, difficultés majeures
+       7  | Oui, difficultés ponctuelles
+       1  | Non, pas de tension actuellement
+
+--- [36] Q3.4 Métiers sensibles | n_rempli=21
+      10  | Non, stabilité prévue
+       7  | Oui, risque partiel identifié
+       4  | Oui, transformation profonde attendue
+
+--- [53] Q4.5 Turnover | n_rempli=21
+      17  | Faible et maîtrisé (ancienneté élevée, peu de départs)
+       4  | En augmentation sur certains postes
+
+--- [70] Q4.8b Besoin transmission | n_rempli=21
+      14  | Non, les dispositifs en place sont suffisants
+       6  | Oui, un besoin est identifié mais non traité
+       1  | Aucun dispositif en place et aucun besoin identifié
+
+--- [71] Q5.1 Recrutements 2024-2025 | n_rempli=21
+      20  | Oui
+       1  | Non
+
+--- [84] Q6.1 Compétences techniques adaptées | n_rempli=21
+      13  | Plutôt adaptées, avec quelques lacunes
+       7  | Tout à fait adaptées
+       1  | Plutôt inadaptées, des besoins importants existent
+
+--- [86] Q6.3 Savoir-être adaptés | n_rempli=21
+      14  | Plutôt adaptées
+       5  | Tout à fait adaptées
+       2  | Plutôt inadaptées
+
+--- [89] Q7.1 Formations organisées | n_rempli=21
+       7  | Oui, des formations de développement des compétences métiers, Oui, des formations obligatoires uniquement (sécurité, habilitations...)
+       6  | Oui, des formations de développement des compétences métiers
+       6  | Oui, des formations de développement des compétences métiers, Oui, des formations management et développement personnel, Oui, des formations obligatoires uniquement (sécurité, habilitations...)
+       2  | Oui, des formations obligatoires uniquement (sécurité, habilitations...)
+
+--- [90] Q7.2 Connaissance OPCO | n_rempli=21
+      19  | Oui, nous les mobilisons régulièrement
+       2  | Non, nous ne connaissons pas bien les dispositifs disponibles
+
+--- [92] Q7.4 Alternance | n_rempli=21
+      16  | Oui, régulièrement
+       3  | Non, et ce n'est pas envisagé
+       2  | Non, mais nous y sommes ouverts
+
+--- [93] Q7.5 Alternants du territoire | n_rempli=18
+       9  | Oui, majoritairement
+       5  | Partiellement
+       4  | Non, ils viennent d'autres territoires
+
+--- [101] Q7.8 Coopération acteurs emploi | n_rempli=21
+       9  | Coopération faible et ponctuelle
+       8  | Coopération régulière et structurée
+       4  | Aucune coopération
+
+################################################################################
+# VALEURS BRUTES UNIQUES — COLONNES À CHOIX MULTIPLE (pour bâtir modalités)
+################################################################################
+
+--- [19] Q2.1 3 préoccupations | n_rempli=21
+     • Recruter des collaborateurs qualifiés, Investir pour moderniser les équipements et l'outil de production, Développer de nouveaux marchés ou clients
+     • Maintenir l'activité et la compétitivité face à la hausse des coûts, Recruter des collaborateurs qualifiés, Développer de nouveaux marchés ou clients
+     • Maintenir l'activité et la compétitivité face à la hausse des coûts, Recruter des collaborateurs qualifiés, Fidéliser les collaborateurs en poste
+     • Recruter des collaborateurs qualifiés, Fidéliser les collaborateurs en poste, Répondre aux enjeux de transition écologique et énergétique
+     • Maintenir l'activité et la compétitivité face à la hausse des coûts, Recruter des collaborateurs qualifiés, Développer de nouveaux marchés ou clients
+     • Recruter des collaborateurs qualifiés, Fidéliser les collaborateurs en poste, Développer de nouveaux marchés ou clients
+     • Fidéliser les collaborateurs en poste, Développer de nouveaux marchés ou clients, Répondre aux enjeux de transition écologique et énergétique, RSE
+     • Recruter des collaborateurs qualifiés, Investir pour moderniser les équipements et l'outil de production, Répondre aux enjeux de transition écologique et énergétique
+     • Maintenir l'activité et la compétitivité face à la hausse des coûts, Recruter des collaborateurs qualifiés, Diversifier l'activité ou lancer de nouveaux produits/services, Préparer la transmission ou la reprise de l'entreprise
+     • Maintenir l'activité et la compétitivité face à la hausse des coûts, Recruter des collaborateurs qualifiés, Développer de nouveaux marchés ou clients
+     • Maintenir l'activité et la compétitivité face à la hausse des coûts, Recruter des collaborateurs qualifiés, Faire face aux évolutions technologiques (Industrie 4.0, IA, automatisation)
+     • Maintenir l'activité et la compétitivité face à la hausse des coûts, Diversifier l'activité ou lancer de nouveaux produits/services, Qualité managériale; communication, climat social
+     • Maintenir l'activité et la compétitivité face à la hausse des coûts, Développer de nouveaux marchés ou clients, Faire face aux évolutions technologiques (Industrie 4.0, IA, automatisation)
+     • Fidéliser les collaborateurs en poste, Investir pour moderniser les équipements et l'outil de production, Développer de nouveaux marchés ou clients
+     • Maintenir l'activité et la compétitivité face à la hausse des coûts, Fidéliser les collaborateurs en poste, Investir pour moderniser les équipements et l'outil de production
+     • Maintenir l'activité et la compétitivité face à la hausse des coûts, Recruter des collaborateurs qualifiés, Fidéliser les collaborateurs en poste
+     • Maintenir l'activité et la compétitivité face à la hausse des coûts, Recruter des collaborateurs qualifiés, Diversifier l'activité ou lancer de nouveaux produits/services
+     • Recruter des collaborateurs qualifiés, Fidéliser les collaborateurs en poste, Investir pour moderniser les équipements et l'outil de production
+     • Maintenir l'activité et la compétitivité face à la hausse des coûts, Fidéliser les collaborateurs en poste, Répondre aux enjeux de transition écologique et énergétique
+     • Maintenir l'activité et la compétitivité face à la hausse des coûts, Fidéliser les collaborateurs en poste, Répondre aux enjeux de transition écologique et énergétique
+     • Maintenir l'activité et la compétitivité face à la hausse des coûts, Répondre aux enjeux de transition écologique et énergétique
+
+--- [52] Q4.4 Services/métiers départs retraite | n_rempli=20
+     • Production / Fabrication, Qualité
+     • Production / Fabrication, Qualité
+     • Production / Fabrication, Maintenance, Bureau d'études, Management de proximité (chefs d'équipe, responsable de service), Comptabilité et contrôle de gestion, Commerce / ADV
+     • CONDUITE DE CAR
+     • Conducteurs routiers et mécanicien
+     • Production / Fabrication, Logistique, Bureau d'études, Achat / Approvisionnement
+     • Production / Fabrication, Commerce / ADV
+     • Production / Fabrication, Maintenance, Qualité
+     • Dirigeant
+     • Chauffeurs, assistante facturation
+     • Logistique, Commerce / ADV
+     • Production / Fabrication, Logistique
+     • Production / Fabrication, Logistique, Management de proximité (chefs d'équipe, responsable de service)
+     • Production / Fabrication, Comptabilité et contrôle de gestion
+     • Production / Fabrication
+     • Maintenance, Management de proximité (chefs d'équipe, responsable de service), Commerce / ADV, Chefs de projets/chargés d'affaires
+     • Production / Fabrication, Logistique, Bureau d'études, Commerce / ADV, Achat / Approvisionnement
+     • CONDUCTEURS
+     • conducteurs et sedentaires
+     • Production / Fabrication
+
+--- [82] Q5.5 Motivation recrutements | n_rempli=21
+     • Remplacement de départs à la retraite, Remplacement de départs volontaires (démissions, mutations), Accroissement de l'activité actuelle
+     • Remplacement de départs à la retraite
+     • Remplacement de départs à la retraite, Remplacement de départs volontaires (démissions, mutations)
+     • Remplacement de départs à la retraite, Remplacement de départs volontaires (démissions, mutations)
+     • Remplacement de départs à la retraite, Accroissement de l'activité actuelle
+     • Remplacement de départs à la retraite, Accroissement de l'activité actuelle
+     • Remplacement de départs à la retraite, Remplacement de départs volontaires (démissions, mutations)
+     • Remplacement de départs à la retraite, Remplacement de départs volontaires (démissions, mutations)
+     • Accroissement de l'activité actuelle, Lancement d'une nouvelle activité ou d'un nouveau marché
+     • Accroissement de l'activité actuelle
+     • Remplacement de départs à la retraite
+     • Remplacement de départs volontaires (démissions, mutations)
+     • Remplacement de départs à la retraite
+     • Accroissement de l'activité actuelle
+     • Remplacement de départs à la retraite, Accroissement de l'activité actuelle, Création de nouveaux postes liés à la transformation technologique
+     • Accroissement de l'activité actuelle
+     • Remplacement de départs à la retraite, Remplacement de départs volontaires (démissions, mutations), Accroissement de l'activité actuelle
+     • Remplacement de départs à la retraite, Remplacement de départs volontaires (démissions, mutations), Accroissement de l'activité actuelle
+     • Remplacement de départs à la retraite, Accroissement de l'activité actuelle
+     • Remplacement de départs à la retraite, Remplacement de départs volontaires (démissions, mutations), Accroissement de l'activité actuelle
+     • Remplacement de départs à la retraite, Accroissement de l'activité actuelle
+
+--- [83] Q5.6 Actions attractivité | n_rempli=21
+     • Relations avec les écoles, CFA et lycées professionnels du territoire, Communication sur les réseaux sociaux (LinkedIn, Indeed...)
+     • Communication sur les réseaux sociaux (LinkedIn, Indeed...), Programme d'ambassadeurs métiers
+     • Relations avec les écoles, CFA et lycées professionnels du territoire, Portes ouvertes, visites d'entreprise, journées découverte, Communication sur les réseaux sociaux (LinkedIn, Indeed...), Lauréat Top Entreprises de l'Indre 2024
+     • Programme d'ambassadeurs métiers, Partenariat avec France Travail, Mission Locale ou Cap Emploi, DEFI
+     • Aucune action spécifique mise en place à ce jour
+     • Relations avec les écoles, CFA et lycées professionnels du territoire, Portes ouvertes, visites d'entreprise, journées découverte, Communication sur les réseaux sociaux (LinkedIn, Indeed...), Programme d'ambassadeurs métiers, Partenariat avec France Travail, Mission Locale ou Cap Emploi
+     • Relations avec les écoles, CFA et lycées professionnels du territoire, Communication sur les réseaux sociaux (LinkedIn, Indeed...), Partenariat avec France Travail, Mission Locale ou Cap Emploi
+     • Relations avec les écoles, CFA et lycées professionnels du territoire, Portes ouvertes, visites d'entreprise, journées découverte, Communication sur les réseaux sociaux (LinkedIn, Indeed...), Partenariat avec France Travail, Mission Locale ou Cap Emploi
+     • Portes ouvertes, visites d'entreprise, journées découverte, Communication sur les réseaux sociaux (LinkedIn, Indeed...), Partenariat avec France Travail, Mission Locale ou Cap Emploi, "'Usine ouverte" --> Arts et Métiers
+     • Relations avec les écoles, CFA et lycées professionnels du territoire, Partenariat avec France Travail, Mission Locale ou Cap Emploi, DEFI 6 Pas possible de faire des POEI
+     • Relations avec les écoles, CFA et lycées professionnels du territoire, Portes ouvertes, visites d'entreprise, journées découverte, SECRET DE FABRIQUE
+     • Relations avec les écoles, CFA et lycées professionnels du territoire, Portes ouvertes, visites d'entreprise, journées découverte, Communication sur les réseaux sociaux (LinkedIn, Indeed...), Programme d'ambassadeurs métiers, Partenariat avec France Travail, Mission Locale ou Cap Emploi, Actions pilotées par le siège comme des forums
+     • Relations avec les écoles, CFA et lycées professionnels du territoire, Portes ouvertes, visites d'entreprise, journées découverte, Communication sur les réseaux sociaux (LinkedIn, Indeed...), Partenariat avec France Travail, Mission Locale ou Cap Emploi
+     • Relations avec les écoles, CFA et lycées professionnels du territoire, Communication sur les réseaux sociaux (LinkedIn, Indeed...), Partenariat avec France Travail, Mission Locale ou Cap Emploi
+     • Relations avec les écoles, CFA et lycées professionnels du territoire, Communication sur les réseaux sociaux (LinkedIn, Indeed...), Partenariat avec France Travail, Mission Locale ou Cap Emploi, TERRITOIRE D INDUSTRIE, sponsoring club sport
+     • Relations avec les écoles, CFA et lycées professionnels du territoire, Communication sur les réseaux sociaux (LinkedIn, Indeed...), Partenariat avec France Travail, Mission Locale ou Cap Emploi
+     • Relations avec les écoles, CFA et lycées professionnels du territoire, Communication sur les réseaux sociaux (LinkedIn, Indeed...), Partenariat avec France Travail, Mission Locale ou Cap Emploi
+     • Relations avec les écoles, CFA et lycées professionnels du territoire, Portes ouvertes, visites d'entreprise, journées découverte, Communication sur les réseaux sociaux (LinkedIn, Indeed...), Partenariat avec France Travail, Mission Locale ou Cap Emploi, PARTENARIAT MANPOWER BOURGES CQP
+     • Relations avec les écoles, CFA et lycées professionnels du territoire, Portes ouvertes, visites d'entreprise, journées découverte, Communication sur les réseaux sociaux (LinkedIn, Indeed...), Programme d'ambassadeurs métiers, Partenariat avec France Travail, Mission Locale ou Cap Emploi
+     • Relations avec les écoles, CFA et lycées professionnels du territoire, Portes ouvertes, visites d'entreprise, journées découverte, Communication sur les réseaux sociaux (LinkedIn, Indeed...), Partenariat avec France Travail, Mission Locale ou Cap Emploi
+     • Relations avec les écoles, CFA et lycées professionnels du territoire
+
+--- [85] Q6.2 Compétences techniques manquantes | n_rempli=21
+     • Qualité, contrôle et métrologie, CAO / DAO / lecture de plans techniques, Transition écologique et énergétique (efficacité énergétique, éco-conception), Sécurité et prévention des risques professionnels
+     • Programmation de machines (robots, automates, CNC), Management et gestion d'équipe
+     • Programmation de machines (robots, automates, CNC), Qualité, contrôle et métrologie, CAO / DAO / lecture de plans techniques
+     • Aucun manque identifié à ce jour
+     • Aucun manque identifié à ce jour
+     • Qualité, contrôle et métrologie, CAO / DAO / lecture de plans techniques
+     • Maintenance industrielle et automatismes, Qualité, contrôle et métrologie, Logistique, supply chain et gestion des flux, Sécurité et prévention des risques professionnels, Compétences commerciales et relation client
+     • Maintenance industrielle et automatismes, Conduite de véhicules et engins (SPL, CACES...)
+     • Aucun manque identifié à ce jour
+     • Aucun manque identifié à ce jour
+     • Aucun manque identifié à ce jour
+     • Numérique industriel, data et traçabilité (ERP, GPAO), Management et gestion d'équipe
+     • Usinage, mécanique et travail des métaux, Numérique industriel, data et traçabilité (ERP, GPAO), Management et gestion d'équipe
+     • Maintenance industrielle et automatismes, Qualité, contrôle et métrologie, Numérique industriel, data et traçabilité (ERP, GPAO)
+     • Maintenance industrielle et automatismes, Qualité, contrôle et métrologie, Compétences commerciales et relation client
+     • Usinage, mécanique et travail des métaux, Logistique, supply chain et gestion des flux, CAO / DAO / lecture de plans techniques, Management et gestion d'équipe
+     • Qualité, contrôle et métrologie, CAO / DAO / lecture de plans techniques
+     • Usinage, mécanique et travail des métaux, Maintenance industrielle et automatismes, Programmation de machines (robots, automates, CNC), Qualité, contrôle et métrologie, CAO / DAO / lecture de plans techniques, Sécurité et prévention des risques professionnels, Compétences commerciales et relation client, Management et gestion d'équipe
+     • Qualité, contrôle et métrologie, Logistique, supply chain et gestion des flux, Management et gestion d'équipe
+     • Compétences commerciales et relation client, Management et gestion d'équipe
+     • Maintenance industrielle et automatismes, Logistique, supply chain et gestion des flux
+
+--- [87] Q6.4 Savoir-être à renforcer | n_rempli=11
+     • Autonomie et prise d'initiative, Rigueur et respect des procédures, Travail en équipe et coopération
+     • Rigueur et respect des procédures, Culture sécurité et vigilance
+     • Rigueur et respect des procédures
+     • Rigueur et respect des procédures
+     • Autonomie et prise d'initiative, Rigueur et respect des procédures, Travail en équipe et coopération, Gestion du stress et résilience, Culture sécurité et vigilance, Engagement et sens des responsabilités
+     • Rigueur et respect des procédures, Culture sécurité et vigilance
+     • Rigueur et respect des procédures, Travail en équipe et coopération, Engagement et sens des responsabilités
+     • Rigueur et respect des procédures, Culture sécurité et vigilance, Engagement et sens des responsabilités
+     • Travail en équipe et coopération, Culture sécurité et vigilance, Engagement et sens des responsabilités
+     • Autonomie et prise d'initiative, Rigueur et respect des procédures, Adaptabilité au changement technologique
+     • Autonomie et prise d'initiative, Rigueur et respect des procédures, Adaptabilité au changement technologique
+
+--- [88] Q6.5 Compétences à développer 3-5 ans | n_rempli=21
+     • Transition énergétique et décarbonation, Cybersécurité industrielle
+     • Transition énergétique et décarbonation, Cybersécurité industrielle, Animation d'équipes en mode agile ou projet, Transmission des savoir-faire et tutorat, Anglais
+     • Intelligence artificielle, Autres compétences techniques, Transmission des savoir-faire et tutorat, Maîtrise des outils numériques collaboratifs
+     • Communication professionnelle écrite et orale
+     • RAS
+     • Intelligence artificielle, Conduite du changement et gestion de projet, Anglais
+     • Automatisation, cobotique et robotique avancée
+     • Intelligence artificielle, Maintenance avancée, Animation d'équipes en mode agile ou projet, Anglais
+     • Développement ingénieurie --> d'ici 1 an
+     • Maîtrise des outils numériques collaboratifs, Informatique embarqué
+     • Intelligence artificielle, Transition énergétique et décarbonation, Transmission des savoir-faire et tutorat
+     • Management de la performance et pilotage par indicateurs, Conduite du changement et gestion de projet, Animation d'équipes en mode agile ou projet, Transmission des savoir-faire et tutorat
+     • Cybersécurité industrielle, Animation d'équipes en mode agile ou projet, Communication professionnelle écrite et orale
+     • Automatisation, cobotique et robotique avancée
+     • Automatisation, cobotique et robotique avancée, Cybersécurité industrielle, Maîtrise des outils numériques collaboratifs, Communication professionnelle écrite et orale
+     • Intelligence artificielle, Management de la performance et pilotage par indicateurs, Conduite du changement et gestion de projet, Animation d'équipes en mode agile ou projet
+     • Conduite du changement et gestion de projet, Animation d'équipes en mode agile ou projet, Transmission des savoir-faire et tutorat, Anglais
+     • Automatisation, cobotique et robotique avancée, Maintenance avancée, Transition énergétique et décarbonation, Cybersécurité industrielle, Management de la performance et pilotage par indicateurs, Conduite du changement et gestion de projet, Transmission des savoir-faire et tutorat, Maîtrise des outils numériques collaboratifs
+     • Intelligence artificielle, Transition énergétique et décarbonation, Communication professionnelle écrite et orale
+     • Intelligence artificielle, Transition énergétique et décarbonation, Maîtrise des outils numériques collaboratifs
+     • Automatisation, cobotique et robotique avancée, Intelligence artificielle, Transition énergétique et décarbonation, Transmission des savoir-faire et tutorat
+
+--- [91] Q7.3 Freins formation | n_rempli=21
+     • Absence de formation adaptée disponible localement, Difficulté à libérer les salariés sur le temps de travail, Faible appétence des salariés pour la formation
+     • Coût pédagogique trop élevé, Coût des déplacements et hébergements (formations hors territoire), Difficulté à libérer les salariés sur le temps de travail, Manque de temps pour identifier et organiser les formations, Faible appétence des salariés pour la formation
+     • Coût pédagogique trop élevé, Complexité administrative des dossiers de financement
+     • Difficulté à libérer les salariés sur le temps de travail
+     • Aucun frein particulier
+     • Difficulté à libérer les salariés sur le temps de travail, Faible appétence des salariés pour la formation
+     • Coût pédagogique trop élevé, Manque de temps pour identifier et organiser les formations
+     • Manque de temps pour identifier et organiser les formations
+     • Aucun frein particulier
+     • Difficulté à libérer les salariés sur le temps de travail, Faible appétence des salariés pour la formation
+     • Aucun frein particulier
+     • Aucun frein particulier
+     • Faible appétence des salariés pour la formation
+     • Difficulté à libérer les salariés sur le temps de travail
+     • Coût pédagogique trop élevé, Coût des déplacements et hébergements (formations hors territoire), Difficulté à libérer les salariés sur le temps de travail
+     • Absence de formation adaptée disponible localement
+     • Aucun frein particulier
+     • Absence de formation adaptée disponible localement
+     • Coût pédagogique trop élevé, Difficulté à libérer les salariés sur le temps de travail
+     • Aucun frein particulier
+     • Coût pédagogique trop élevé
+
+--- [110] Q8.1 Facteurs territoire | n_rempli=21
+     • Offre de logement insuffisante ou trop chère, Offre de soins et de santé insuffisante, Image globale du territoire peu attractive pour les candidats extérieurs
+     • Offre de soins et de santé insuffisante, Image globale du territoire peu attractive pour les candidats extérieurs
+     • Image globale du territoire peu attractive pour les candidats extérieurs
+     • Aucun frein territorial identifié
+     • Offre de soins et de santé insuffisante, Image globale du territoire peu attractive pour les candidats extérieurs
+     • Offre de services à la personne insuffisante (crèches, gardes d'enfants), Image globale du territoire peu attractive pour les candidats extérieurs
+     • Offre de soins et de santé insuffisante, Image globale du territoire peu attractive pour les candidats extérieurs
+     • Image globale du territoire peu attractive pour les candidats extérieurs
+     • Offre de soins et de santé insuffisante, Manque de transports en commun et de solutions de mobilité, Image globale du territoire peu attractive pour les candidats extérieurs
+     • Offre de soins et de santé insuffisante, Image globale du territoire peu attractive pour les candidats extérieurs
+     • Offre de soins et de santé insuffisante, Manque de transports en commun et de solutions de mobilité, Image globale du territoire peu attractive pour les candidats extérieurs
+     • Offre de logement insuffisante ou trop chère, Offre de soins et de santé insuffisante, Manque de transports en commun et de solutions de mobilité, Difficulté à trouver un emploi pour le conjoint, Offre de services à la personne insuffisante (crèches, gardes d'enfants), Image globale du territoire peu attractive pour les candidats extérieurs
+     • Offre de soins et de santé insuffisante, Image globale du territoire peu attractive pour les candidats extérieurs, Manque d'animation culturelle, sportive et de loisirs
+     • Manque de transports en commun et de solutions de mobilité, Offre de services à la personne insuffisante (crèches, gardes d'enfants), Image globale du territoire peu attractive pour les candidats extérieurs
+     • Offre de soins et de santé insuffisante, Offre de services à la personne insuffisante (crèches, gardes d'enfants), Image globale du territoire peu attractive pour les candidats extérieurs
+     • Manque de transports en commun et de solutions de mobilité, Image globale du territoire peu attractive pour les candidats extérieurs
+     • Offre de soins et de santé insuffisante, Manque de transports en commun et de solutions de mobilité, Image globale du territoire peu attractive pour les candidats extérieurs, Manque d'animation culturelle, sportive et de loisirs
+     • Offre de logement insuffisante ou trop chère, Offre de soins et de santé insuffisante, Image globale du territoire peu attractive pour les candidats extérieurs
+     • Offre de soins et de santé insuffisante, Manque de transports en commun et de solutions de mobilité, Offre de services à la personne insuffisante (crèches, gardes d'enfants), Image globale du territoire peu attractive pour les candidats extérieurs
+     • Offre de soins et de santé insuffisante, Image globale du territoire peu attractive pour les candidats extérieurs
+     • Manque de transports en commun et de solutions de mobilité, Difficulté à trouver un emploi pour le conjoint, Image globale du territoire peu attractive pour les candidats extérieurs, Manque d'animation culturelle, sportive et de loisirs
+
+--- [112] Q8.3 Actions collectives (prêt à s'engager) | n_rempli=21
+     • Actions de promotion des métiers industriels auprès des lycéens et collégiens, Campagne de communication commune sur les atouts du territoire, Groupement d'employeurs pour partager des salariés à temps partagé
+     • Plateforme de recrutement mutualisée pour le bassin d'Issoudun, Visites d'entreprises et journées portes ouvertes coordonnées, Groupement d'employeurs pour partager des salariés à temps partagé
+     • Plateforme de recrutement mutualisée pour le bassin d'Issoudun, Actions de promotion des métiers industriels auprès des lycéens et collégiens, Visites d'entreprises et journées portes ouvertes coordonnées, Campagne de communication commune sur les atouts du territoire, Groupement d'employeurs pour partager des salariés à temps partagé, Ateliers inter-entreprises sur les bonnes pratiques RH
+     • Actions de promotion des métiers industriels auprès des lycéens et collégiens, Ateliers inter-entreprises sur les bonnes pratiques RH
+     • Campagne de communication commune sur les atouts du territoire, Ateliers inter-entreprises sur les bonnes pratiques RH
+     • Plateforme de recrutement mutualisée pour le bassin d'Issoudun, Actions de promotion des métiers industriels auprès des lycéens et collégiens, Visites d'entreprises et journées portes ouvertes coordonnées
+     • Actions de promotion des métiers industriels auprès des lycéens et collégiens, Campagne de communication commune sur les atouts du territoire, Ateliers inter-entreprises sur les bonnes pratiques RH
+     • Plateforme de recrutement mutualisée pour le bassin d'Issoudun, Actions de promotion des métiers industriels auprès des lycéens et collégiens, Visites d'entreprises et journées portes ouvertes coordonnées, Campagne de communication commune sur les atouts du territoire, Ateliers inter-entreprises sur les bonnes pratiques RH
+     • Actions de promotion des métiers industriels auprès des lycéens et collégiens, Visites d'entreprises et journées portes ouvertes coordonnées, Campagne de communication commune sur les atouts du territoire, Ateliers inter-entreprises sur les bonnes pratiques RH
+     • Actions de promotion des métiers industriels auprès des lycéens et collégiens, Campagne de communication commune sur les atouts du territoire, Ateliers inter-entreprises sur les bonnes pratiques RH
+     • Campagne de communication commune sur les atouts du territoire, Ateliers inter-entreprises sur les bonnes pratiques RH
+     • Plateforme de recrutement mutualisée pour le bassin d'Issoudun, Actions de promotion des métiers industriels auprès des lycéens et collégiens, Visites d'entreprises et journées portes ouvertes coordonnées, Campagne de communication commune sur les atouts du territoire, Ateliers inter-entreprises sur les bonnes pratiques RH
+     • Plateforme de recrutement mutualisée pour le bassin d'Issoudun, Campagne de communication commune sur les atouts du territoire
+     • Plateforme de recrutement mutualisée pour le bassin d'Issoudun, Campagne de communication commune sur les atouts du territoire, Ateliers inter-entreprises sur les bonnes pratiques RH
+     • Plateforme de recrutement mutualisée pour le bassin d'Issoudun, Actions de promotion des métiers industriels auprès des lycéens et collégiens, Visites d'entreprises et journées portes ouvertes coordonnées, Campagne de communication commune sur les atouts du territoire
+     • Plateforme de recrutement mutualisée pour le bassin d'Issoudun, Actions de promotion des métiers industriels auprès des lycéens et collégiens, Visites d'entreprises et journées portes ouvertes coordonnées
+     • Non, pas d'intérêt pour des actions collectives à ce stade
+     • Plateforme de recrutement mutualisée pour le bassin d'Issoudun, Actions de promotion des métiers industriels auprès des lycéens et collégiens, Visites d'entreprises et journées portes ouvertes coordonnées, Campagne de communication commune sur les atouts du territoire, Groupement d'employeurs pour partager des salariés à temps partagé, Ateliers inter-entreprises sur les bonnes pratiques RH
+     • Actions de promotion des métiers industriels auprès des lycéens et collégiens, Visites d'entreprises et journées portes ouvertes coordonnées, Campagne de communication commune sur les atouts du territoire, Groupement d'employeurs pour partager des salariés à temps partagé, Ateliers inter-entreprises sur les bonnes pratiques RH
+     • Visites d'entreprises et journées portes ouvertes coordonnées, Campagne de communication commune sur les atouts du territoire
+     • Plateforme de recrutement mutualisée pour le bassin d'Issoudun, Actions de promotion des métiers industriels auprès des lycéens et collégiens, Visites d'entreprises et journées portes ouvertes coordonnées, Campagne de communication commune sur les atouts du territoire, Groupement d'employeurs pour partager des salariés à temps partagé, Ateliers inter-entreprises sur les bonnes pratiques RH
+
+--- [121] Q9.2 Ateliers co-construction | n_rempli=21
+     • Non, je ne souhaite pas participer à des ateliers
+     • Atelier "Transmission des savoir-faire et gestion des seniors"
+     • Atelier "Métiers sensibles et compétences clés du territoire", Atelier "Attractivité et recrutement territorial", Atelier "Formation et ingénierie pédagogique mutualisée", Atelier "Transmission des savoir-faire et gestion des seniors", Atelier "Industrie 4.0 et compétences de demain"
+     • Non, je ne souhaite pas participer à des ateliers
+     • Atelier "Attractivité et recrutement territorial"
+     • Atelier "Métiers sensibles et compétences clés du territoire", Atelier "Attractivité et recrutement territorial"
+     • Atelier "Métiers sensibles et compétences clés du territoire", Atelier "Attractivité et recrutement territorial"
+     • Atelier "Métiers sensibles et compétences clés du territoire", Atelier "Attractivité et recrutement territorial"
+     • Atelier "Attractivité et recrutement territorial"
+     • Non, je ne souhaite pas participer à des ateliers
+     • Atelier "Attractivité et recrutement territorial"
+     • Atelier "Attractivité et recrutement territorial"
+     • Atelier "Métiers sensibles et compétences clés du territoire", Atelier "Attractivité et recrutement territorial"
+     • Non, je ne souhaite pas participer à des ateliers
+     • Atelier "Industrie 4.0 et compétences de demain"
+     • Non, je ne souhaite pas participer à des ateliers
+     • Non, je ne souhaite pas participer à des ateliers
+     • Atelier "Métiers sensibles et compétences clés du territoire", Atelier "Transmission des savoir-faire et gestion des seniors"
+     • Atelier "Métiers sensibles et compétences clés du territoire", Atelier "Attractivité et recrutement territorial", Atelier "Formation et ingénierie pédagogique mutualisée", Atelier "Industrie 4.0 et compétences de demain"
+     • Non, je ne souhaite pas participer à des ateliers
+     • Atelier "Métiers sensibles et compétences clés du territoire"
+
+################################################################################
+# CHAMPS TEXTE LIBRE (verbatims — pour codage thématique, à anonymiser)
+################################################################################
+
+--- [12] Q1.2 Autre secteur | n_rempli=4
+     » Transport de voyages
+     » ETIRAGE TUBE A FROID DE PRCISION
+     » METALLURGIE - comptage gaz et liquides autres que l'eau
+     » Production et vente de gants pour les electriciens
+
+--- [24] Q3.1 Métiers clés/en tension | n_rempli=21
+     » SOUDEUR, CHAUDRONIER,TECHNICIEN METHODES
+     » Règleur, contôle qualité, technicien méthodes
+     » Chef de projet Bureau d'Etudes, Technicien Bureau Etudes, Technicien Méthodes Industrialisation
+     » Conducteur de car, mécanicien groupe lourd
+     » Conducteurs routiers, mécanicien
+     » Responsable Projets, Contrôleur, Certificateur
+     » Tech Méthodes et Ingénieurs, Tech Qualité, Responsable QHSE, Tech maintenance, Contrôle de Gestion Industriel, Resp Supply, Tech HSE
+     » Electromécanicien, opérateur logistique/Cariste, opérateur de production
+     » Pas de métier en tension
+     » Chauffeur routier, 
+     » Imprimeur, Graphiste pao, viseur-fabriquant, massicotier, plieur
+     » Maroquinier, Chef d'équipe
+     » BUREAU ETUDES OPERATEUR DE PRODUCTION RESSOURCES HUMAINES
+     » Opérateur usinage CN 
+     » DEVISEUR, DESSINATEUR CAO, PROGRAMMEUR, SOUDEUR, MAGASINIER
+     » Opérateur sur centre d'usinage à commande numérique - Règleur sur centre d'usinage à commande numérique
+     » Chef de projets, technicien de maintenance, technicien analyses
+     » OPERATEUR REGLEUR CN, OPERATEUR DE FORGE, CHARGE D AFFAIRE NUCLEAIRE, TECNHICIEN METHODES, CONTROLEUR QUALITE
+     » CONDUCTEUR SPL, EXPLOITANT, TECHNICIEN QHSE
+     » CHAUFFEUR, EXPLOITANTS
+     » En tension : Resp logistique, Technicien maintenance, R&D
+
+--- [52] Q4.4 (déjà multi mais texte libre mixte) | n_rempli=20
+     » Production / Fabrication, Qualité
+     » Production / Fabrication, Qualité
+     » Production / Fabrication, Maintenance, Bureau d'études, Management de proximité (chefs d'équipe, responsable de service), Comptabilité et contrôle de gestion, Commerce / ADV
+     » CONDUITE DE CAR
+     » Conducteurs routiers et mécanicien
+     » Production / Fabrication, Logistique, Bureau d'études, Achat / Approvisionnement
+     » Production / Fabrication, Commerce / ADV
+     » Production / Fabrication, Maintenance, Qualité
+     » Dirigeant
+     » Chauffeurs, assistante facturation
+     » Logistique, Commerce / ADV
+     » Production / Fabrication, Logistique
+     » Production / Fabrication, Logistique, Management de proximité (chefs d'équipe, responsable de service)
+     » Production / Fabrication, Comptabilité et contrôle de gestion
+     » Production / Fabrication
+     » Maintenance, Management de proximité (chefs d'équipe, responsable de service), Commerce / ADV, Chefs de projets/chargés d'affaires
+     » Production / Fabrication, Logistique, Bureau d'études, Commerce / ADV, Achat / Approvisionnement
+     » CONDUCTEURS
+     » conducteurs et sedentaires
+     » Production / Fabrication
+
+--- [54] Q4.6 Postes turnover | n_rempli=21
+     » PRODUCTION
+     » Régleur
+     » Technicien Bureau d'Etudes
+     » CONDUCTEUR DE CAR
+     » pas de turn over
+     » Agent de production, Agent logistique, contrôleur, ingénieur études, Responsable service qualité programmation
+     » Qualité (12,42)
+     » maintenance
+     » RAS
+     » RAS
+     » Plieur
+     » Maroquiniers
+     » SERVICES SUPPORTS
+     » APPRENTISAGE
+     » Production
+     » Opérateur
+     » Techniciens de maintenances
+     » Pas de secteur identifié
+     » CONDUCTEUR
+     » conducteur
+     » Opérateur de production
+
+--- [122] Q9.3 Action concrète la plus utile | n_rempli=21
+     » Plus de formation lié aux métiers de l'aeronautique
+     » Manque de la sécurité de biens et des personnes
+     » Améliorer la visibilité et l'image de marque de notre entreprise sur le bassin d'emploi d'Issoudun
+     » Pas d'actions concretes
+     » Santé (médecin), Sécurité, Emplois, 
+     » Obtenir un observatoire territorial des métiers et des compétences
+     » STAGE DE 3ème et de 2nde avec un transport en commun 
+     » Identification de métiers sous tension 
+     » Vidéo dynamique de la ville ou du territoire
+     » Forum emploi/job dating
+     » ATTRACTIVITE DU METIER; PRESENTATION DU METIER VERS LES METIERS DE L IMPRIMERIE
+
+
+     » Visibilité du territoire et les atouts
+     » Travailler sur les métiers en tension, attractivité usinage 
+     » Recrutement
+     » formation des jeunes
+     » Ouverture d'une formation en génie mécanique
+     » L'attractivité du territoire
+     » Mutualisation action communication hors territoire
+     » CREER DU LIEN ENTRE LES ACTEURS DE LA FORMATION ET DE L EMPLOI ET LES ENTREORISES
+     » Développer la communication sur les atouts du territoire
+     » Travailler sur l'attractivité du territoire 
+
+--- [123] Q9.4 Remarques | n_rempli=12
+     » Pas de partage complémentaire
+     » RAS
+     » RAS
+     » Questionnaire concis
+     » Le métier d'imprimeur doit se faire connaitre au niveau des écoles
+     » Les thèmes abordés sont connues depuis longtemps mais il n'y a pas d'action concrète
+     » Disposé à accompagner les jeunes en formation sur le bassin avec des interventions au centre de formation / organisation de formations partagées pour nos salariés en partenariat avec les entreprises du bassin
+     » RAS
+     » ras
+     » Mobiliser les entreprises
+     » ras
+     » Pyramide des âges élevé. Pas d'attractivité des jeunes 
+
+################################################################################
+# NUMÉRIQUES — VALEURS BRUTES (nettoyage volumes intérim/prestation)
+################################################################################
+--- [16] Q1.6 intérim (n=20) : ['3', '2', '10', '0', '0', '220', '10', '5', '1', '1', '0', '7', '0', '3', '7', '1.5', '15', '25', '0', '7.5']
+--- [17] Q1.7 prestation (n=12) : ['0', '0', '?', '2', '3', '0', '10', '0.1', '5', '2', '35', 'NC']
+--- [50] Q4.2 retraite 2 ans (n=21) : ['2', '1', '9', '4', '3', '0', '3', '0', '1', '4', '2', '37', '6', '0', '2', '1', '2', '3', '5', '2', '3']
+--- [51] Q4.3 retraite 5 ans (n=21) : ['0', '3', '20', '5', '1', '0', '3', '2', '0', '0', '0', '75', '12', '0', '0', '3', '3', '5', '2', '1', '1']
+--- [81] Q5.4 recrut. prévus 3 ans (n=21) : ['10', '1', '10', '5', '3', '1', '10', '3', '2', '2', '2', '10', '6', '2', '2', '12', '6', '7', '20', '2', '15']
+--- [14] Q1.4 effectif inscrit (n=21) : ['26', '23', '125', '25', '17', '1550', '88', '31', '4', '20', '19', '596', '97', '2', '24', '71', '66', '121', '198', '15', '71']
