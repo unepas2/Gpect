@@ -434,8 +434,11 @@ function auto(c,k){const d=Q(c,k);if(!d)return '';const cm=COMMENTS[c+'|'+k]||''
    return card(title,'% des '+d.n_repondants+' répondants — plusieurs réponses possibles',chCanvas(id,a.length>6),cm);}
  if(t==='batterie_echelle_1_5'){const a=(d.classement_par_moyenne||d.items);CQ.push(()=>battChart(id,a,col));
    return card(title,'Note moyenne sur 5 (du + élevé au + faible) — '+(a[0]?a[0].n:'')+' répondants',chCanvas(id,true),cm);}
- if(t==='texte_libre_code'){const a=d.themes.filter(x=>x.n>0);CQ.push(()=>hbar(id,a.map(x=>x.theme),a.map(x=>x.n),col,d.n_repondants));
-   return card(title,'Nombre de répondants (sur '+d.n_repondants+') ayant cité chaque thème',chCanvas(id,a.length>6)+verbList(d.verbatims_anonymises,3),cm);}
+ if(t==='texte_libre_code'){const a=d.themes.filter(x=>x.n>0);
+   const PILL_COLS=['#0b6e99','#1f7a55','#c05c10','#6b3a8a','#2e5c8a','#0b7a6e','#8a6b0b','#8a2b0b','#5c6b0b','#1a4e6e'];
+   const pills=a.map((x,i)=>{const c=PILL_COLS[i%PILL_COLS.length];return `<span style="display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid ${c}28;border-radius:40px;padding:6px 14px 6px 8px;margin:4px;font-size:13px;box-shadow:0 1px 5px ${c}12"><span style="background:${c};color:#fff;font-weight:800;font-size:12px;min-width:26px;height:26px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0">${x.n}</span>${x.theme}</span>`;}).join('');
+   const pillHtml=`<p style="font-size:11.5px;color:#9aa7b4;margin:0 0 10px">Chiffre = nombre d'entreprises (sur ${d.n_repondants}) ayant cité ce thème</p><div style="display:flex;flex-wrap:wrap;gap:2px;margin-bottom:14px">${pills}</div>`;
+   return card(title,'Verbatims anonymisés · N='+d.n_repondants,pillHtml+verbList(d.verbatims_anonymises,3),cm);}
  if(t==='texte_libre'){const vb=verbList(d.verbatims_anonymises,6);if(!vb&&!cm)return '';return card(title,'Verbatims anonymisés · '+d.n_repondants+' réponses',vb||'',cm);}
  return '';}
 // pyramide entreprises (avec/sans Safran)
