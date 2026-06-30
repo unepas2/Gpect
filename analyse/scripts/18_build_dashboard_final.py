@@ -282,7 +282,9 @@ main{max-width:1220px;margin:0 auto;padding:clamp(16px,3vw,26px) clamp(12px,3vw,
 @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 .banner{background:linear-gradient(115deg,#ffffff,#f1f7fb 90%);border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:14px;padding:15px 19px;margin:0 0 20px;box-shadow:var(--sh-md);font-size:clamp(13px,1.7vw,15px)}
 .banner b{color:var(--accent)}
-h2.pt{font-size:clamp(20px,2.8vw,26px);margin:0 0 4px;font-weight:800;letter-spacing:-.4px}
+h2.pt{font-size:11px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:var(--accent);margin:0 0 10px}
+.college-hl{font-size:clamp(22px,3.2vw,34px);font-weight:900;letter-spacing:-.5px;margin:0 0 12px;color:#0e2740;line-height:1.2}
+.college-desc{font-size:14.5px;color:#4a5a6a;max-width:740px;margin:0 0 20px;line-height:1.65}
 .sub{color:var(--mut);font-size:13.5px;margin:0 0 18px}
 h3.sec{position:relative;font-size:16.5px;font-weight:750;margin:30px 0 6px;padding-left:14px;color:#0e2740}
 h3.sec::before{content:"";position:absolute;left:0;top:2px;bottom:2px;width:4px;border-radius:4px;background:linear-gradient(180deg,#0b6e99,#2e8b57)}
@@ -460,12 +462,12 @@ const BANNERS={
  act:"<b>En clair :</b> les acteurs de l'emploi confirment les tensions (maintenance, usinage, machines numériques) et pointent un manque de qualification des candidats plus qu'un simple manque de bras.",
  syn:"<b>En clair :</b> atout n°1 = la position et le foncier ; freins = qualification de la main-d'œuvre et mobilité. La transmission-reprise est jugée prioritaire, l'engagement des entreprises plutôt faible. Réponses surtout qualitatives.",
 };
-const TITLES={ent:["Collège Entreprises","n=21 · le tissu industriel du bassin"],of:["Collège Organismes de formation","n=7 · l'offre de formation"],act:["Collège Acteurs de l'emploi","n=7 · France Travail, Mission Locale, Cap Emploi, APEC, intérim"],syn:["Collège Syndicats / organisations professionnelles","n=7 · patronal, salariés, consulaires"]};
+const TITLES={ent:["Collège · Entreprises","n=21 · le tissu industriel du bassin","Un socle industriel dynamique face à un choc démographique non anticipé","Tissu à dominante métallurgie/usinage : 95 % des entreprises en tension de recrutement, une dynamique d'investissement forte (71 %) — mais un choc démographique et un déficit d'attractivité encore peu adressés."],of:["Collège · Organismes de formation","n=7 · l'offre de formation","Une offre de formation solide, mais perçue en décalage par ses utilisateurs","Plateaux techniques bien équipés, mais capacité limitée sur les compétences de demain. Les OF s'auto-évaluent mieux que ne le font les entreprises et les acteurs de l'emploi."],act:["Collège · Acteurs de l'emploi","n=7 · France Travail, Mission Locale, Cap Emploi, APEC, intérim","Des tensions confirmées, une qualification insuffisante identifiée comme frein principal","Les acteurs confirment les difficultés sur les métiers techniques et pointent le manque de qualification des candidats davantage que le manque de candidats."],syn:["Collège · Syndicats & org. professionnelles","n=7 · patronal, salariés, consulaires","Position et foncier en atout, qualification et mobilité comme principaux freins","Engagement des entreprises jugé insuffisant, transmission-reprise considérée comme prioritaire. Réponses majoritairement qualitatives."]};
 const CMAP={ent:'entreprises',of:'of',act:'acteurs',syn:'syndicats'};
 
 const BUILD={};
 function pageCollege(short){return function(){const c=CMAP[short];const host=document.getElementById('p-'+short);
- host.innerHTML=`<div class="banner">${BANNERS[short]}</div><h2 class="pt">${TITLES[short][0]}</h2><p class="sub">${TITLES[short][1]}</p>`+buildCollege(c);
+ host.innerHTML=`<h2 class="pt">${TITLES[short][0]}</h2><h1 class="college-hl">${TITLES[short][2]}</h1><p class="college-desc">${TITLES[short][3]}</p><p class="sub">${TITLES[short][1]}</p><div class="banner">${BANNERS[short]}</div>`+buildCollege(c);
  CQ.forEach(f=>{try{f()}catch(e){}});CQ=[];};}
 ['ent','of','act','syn'].forEach(s=>BUILD[s]=pageCollege(s));
 
